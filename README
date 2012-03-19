@@ -29,8 +29,14 @@ grails dev run-app  // runs with the "development" data source
 grails test run-app // runs with the test data source
 grails prod run-app // runs with the production data source
 
+--  Build the application for deployment --
+
 #To build different environments
 
 grails war       // Packages the application with the "production" data source
 grails dev war   // Packages the application with the "development" data source
 grails prod war  // Packages the application with the "production" 
+
+-- Webservices avaialble--
+
+http://<host>/Schedulr-0.1/ws
