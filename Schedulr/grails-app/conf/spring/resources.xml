@@ -9,5 +9,9 @@
 	<jaxws:endpoint id="getsubjectofcarescheduleresponderservice"
 		implementor="#getSubjectOfCareScheduleService" address="/GetSubjectOfCareSchedule" >
 	</jaxws:endpoint>
+	
+	<jaxws:endpoint id="getbookingdetailsresponderservice"
+		implementor="#getBookingDetailsService" address="/GetBookingDetails" >
+	</jaxws:endpoint>
 
 </beans>

@@ -31,15 +31,15 @@ class GetSubjectOfCareScheduleService implements GetSubjectOfCareScheduleRespond
 		hasText(getSubjectOfCareSchedule.subjectOfCare, "missing argument \"subject_of_care\"")
 
 		List timeSlots = getTimeSlotsForSubjectOfCareAndFacility(getSubjectOfCareSchedule)
-		return ScheduleBuilder.buildSchedule(timeSlots);
+		return ResponseBuilder.buildSubjectOfCareSchedule(timeSlots);
 	}
 
 	private List getTimeSlotsForSubjectOfCareAndFacility(GetSubjectOfCareScheduleType getSubjectOfCareSchedule) {
 		def subjectOfCareId = getSubjectOfCareSchedule.subjectOfCare
 		def healtcareFacilityId = getSubjectOfCareSchedule.healthcareFacility
 
-		SubjectOfCare subjectOfCare = SubjectOfCare.findBySubjectOfCareId(subjectOfCareId);
-		HealthcareFacility healtcareFacility = HealthcareFacility.findByHealthcareFacility(healtcareFacilityId);
+		def subjectOfCare = SubjectOfCare.findBySubjectOfCareId(subjectOfCareId);
+		def healtcareFacility = HealthcareFacility.findByHealthcareFacility(healtcareFacilityId);
 
 		List timeSlots = Timeslot.findAllBySubjectOfCareAndHealthcareFacility(subjectOfCare, healtcareFacility)
 		return timeSlots

@@ -8,6 +8,9 @@ beans = {
 	getSubjectOfCareScheduleService(org.callistasoftware.schedulr.services.GetSubjectOfCareScheduleService) {
 	}
 
+	getBookingDetailsService(org.callistasoftware.schedulr.services.GetBookingDetailsService){
+	}
+
 	switch (grails.util.GrailsUtil.environment) {
 
 		case "production":
