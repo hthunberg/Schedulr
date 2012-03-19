@@ -28,3 +28,9 @@ grails run-app      // runs with the default "development" data source
 grails dev run-app  // runs with the "development" data source
 grails test run-app // runs with the test data source
 grails prod run-app // runs with the production data source
+
+#To build different environments
+
+grails war       // Packages the application with the "production" data source
+grails dev war   // Packages the application with the "development" data source
+grails prod war  // Packages the application with the "production" 
