@@ -1,0 +1,30 @@
+--  Setup mysql my.cnf under /etc/  --
+
+[client]
+port = 3306
+socket = /tmp/mysql.sock
+default-character-set=utf8
+
+[mysqld]
+port = 3306
+basedir = /usr/local/mysql/
+character-set-server=utf8
+collation-server=utf8_general_ci
+
+-- Setup database --
+CREATE DATABASE IF NOT EXISTS `schedulr`;
+create user 'schedulr'@'localhost' identified by 'schedulr';
+GRANT ALL ON schedulr.* TO 'schedulr'@'localhost';
+
+--  Run the application  --
+
+#To change portnumber
+
+grails -Dserver.port=9090 run-app
+
+#To run different environments
+
+grails run-app      // runs with the default "development" data source
+grails dev run-app  // runs with the "development" data source
+grails test run-app // runs with the test data source
+grails prod run-app // runs with the production data source
