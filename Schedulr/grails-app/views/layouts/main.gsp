@@ -18,7 +18,7 @@
         <r:layoutResources />
 	</head>
 	<body>
-		<div id="schedulrLogo" role="banner"><font color="black" size="10" style="font-family:courier" ><g:message code="application.name" /></font></div>
+		<div id="schedulrLogo" role="banner"><font color="black" size="6" style="font-family:courier" ><g:message code="application.name" /></font></div>
 		<g:layoutBody/>
 		<div class="footer" role="contentinfo"></div>
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
