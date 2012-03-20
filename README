@@ -33,10 +33,17 @@ grails prod run-app // runs with the production data source
 
 #To build different environments
 
-grails war       // Packages the application with the "production" data source
-grails dev war   // Packages the application with the "development" data source
-grails prod war  // Packages the application with the "production" 
+Usage:
+grails [environment]* war [filename]* [arguments]*
+
+grails war       // Packages the application with the "production" data source and filename Schedulr-0.1.war
+grails dev war   // Packages the application with the "development" data source and filename Schedulr-0.1.war
+grails prod Schedulr war  // Packages the application with the "production" data source and filename Schedulr.war
 
 -- Webservices avaialble--
 
+Test:
 http://<host>/Schedulr-0.1/ws
+
+Prod:
+http://<host>/Schedulr/ws
