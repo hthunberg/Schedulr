@@ -7,11 +7,11 @@
 						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
 	<jaxws:endpoint id="getsubjectofcarescheduleresponderservice"
-		implementor="#getSubjectOfCareScheduleService" address="/GetSubjectOfCareSchedule" >
+		implementor="#getSubjectOfCareScheduleService" address="/GetSubjectOfCareSchedule/1" >
 	</jaxws:endpoint>
 	
 	<jaxws:endpoint id="getbookingdetailsresponderservice"
-		implementor="#getBookingDetailsService" address="/GetBookingDetails" >
+		implementor="#getBookingDetailsService" address="/GetBookingDetails/1" >
 	</jaxws:endpoint>
 
 </beans>

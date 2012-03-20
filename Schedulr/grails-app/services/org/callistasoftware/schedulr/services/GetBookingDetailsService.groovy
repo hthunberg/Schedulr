@@ -28,6 +28,8 @@ class GetBookingDetailsService implements GetBookingDetailsResponderInterface{
 	public GetBookingDetailsResponseType getBookingDetails(
 	String logicalAddress, ActorType actor, GetBookingDetailsType getBookingDetails) {
 		hasText(getBookingDetails.bookingId, "missing argument \"bookingId\"")
+		
+		log.debug("Get booking details for booking id ${getBookingDetails.bookingId}")
 
 		def timeslot = getTimeslotWithBookingId(getBookingDetails.bookingId)
 		return ResponseBuilder.buildBookingDetails(timeslot);

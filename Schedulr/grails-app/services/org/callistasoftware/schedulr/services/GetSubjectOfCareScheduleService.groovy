@@ -29,6 +29,8 @@ class GetSubjectOfCareScheduleService implements GetSubjectOfCareScheduleRespond
 	String logicalAddress, ActorType actor, GetSubjectOfCareScheduleType getSubjectOfCareSchedule) {
 		hasText(getSubjectOfCareSchedule.healthcareFacility, "missing argument \"healthcareFacility\"")
 		hasText(getSubjectOfCareSchedule.subjectOfCare, "missing argument \"subject_of_care\"")
+		
+		log.debug("Get booking details for subject of care ${getSubjectOfCareSchedule.subjectOfCare}")
 
 		List timeSlots = getTimeSlotsForSubjectOfCareAndFacility(getSubjectOfCareSchedule)
 		return ResponseBuilder.buildSubjectOfCareSchedule(timeSlots);
