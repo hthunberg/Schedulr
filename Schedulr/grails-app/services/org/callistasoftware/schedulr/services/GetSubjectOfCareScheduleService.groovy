@@ -27,9 +27,9 @@ class GetSubjectOfCareScheduleService implements GetSubjectOfCareScheduleRespond
 	@Override
 	public GetSubjectOfCareScheduleResponseType getSubjectOfCareSchedule(
 	String logicalAddress, ActorType actor, GetSubjectOfCareScheduleType getSubjectOfCareSchedule) {
-		hasText(getSubjectOfCareSchedule.healthcareFacility, "missing argument \"healthcareFacility\"")
+		//hasText(getSubjectOfCareSchedule.healthcareFacility, "missing argument \"healthcareFacility\"")
 		hasText(getSubjectOfCareSchedule.subjectOfCare, "missing argument \"subject_of_care\"")
-		
+
 		log.debug("Get booking details for subject of care ${getSubjectOfCareSchedule.subjectOfCare}")
 
 		List timeSlots = getTimeSlotsForSubjectOfCareAndFacility(getSubjectOfCareSchedule)
@@ -43,7 +43,14 @@ class GetSubjectOfCareScheduleService implements GetSubjectOfCareScheduleRespond
 		def subjectOfCare = SubjectOfCare.findBySubjectOfCareId(subjectOfCareId);
 		def healtcareFacility = HealthcareFacility.findByHealthcareFacility(healtcareFacilityId);
 
-		List timeSlots = Timeslot.findAllBySubjectOfCareAndHealthcareFacility(subjectOfCare, healtcareFacility)
+		List timeSlots = null;
+		if(healtcareFacility == null){
+			timeSlots = Timeslot.findAllBySubjectOfCare(subjectOfCare)
+		}else{
+			timeSlots = Timeslot.findAllBySubjectOfCareAndHealthcareFacility(subjectOfCare, healtcareFacility)
+		}
+
+
 		return timeSlots
 	}
 }
