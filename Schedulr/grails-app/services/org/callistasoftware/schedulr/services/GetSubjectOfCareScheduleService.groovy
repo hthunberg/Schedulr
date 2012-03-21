@@ -32,25 +32,23 @@ class GetSubjectOfCareScheduleService implements GetSubjectOfCareScheduleRespond
 
 		log.debug("Get booking details for subject of care ${getSubjectOfCareSchedule.subjectOfCare}")
 
-		List timeSlots = getTimeSlotsForSubjectOfCareAndFacility(getSubjectOfCareSchedule)
+		List timeSlots = getTimeSlots(getSubjectOfCareSchedule)
 		return ResponseBuilder.buildSubjectOfCareSchedule(timeSlots);
 	}
 
-	private List getTimeSlotsForSubjectOfCareAndFacility(GetSubjectOfCareScheduleType getSubjectOfCareSchedule) {
-		def subjectOfCareId = getSubjectOfCareSchedule.subjectOfCare
-		def healtcareFacilityId = getSubjectOfCareSchedule.healthcareFacility
+	private List getTimeSlots(GetSubjectOfCareScheduleType getSubjectOfCareSchedule) {
+		String subjectOfCareId = getSubjectOfCareSchedule.subjectOfCare
+		String healtcareFacilityId = getSubjectOfCareSchedule.healthcareFacility
 
 		def subjectOfCare = SubjectOfCare.findBySubjectOfCareId(subjectOfCareId);
-		def healtcareFacility = HealthcareFacility.findByHealthcareFacility(healtcareFacilityId);
 
 		List timeSlots = null;
-		if(healtcareFacility == null){
-			timeSlots = Timeslot.findAllBySubjectOfCare(subjectOfCare)
-		}else{
+		if(healtcareFacilityId){
+			def healtcareFacility = HealthcareFacility.findByHealthcareFacility(healtcareFacilityId);
 			timeSlots = Timeslot.findAllBySubjectOfCareAndHealthcareFacility(subjectOfCare, healtcareFacility)
+		}else{
+			timeSlots = Timeslot.findAllBySubjectOfCare(subjectOfCare)
 		}
-
-
 		return timeSlots
 	}
 }
