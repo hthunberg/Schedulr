@@ -40,15 +40,19 @@ class GetSubjectOfCareScheduleService implements GetSubjectOfCareScheduleRespond
 		String subjectOfCareId = getSubjectOfCareSchedule.subjectOfCare
 		String healtcareFacilityId = getSubjectOfCareSchedule.healthcareFacility
 
-		def subjectOfCare = SubjectOfCare.findBySubjectOfCareId(subjectOfCareId);
-
 		List timeSlots = null;
-		if(healtcareFacilityId){
-			def healtcareFacility = HealthcareFacility.findByHealthcareFacility(healtcareFacilityId);
-			timeSlots = Timeslot.findAllBySubjectOfCareAndHealthcareFacility(subjectOfCare, healtcareFacility)
-		}else{
-			timeSlots = Timeslot.findAllBySubjectOfCare(subjectOfCare)
+
+		SubjectOfCare subjectOfCare = SubjectOfCare.findBySubjectOfCareId(subjectOfCareId);
+
+		if(subjectOfCare){
+			if(healtcareFacilityId){
+				def healtcareFacility = HealthcareFacility.findByHealthcareFacility(healtcareFacilityId);
+				timeSlots = Timeslot.findAllBySubjectOfCareAndHealthcareFacility(subjectOfCare, healtcareFacility)
+			}else{
+				timeSlots = Timeslot.findAllBySubjectOfCare(subjectOfCare)
+			}
 		}
+
 		return timeSlots
 	}
 }
