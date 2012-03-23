@@ -13,7 +13,7 @@ environments {
 	development {
 		dataSource {
 			dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
-			url = "jdbc:mysql://localhost:3306/schedulr?useUnicode=yes&characterEncoding=UTF-8"
+			url = "jdbc:mysql://localhost:3306/schedulr?useUnicode=yes&characterEncoding=UTF-8&autoReconnect=true"
 			username = "schedulr"
 			password = "schedulr"
 		}
@@ -24,7 +24,7 @@ environments {
 	test {
 		dataSource {
 			dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
-			url = "jdbc:mysql://localhost:3306/schedulr?useUnicode=yes&characterEncoding=UTF-8"
+			url = "jdbc:mysql://localhost:3306/schedulr?useUnicode=yes&characterEncoding=UTF-8&autoReconnect=true"
 			username = "schedulr"
 			password = "schedulr"
 		}
@@ -32,7 +32,7 @@ environments {
 	production {
 		dataSource {
 			dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
-			url = "jdbc:mysql://localhost:3306/schedulr?useUnicode=yes&characterEncoding=UTF-8"
+			url = "jdbc:mysql://localhost:3306/schedulr?useUnicode=yes&characterEncoding=UTF-8&autoReconnect=true"
 			username = "schedulr"
 			password = "schedulr"
 		}
