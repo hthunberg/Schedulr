@@ -1,3 +1,4 @@
+
 --  Setup mysql my.cnf under /etc/  --
 
 [client]
@@ -41,6 +42,8 @@ grails dev war   // Packages the application with the "development" data source 
 grails prod Schedulr war  // Packages the application with the "production" data source and filename Schedulr.war
 
 -- Webservices avaialble--
+
+Dev:
 
 Test:
 http://<host>/Schedulr-0.1/ws
