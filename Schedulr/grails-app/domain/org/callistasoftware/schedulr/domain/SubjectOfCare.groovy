@@ -18,7 +18,7 @@ class SubjectOfCare {
 		lastName(blank: false)
 		phone(blank: false)
 		email(email: true, blank: false, )
-		subjectOfCareId(blank: false, unique:true, matches: '([0-9]{8})-([0-9]{4})')
+		subjectOfCareId(blank: false, unique:true, matches: '([0-9]{12})')
 		coAddress(nullable: true)
 		homeAddress(blank: false)
 		middleName(nullable: true)

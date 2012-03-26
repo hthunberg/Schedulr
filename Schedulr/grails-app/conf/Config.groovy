@@ -74,7 +74,7 @@ environments {
 log4j = {
     
     appenders {
-        console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n')
+        console name:'stdout', layout:pattern(conversionPattern: '%d{yyMMdd HH:mm:ss,SSS} %-5p: %c -SCHDLR- %m%n')
     }
 
 	error  'org.codehaus.groovy.grails.web.servlet',  //  controllers
@@ -90,4 +90,8 @@ log4j = {
            'net.sf.ehcache.hibernate'
 	
     debug  "org.callistasoftware.schedulr"
+    
+	root {
+        debug()
+    }
 }

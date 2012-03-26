@@ -24,10 +24,10 @@ class BootStrap {
 
 		//Patienter
 		if (!SubjectOfCare.count()) {
-			new SubjectOfCare(subjectOfCareId: "19691202-6066", firstName: "Jan", lastName: "Jansson", middleName: "Ove", phone: "0451-3553531", email: "jan.jansson@fejkepost.something", homeAddress: "Tungegatan 32, 44254, Ytterby").save(failOnError: true)
-			new SubjectOfCare(subjectOfCareId: "19751026-6849",firstName: "Per", lastName: "Persson", middleName: "", phone: "021-6213418", email: "per.persson@fejkepost.something",homeAddress: "Bygatan 145, 44254, Kärna").save(failOnError: true)
-			new SubjectOfCare(subjectOfCareId: "19701217-7650",firstName: "Peter", lastName: "Petersson", middleName: "", phone: "040-3191163", email: "peter.petersson@fejkepost.something",homeAddress: "Sparråsvägen 21, 44254, Ytterby").save(failOnError: true)
-			new SubjectOfCare(subjectOfCareId: "19700406-4155",firstName: "Olle", lastName: "Granberg", middleName: "", phone: "0940-4230632", email: "olle.granberg@dodgit.com",homeAddress: "Holmtebo ekbacken, 91290, Marstrand").save(failOnError: true)
+			new SubjectOfCare(subjectOfCareId: "188803099368", firstName: "Agda", lastName: "Andersson", middleName: "", phone: "0451-3553531", email: "agda.andersson@fejkepost.something", homeAddress: "Tungegatan 32, 44254, Ytterby").save(failOnError: true)
+			new SubjectOfCare(subjectOfCareId: "197510266849",firstName: "Per", lastName: "Persson", middleName: "", phone: "021-6213418", email: "per.persson@fejkepost.something",homeAddress: "Bygatan 145, 44254, Kärna").save(failOnError: true)
+			new SubjectOfCare(subjectOfCareId: "197012177650",firstName: "Peter", lastName: "Petersson", middleName: "", phone: "040-3191163", email: "peter.petersson@fejkepost.something",homeAddress: "Sparråsvägen 21, 44254, Ytterby").save(failOnError: true)
+			new SubjectOfCare(subjectOfCareId: "197004064155",firstName: "Olle", lastName: "Granberg", middleName: "", phone: "0940-4230632", email: "olle.granberg@dodgit.com",homeAddress: "Holmtebo ekbacken, 91290, Marstrand").save(failOnError: true)
 		}
 
 	}
