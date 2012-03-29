@@ -34,8 +34,8 @@ class ResponseBuilder {
 		timeSlotType.cancelBookingAllowed = timeslot.cancelBookingAllowed
 		timeSlotType.careTypeID = timeslot.caretype.id
 		timeSlotType.careTypeName = timeslot.caretype.value
-		timeSlotType.endTimeExclusive = timeslot.endTimeExclusive.format("yyyyMMddhhmmss")
-		timeSlotType.startTimeInclusive = timeslot.startTimeInclusive.format("yyyyMMddhhmmss")
+		timeSlotType.endTimeExclusive = timeslot.endTimeExclusive.format("yyyyMMddHHmmss")
+		timeSlotType.startTimeInclusive = timeslot.startTimeInclusive.format("yyyyMMddHHmmss")
 		timeSlotType.isInvitation = timeslot.isInvitation
 		timeSlotType.purpose = timeslot.purpose
 		timeSlotType.reason = timeslot.reason
