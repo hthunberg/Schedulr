@@ -40,8 +40,8 @@ class ResponseBuilder {
 		timeSlotType.purpose = timeslot.purpose
 		timeSlotType.reason = timeslot.reason
 		timeSlotType.rebookingAllowed = timeslot.rebookingAllowed
-		timeSlotType.resourceID = timeslot.resourcetype.id
-		timeSlotType.resourceName = timeslot.resourcetype.value
+		timeSlotType.resourceID = timeslot.resourceId
+		timeSlotType.resourceName = timeslot.resourceName
 		timeSlotType.timeTypeID = timeslot.timetype.id
 		timeSlotType.timeTypeName = timeslot.timetype.value
 

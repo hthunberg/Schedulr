@@ -113,14 +113,23 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${timeslotInstance?.resourcetype}">
+				<g:if test="${timeslotInstance?.resourceId}">
 				<li class="fieldcontain">
-					<span id="resourcetyp-label" class="property-label"><g:message code="resourcetype.label" default="Resource Type" /></span>
+					<span id="resourceid-label" class="property-label"><g:message code="resourceId.label" default="Resource Id" /></span>
 					
-						<span class="property-value" aria-labelledby="resourcetype-label"><g:fieldValue bean="${timeslotInstance}" field="resourcetype"/></span>
+						<span class="property-value" aria-labelledby="resourceid-label"><g:fieldValue bean="${timeslotInstance}" field="resourceId"/></span>
 					
 				</li>
 				</g:if>
+			
+				<g:if test="${timeslotInstance?.resourceName}">
+				<li class="fieldcontain">
+					<span id="resourceName-label" class="property-label"><g:message code="resourceName.label" default="Resource Name" /></span>
+					
+						<span class="property-value" aria-labelledby="resourceName-label"><g:fieldValue bean="${timeslotInstance}" field="resourceName"/></span>
+					
+				</li>
+				</g:if>			
 			
 				<g:if test="${timeslotInstance?.subjectOfCare}">
 				<li class="fieldcontain">

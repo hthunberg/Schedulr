@@ -81,11 +81,18 @@
 	<g:textField name="reason" value="${timeslotInstance?.reason}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: timeslotInstance, field: 'resourcetype', 'error')} ">
-	<label for="resourcetype">
-		<g:message code="resourcetype.label" default="Resource Type" />
+<div class="fieldcontain ${hasErrors(bean: timeslotInstance, field: 'resourceId', 'error')} ">
+	<label for="resourceId">
+		<g:message code="resourceId.label" default="Resource Id" />
 	</label>
-	<g:select from="${org.callistasoftware.schedulr.domain.Resourcetype?.values()}" value="${timeslotInstance?.resourcetype}" name="resourcetype" noSelection="['':'']" optionKey="key"></g:select>
+	<g:textField name="resourceId" value="${timeslotInstance?.resourceId}"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: timeslotInstance, field: 'resourceName', 'error')} ">
+	<label for="resourceName">
+		<g:message code="resourceName.label" default="Resource Name" />
+	</label>
+	<g:textField name="resourceName" value="${timeslotInstance?.resourceName}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: timeslotInstance, field: 'subjectOfCare', 'error')} required">

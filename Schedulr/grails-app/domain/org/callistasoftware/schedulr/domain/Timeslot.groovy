@@ -10,7 +10,8 @@ class Timeslot {
 	boolean rebookingAllowed
 	boolean isInvitation
 
-	Resourcetype resourcetype
+	String resourceId
+	String resourceName
 	Timetype timetype
 	Caretype caretype
 	HealthcareFacility healthcareFacility
@@ -27,9 +28,10 @@ class Timeslot {
 	static constraints = {
 		startTimeInclusive(blank: false)
 		endTimeExclusive(blank: false)
-		caretype(blank:false)
-		timetype(blank:false)
-		resourcetype(blank:true)
+		caretype(blank:true, nullable: true)
+		timetype(blank:true, nullable: true)
+		resourceId(blank:true, nullable: true)
+		resourceName(blank:true, nullable: true)		
 	}
 
 	public String toString() {
