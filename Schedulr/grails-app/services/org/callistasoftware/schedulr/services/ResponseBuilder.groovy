@@ -51,7 +51,7 @@ class ResponseBuilder {
 
 		//Performer information
 		timeSlotType.performer = timeslot.performer.performerId
-		timeSlotType.performerName = timeslot.performer.firstName
+		timeSlotType.performerName = "$timeslot.performer.firstName $timeslot.performer.lastName, $timeslot.performer.title"
 
 		//Subject of care
 		timeSlotType.subjectOfCare = timeslot.subjectOfCare.subjectOfCareId
