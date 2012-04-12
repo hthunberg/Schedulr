@@ -1,17 +1,18 @@
 package org.callistasoftware.schedulr.types
 
 enum Caretype {
-	REHAB("Rehab"),
-	SAMPLING("Provtagning"),
-	UPVISIT("Återbesök"),
-	DOCTOR("Tid hos läkare"),
-	OTHER("Övrigt"),
+	REHAB("1","Rehab"),
+	SAMPLING("2","Provtagning"),
+	UPVISIT("3","Återbesök"),
+	DOCTOR("4","Tid hos läkare"),
+	OTHER("5","Övrigt"),
 
 	private final String name
+	private final String id
 
-
-	Caretype(String name){
+	Caretype(String id, String name){
 		this.name = name;
+		this.id = id;
 	}
 
 	String toString() {

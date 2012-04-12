@@ -1,13 +1,15 @@
 package org.callistasoftware.schedulr.types
 
 enum Timetype {
-	OPEN("Öppen"),
-	OTHER("Övrigt"),
+	OPEN("1","Öppen"),
+	OTHER("5","Övrigt")
 
-	private final String name
+	final String name
+	final String id
 
-	Timetype(String name){
+	Timetype(String id, String name){
 		this.name = name;
+		this.id = id;
 	}
 
 	String toString() {

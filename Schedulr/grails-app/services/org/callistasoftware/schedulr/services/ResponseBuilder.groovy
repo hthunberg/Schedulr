@@ -32,8 +32,8 @@ class ResponseBuilder {
 		//Timeslot information
 		timeSlotType.bookingId = timeslot.id
 		timeSlotType.cancelBookingAllowed = timeslot.cancelBookingAllowed
-		timeSlotType.careTypeID = timeslot.caretype.id
-		timeSlotType.careTypeName = timeslot.caretype.value
+		timeSlotType.careTypeID = timeslot?.caretype?.id
+		timeSlotType.careTypeName = timeslot?.caretype?.name
 		timeSlotType.endTimeExclusive = timeslot.endTimeExclusive.format("yyyyMMddHHmmss")
 		timeSlotType.startTimeInclusive = timeslot.startTimeInclusive.format("yyyyMMddHHmmss")
 		timeSlotType.isInvitation = timeslot.isInvitation
@@ -42,8 +42,8 @@ class ResponseBuilder {
 		timeSlotType.rebookingAllowed = timeslot.rebookingAllowed
 		timeSlotType.resourceID = timeslot.resourceId
 		timeSlotType.resourceName = timeslot.resourceName
-		timeSlotType.timeTypeID = timeslot.timetype.id
-		timeSlotType.timeTypeName = timeslot.timetype.value
+		timeSlotType.timeTypeID = timeslot?.timetype?.id
+		timeSlotType.timeTypeName = timeslot?.timetype?.name
 
 		//Healtcare facility information
 		timeSlotType.healthcareFacility = timeslot.getHealthcareFacility().healthcareFacility
