@@ -3,6 +3,7 @@ dataSource {
 	driverClassName = "com.mysql.jdbc.Driver"
 	dialect = "org.hibernate.dialect.MySQL5InnoDBDialect"
 
+	//http://sacharya.com/grails-dbcp-stale-connections/
 	//http://jira.grails.org/browse/GRAILS-6474
 	properties
 	{
@@ -17,7 +18,7 @@ dataSource {
 
 		testOnBorrow = true
 		testWhileIdle = true
-		testOnReturn = false
+		testOnReturn = true
 
 		validationQuery = "SELECT 1"
 	}
@@ -56,3 +57,9 @@ environments {
 		}
 	}
 }
+
+println "***************************************"
+println "**     Datasource properties used:   **"
+println "***************************************"
+dataSource.properties.each { println it }
+println "***************************************"
