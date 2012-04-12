@@ -15,11 +15,9 @@ dataSource {
 		timeBetweenEvictionRunsMillis = 60000
 		numTestsPerEvictionRun = 3
 		maxWait = 10000
-
 		testOnBorrow = true
 		testWhileIdle = true
 		testOnReturn = true
-
 		validationQuery = "SELECT 1"
 	}
 }
@@ -57,9 +55,3 @@ environments {
 		}
 	}
 }
-
-println "***************************************"
-println "**     Datasource properties used:   **"
-println "***************************************"
-dataSource.properties.each { println it }
-println "***************************************"
