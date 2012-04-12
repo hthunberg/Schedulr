@@ -25,6 +25,10 @@ class SubjectOfCare {
 	}
 
 	public String toString() {
-		"$firstName $middleName $lastName, $subjectOfCareId"
+		if(middleName){
+			"$firstName $middleName $lastName, $subjectOfCareId"
+		}else{
+			"$firstName $lastName, $subjectOfCareId"
+		}
 	}
 }

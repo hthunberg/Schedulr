@@ -46,7 +46,7 @@
 	<label for="careType">
 		<g:message code="caretype.label" default="Care Type" />
 	</label>
-	<g:select from="${org.callistasoftware.schedulr.domain.Caretype?.values()}" value="${timeslotInstance?.caretype}" name="caretype" noSelection="['':'']" optionKey="key"></g:select>
+	<g:select name="caretype" from="${org.callistasoftware.schedulr.types.Caretype?.values()}" value="${timeslotInstance?.caretype?.key}" optionKey="key" noSelection="['':'']"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: timeslotInstance, field: 'healthcareFacility', 'error')} required">
@@ -81,18 +81,18 @@
 	<g:textField name="reason" value="${timeslotInstance?.reason}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: timeslotInstance, field: 'resourceId', 'error')} ">
-	<label for="resourceId">
-		<g:message code="resourceId.label" default="Resource Id" />
-	</label>
-	<g:textField name="resourceId" value="${timeslotInstance?.resourceId}"/>
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: timeslotInstance, field: 'resourceName', 'error')} ">
 	<label for="resourceName">
 		<g:message code="resourceName.label" default="Resource Name" />
 	</label>
 	<g:textField name="resourceName" value="${timeslotInstance?.resourceName}"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: timeslotInstance, field: 'resourceId', 'error')} ">
+	<label for="resourceId">
+		<g:message code="resourceId.label" default="Resource Id" />
+	</label>
+	<g:textField name="resourceId" value="${timeslotInstance?.resourceId}" />
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: timeslotInstance, field: 'subjectOfCare', 'error')} required">
@@ -107,7 +107,7 @@
 	<label for="timetype">
 		<g:message code="timetype.label" default="Time Type" />
 	</label>
-	<g:select from="${org.callistasoftware.schedulr.domain.Timetype?.values()}" value="${timeslotInstance?.timetype}" name="timetype" noSelection="['':'']" optionKey="key"></g:select>
+	<g:select name="timetype" from="${org.callistasoftware.schedulr.types.Timetype?.values()}" value="${timeslotInstance?.timetype?.key}" optionKey="key" noSelection="['':'']"/>
 </div>
 
 
