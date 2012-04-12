@@ -31,8 +31,8 @@ class Timeslot {
 	static constraints = {
 		startTimeInclusive(blank: false)
 		endTimeExclusive(blank: false)
-		caretype(blank:true, nullable: true)
-		timetype(blank:true, nullable: true)
+		caretype(nullable: true)
+		timetype(nullable: true)
 		resourceId(blank:true, nullable: true)
 		resourceName(blank:true, nullable: true)
 
