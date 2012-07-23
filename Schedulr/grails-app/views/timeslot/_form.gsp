@@ -57,12 +57,12 @@
 	<g:select id="healthcareFacility" name="healthcareFacility.id" from="${org.callistasoftware.schedulr.domain.HealthcareFacility.list()}" optionKey="id" required="" value="${timeslotInstance?.healthcareFacility?.id}" class="many-to-one"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: timeslotInstance, field: 'performer', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: timeslotInstance, field: 'performer', 'error')} ">
 	<label for="performer">
 		<g:message code="performer.label" default="Performer" />
-		<span class="required-indicator">*</span>
+		
 	</label>
-	<g:select id="performer" name="performer.id" from="${org.callistasoftware.schedulr.domain.Performer.list()}" optionKey="id" required="" value="${timeslotInstance?.performer?.id}" class="many-to-one"/>
+	<g:select id="performer" name="performer.id" from="${org.callistasoftware.schedulr.domain.Performer.list()}" optionKey="id" value="${timeslotInstance?.performer?.id}" class="many-to-one" noSelection="${['null':'']}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: timeslotInstance, field: 'purpose', 'error')} ">

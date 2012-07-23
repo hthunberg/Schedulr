@@ -33,6 +33,7 @@ class Timeslot {
 		endTimeExclusive(blank: false)
 		caretype(nullable: true)
 		timetype(nullable: true)
+		performer(nullable: true)
 		resourceId(blank:true, nullable: true)
 		resourceName(blank:true, nullable: true)
 
