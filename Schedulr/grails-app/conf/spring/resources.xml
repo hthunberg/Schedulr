@@ -13,5 +13,9 @@
 	<jaxws:endpoint id="getbookingdetailsresponderservice"
 		implementor="#getBookingDetailsService" address="/GetBookingDetails/1" >
 	</jaxws:endpoint>
+	
+	<jaxws:endpoint id="pingforconfigurationresponderservice"
+		implementor="#pingForConfigurationService" address="/PingForConfiguration/1" >
+	</jaxws:endpoint>
 
 </beans>

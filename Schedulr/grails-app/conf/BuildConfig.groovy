@@ -39,6 +39,8 @@ grails.project.dependency.resolution = {
 		compile 'org.apache.cxf:cxf-rt-frontend-jaxws:2.5.2'
 		compile 'org.apache.cxf:cxf-rt-transports-http:2.5.2'
 		compile 'se.rivta.tools:crm-scheduling-schemas:1.1.0'
+		compile 'se.riv.itintegration.monitoring:itintegration-monitoring-schemas:1.0.0'
+		
     }
 
     plugins {

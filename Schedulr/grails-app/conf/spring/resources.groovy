@@ -10,6 +10,9 @@ beans = {
 
 	getBookingDetailsService(org.callistasoftware.schedulr.services.GetBookingDetailsService){
 	}
+	
+	pingForConfigurationService(org.callistasoftware.schedulr.services.PingForConfigurationService){
+	}
 
 	switch (grails.util.GrailsUtil.environment) {
 
