@@ -63,9 +63,31 @@ grails.hibernate.cache.queries = true
 environments {
     development {
         grails.logging.jul.usebridge = true
+		engagementindex.updateEngagementIndex = true
+		engagementindex.endpoint.update = 'http://localhost:8088/Update'
+		engagementindex.trustStore.file = 'na'
+		engagementindex.trustStore.password = 'na'
+		engagementindex.trustStore.type = 'na'
+		engagementindex.keyStore.file = 'na'
+		engagementindex.keyStore.password = 'na'
+		engagementindex.keyStore.type = 'na'
+		engagementindex.keyStore.password = 'na' 
+		engagementindex.disableCnCheck = true
+		engagementindex.logicalAddress = '5565594230' // Inera's organization number
     }
     production {
         grails.logging.jul.usebridge = false
+		engagementindex.updateEngagementIndex = true
+		engagementindex.endpoint.update = ''
+		engagementindex.trustStore.file = 'na'
+		engagementindex.trustStore.password = 'na'
+		engagementindex.trustStore.type = 'na'
+		engagementindex.keyStore.file = 'na'
+		engagementindex.keyStore.password = 'na'
+		engagementindex.keyStore.type = 'na'
+		engagementindex.keyStore.password = 'na'
+		engagementindex.disableCnCheck = true
+		engagementindex.logicalAddress = '5565594230'
         // TODO: grails.serverURL = "http://www.changeme.com"
     }
 }
@@ -92,6 +114,6 @@ log4j = {
     debug  "org.callistasoftware.schedulr"
     
 	root {
-        debug()
+        info()
     }
 }

@@ -1,10 +1,13 @@
 package org.callistasoftware.schedulr.domain
 
+import org.callistasoftware.schedulr.services.EngagementIndexService;
 import org.springframework.dao.DataIntegrityViolationException
 
 class TimeslotController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
+	
+	def engagementIndexService
 
     def index() {
         redirect(action: "list", params: params)
@@ -25,7 +28,7 @@ class TimeslotController {
             render(view: "create", model: [timeslotInstance: timeslotInstance])
             return
         }
-
+		engagementIndexService.updateEngagementIndex(timeslotInstance)
 		flash.message = message(code: 'default.created.message', args: [message(code: 'timeslot.label', default: 'Timeslot'), timeslotInstance.id])
         redirect(action: "show", id: timeslotInstance.id)
     }
@@ -77,6 +80,8 @@ class TimeslotController {
             render(view: "edit", model: [timeslotInstance: timeslotInstance])
             return
         }
+		
+		engagementIndexService.updateEngagementIndex(timeslotInstance)
 
 		flash.message = message(code: 'default.updated.message', args: [message(code: 'timeslot.label', default: 'Timeslot'), timeslotInstance.id])
         redirect(action: "show", id: timeslotInstance.id)
@@ -93,7 +98,8 @@ class TimeslotController {
         try {
             timeslotInstance.delete(flush: true)
 			flash.message = message(code: 'default.deleted.message', args: [message(code: 'timeslot.label', default: 'Timeslot'), params.id])
-            redirect(action: "list")
+			engagementIndexService.updateEngagementIndex(timeslotInstance, true)
+			redirect(action: "list")
         }
         catch (DataIntegrityViolationException e) {
 			flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'timeslot.label', default: 'Timeslot'), params.id])

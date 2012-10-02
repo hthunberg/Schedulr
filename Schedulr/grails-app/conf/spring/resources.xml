@@ -1,10 +1,20 @@
 
 <beans default-autowire="byName"
 	xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:jaxws="http://cxf.apache.org/jaxws" xmlns:context="http://www.springframework.org/schema/context"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
-						http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd
-						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xmlns:sec="http://cxf.apache.org/configuration/security"
+	xmlns:http="http://cxf.apache.org/transports/http/configuration" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://cxf.apache.org/configuration/security
+                        http://cxf.apache.org/schemas/configuration/security.xsd
+                        http://cxf.apache.org/transports/http/configuration
+                        http://cxf.apache.org/schemas/configuration/http-conf.xsd
+						http://www.springframework.org/schema/beans 
+						http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+						http://cxf.apache.org/jaxws 
+						http://cxf.apache.org/schemas/jaxws.xsd
+						http://www.springframework.org/schema/context 
+						http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
 	<jaxws:endpoint id="getsubjectofcarescheduleresponderservice"
 		implementor="#getSubjectOfCareScheduleService" address="/GetSubjectOfCareSchedule/1" >
@@ -17,5 +27,48 @@
 	<jaxws:endpoint id="pingforconfigurationresponderservice"
 		implementor="#pingForConfigurationService" address="/PingForConfiguration/1" >
 	</jaxws:endpoint>
+	
+	<http:conduit name="http://.*">
+          <http:client AutoRedirect="true" Connection="Keep-Alive" 
+                ContentType="text/xml;charset=utf-8" Accept="application/soap+xml"/>
+    </http:conduit>
+
+    <http:conduit name="https://.*">
+       <http:tlsClientParameters disableCNCheck="${engagementindex.disableCnCheck}">
+          <sec:keyManagers keyPassword="${engagementindex.keyStore.password}">
+               <sec:keyStore type="${engagementindex.keyStore.type}" 
+               		password="${engagementindex.keyStore.password}"
+                    file="${engagementindex.keyStore.file}"/>
+          </sec:keyManagers>
+          <sec:trustManagers>
+              <sec:keyStore type="${engagementindex.trustStore.type}" 
+              	   password="${engagementindex.trustStore.password}"
+                   file="${engagementindex.trustStore.file}"/>
+          </sec:trustManagers>
+          <sec:cipherSuitesFilter>
+            <!-- these filters ensure that a ciphersuite with
+              export-suitable or null encryption is used,
+              but exclude anonymous Diffie-Hellman key change as
+              this is vulnerable to man-in-the-middle attacks -->
+            <sec:include>.*_EXPORT_.*</sec:include>
+            <sec:include>.*_EXPORT1024_.*</sec:include>
+            <sec:include>.*_WITH_DES_.*</sec:include>
+                <sec:include>.*_WITH_AES_.*</sec:include>
+            <sec:include>.*_WITH_NULL_.*</sec:include>
+            <sec:exclude>.*_DH_anon_.*</sec:exclude>
+          </sec:cipherSuitesFilter>
+      </http:tlsClientParameters>
+<!--       <http:authorization> -->
+<!--          <sec:UserName>Betty</sec:UserName> -->
+<!--          <sec:Password>password</sec:Password> -->
+<!--       </http:authorization> -->
+      <http:client AutoRedirect="true" Connection="Keep-Alive" 
+                ContentType="text/xml;charset=utf-8" Accept="application/soap+xml"/>
+   </http:conduit>
+   
+    <jaxws:client id="updateEngagementIndexClient"
+        serviceClass="se.riv.itintegration.engagementindex.update.v1.rivtabp21.UpdateResponderInterface"
+        address="${engagementindex.endpoint.update}">
+    </jaxws:client>
 
 </beans>
