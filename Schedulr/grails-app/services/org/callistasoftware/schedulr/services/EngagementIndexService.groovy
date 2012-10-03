@@ -14,7 +14,7 @@ import se.riv.itintegration.engagementindex.updateresponder.v1.UpdateType
 
 class EngagementIndexService {
 
-	@Autowired
+	@Autowired(required = false)
 	UpdateResponderInterface updateEngagementIndexClient;
 	
 	def grailsApplication

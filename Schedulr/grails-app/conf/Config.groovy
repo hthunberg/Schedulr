@@ -90,6 +90,20 @@ environments {
 		engagementindex.logicalAddress = '5565594230'
         // TODO: grails.serverURL = "http://www.changeme.com"
     }
+	test {
+//		grails.logging.jul.usebridge = true
+		engagementindex.updateEngagementIndex = true
+		engagementindex.endpoint.update = 'na'
+		engagementindex.trustStore.file = 'na'
+		engagementindex.trustStore.password = 'na'
+		engagementindex.trustStore.type = 'na'
+		engagementindex.keyStore.file = 'na'
+		engagementindex.keyStore.password = 'na'
+		engagementindex.keyStore.type = 'na'
+		engagementindex.keyStore.password = 'na'
+		engagementindex.disableCnCheck = true
+		engagementindex.logicalAddress = '5565594230' // Inera's organization number
+	}
 }
 
 // log4j configuration

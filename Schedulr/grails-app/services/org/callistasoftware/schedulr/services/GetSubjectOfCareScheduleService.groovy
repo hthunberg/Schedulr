@@ -27,10 +27,12 @@ class GetSubjectOfCareScheduleService implements GetSubjectOfCareScheduleRespond
 	@Override
 	public GetSubjectOfCareScheduleResponseType getSubjectOfCareSchedule(
 	String logicalAddress, ActorType actor, GetSubjectOfCareScheduleType getSubjectOfCareSchedule) {
-		//hasText(getSubjectOfCareSchedule.healthcareFacility, "missing argument \"healthcareFacility\"")
+		hasText(getSubjectOfCareSchedule.healthcareFacility, "missing argument \"healthcareFacility\"")
 		hasText(getSubjectOfCareSchedule.subjectOfCare, "missing argument \"subject_of_care\"")
-
-		log.debug("Get booking details for subject of care ${getSubjectOfCareSchedule.subjectOfCare}")
+		isTrue(logicalAddress == getSubjectOfCareSchedule.healthcareFacility, '"logicalAddress" differs from "healthcareFacility"')
+		
+		log.debug("Get booking details for subject of care ${getSubjectOfCareSchedule.subjectOfCare} " +
+			"at healthcare facility ${getSubjectOfCareSchedule.healthcareFacility}")
 
 		List timeSlots = getTimeSlots(getSubjectOfCareSchedule)
 		return ResponseBuilder.buildSubjectOfCareSchedule(timeSlots);
