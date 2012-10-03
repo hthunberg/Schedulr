@@ -21,7 +21,10 @@ class ResponseBuilder {
 
 	static GetBookingDetailsResponseType buildBookingDetails(Timeslot timeslot){
 		def response = new GetBookingDetailsResponseType()
-		TimeslotType timeSlotType = buildTimeslotType(timeslot)
+		TimeslotType timeSlotType
+		if (timeslot) {
+			timeSlotType = buildTimeslotType(timeslot)
+		}
 		response.setTimeslotDetail(timeSlotType);
 		return response
 	}

@@ -28,14 +28,19 @@ class GetBookingDetailsService implements GetBookingDetailsResponderInterface{
 	public GetBookingDetailsResponseType getBookingDetails(
 	String logicalAddress, ActorType actor, GetBookingDetailsType getBookingDetails) {
 		hasText(getBookingDetails.bookingId, "missing argument \"bookingId\"")
+		hasText(getBookingDetails.healthcareFacility, 'missing argument "healthcareFacility"')
+		isTrue(logicalAddress == getBookingDetails.healthcareFacility, '"logicalAddress" differs from "healthcareFacility"')
 		
-		log.debug("Get booking details for booking id ${getBookingDetails.bookingId}")
+		log.debug("Get booking details for booking id ${getBookingDetails.bookingId} " +
+			"and health care facility ${getBookingDetails.healthcareFacility}")
 
-		def timeslot = getTimeslotWithBookingId(getBookingDetails.bookingId)
+		def timeslot = getTimeslotWithBookingId(getBookingDetails.bookingId, getBookingDetails.healthcareFacility)
 		return ResponseBuilder.buildBookingDetails(timeslot);
 	}
 
-	private Timeslot getTimeslotWithBookingId(String bookingId){
-		return Timeslot.get(bookingId)
+	private Timeslot getTimeslotWithBookingId(String bookingId, String healthcareFacilityId){
+		Timeslot.find {
+			id == bookingId && healthcareFacility.healthcareFacility == healthcareFacilityId
+		}
 	}
 }
