@@ -34,12 +34,14 @@ class EngagementIndexService {
 		
 		EngagementType eiType = new EngagementType();
 		eiType.setRegisteredResidentIdentification(timeslot.subjectOfCare.subjectOfCareId)
-		eiType.setServiceDomain('urn:riv:crm:scheduling')
+		eiType.setServiceDomain('riv:crm:scheduling')
+		eiType.setSourceSystem(grailsApplication.config.schedulr.hsaId)
 		if (timeslot.isInvitation) {
 			eiType.setCategorization('Invitation')
 		} else {
 			eiType.setCategorization('Booking')
 		}
+		eiType.setClinicalProcessInterestId("NA")
 		eiType.setLogicalAddress(timeslot.healthcareFacility.healthcareFacility) // the hsaId of the healthcare facility
 		eiType.setBusinessObjectInstanceIdentifier("${timeslot.id}")
 		//eiType.setClinicalProcessInterestId() // Not used in the crm:scheduling domain
