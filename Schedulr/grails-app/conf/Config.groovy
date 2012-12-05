@@ -62,36 +62,36 @@ grails.hibernate.cache.queries = true
 // set per-environment serverURL stem for creating absolute links
 environments {
     development {
-        grails.logging.jul.usebridge = true
+    grails.logging.jul.usebridge = true
+		schedulr.hsaId = 'OWN-ID-IN-SERVICE-PLATFORM'
 		engagementindex.updateEngagementIndex = true
-		engagementindex.endpoint.update = 'http://localhost:8088/Update'
-		engagementindex.trustStore.file = 'na'
-		engagementindex.trustStore.password = 'na'
-		engagementindex.trustStore.type = 'na'
-		engagementindex.keyStore.file = 'na'
-		engagementindex.keyStore.password = 'na'
-		engagementindex.keyStore.type = 'na'
-		engagementindex.keyStore.password = 'na' 
+		engagementindex.endpoint.update = 'https://localhost:20000/vp/Update/1/rivtabp21'
+		engagementindex.trustStore.file = 'clienttruststore.jks'
+		engagementindex.trustStore.password = 'truststore-password-here'
+		engagementindex.trustStore.type = 'jks'
+		engagementindex.keyStore.file = 'client.jks'
+		engagementindex.keyStore.password = 'keystore-password-here'
+		engagementindex.keyStore.type = 'jks'
 		engagementindex.disableCnCheck = true
-		engagementindex.logicalAddress = '5565594230' // Inera's organization number
+		engagementindex.logicalAddress = 'EI-ID-IN-SERVICE-PLATFORM'
     }
     production {
-        grails.logging.jul.usebridge = false
-		engagementindex.updateEngagementIndex = true
-		engagementindex.endpoint.update = ''
-		engagementindex.trustStore.file = 'na'
-		engagementindex.trustStore.password = 'na'
-		engagementindex.trustStore.type = 'na'
-		engagementindex.keyStore.file = 'na'
-		engagementindex.keyStore.password = 'na'
-		engagementindex.keyStore.type = 'na'
-		engagementindex.keyStore.password = 'na'
-		engagementindex.disableCnCheck = true
-		engagementindex.logicalAddress = '5565594230'
-        // TODO: grails.serverURL = "http://www.changeme.com"
+    grails.logging.jul.usebridge = false
+    schedulr.hsaId = 'OWN-ID-IN-SERVICE-PLATFORM'
+    engagementindex.updateEngagementIndex = true
+		engagementindex.endpoint.update = 'https://localhost:20000/vp/Update/1/rivtabp21'
+		engagementindex.trustStore.file = 'clienttruststore.jks'
+		engagementindex.trustStore.password = 'truststore-password-here'
+		engagementindex.trustStore.type = 'jks'
+		engagementindex.keyStore.file = 'client.jks'
+		engagementindex.keyStore.password = 'keystore-password-here'
+		engagementindex.keyStore.type = 'jks'
+		engagementindex.disableCnCheck = true // set to false before going to production
+		engagementindex.logicalAddress = 'EI-ID-IN-SERVICE-PLATFORM'
     }
 	test {
 //		grails.logging.jul.usebridge = true
+		schedulr.hsaId = ''
 		engagementindex.updateEngagementIndex = true
 		engagementindex.endpoint.update = 'na'
 		engagementindex.trustStore.file = 'na'
