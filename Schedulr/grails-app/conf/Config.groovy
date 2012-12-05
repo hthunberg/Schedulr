@@ -86,7 +86,7 @@ environments {
 		engagementindex.keyStore.file = 'client.jks'
 		engagementindex.keyStore.password = 'keystore-password-here'
 		engagementindex.keyStore.type = 'jks'
-		engagementindex.disableCnCheck = true // set to false before going to production
+		engagementindex.disableCnCheck = false // make sure this is false before going to production
 		engagementindex.logicalAddress = 'EI-ID-IN-SERVICE-PLATFORM'
     }
 	test {
