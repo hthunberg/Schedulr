@@ -53,9 +53,11 @@ class ResponseBuilder {
 		timeSlotType.healthcareFacilityName = timeslot.getHealthcareFacility().healthcareFacilityName
 
 		//Performer information
-		timeSlotType.performer = timeslot.performer.performerId
-		timeSlotType.performerName = "$timeslot.performer.firstName $timeslot.performer.lastName, $timeslot.performer.title"
-
+		if (timeslot.performer != null) {
+			timeSlotType.performer = timeslot.performer.performerId
+			timeSlotType.performerName = "$timeslot.performer.firstName $timeslot.performer.lastName, $timeslot.performer.title"
+		}
+		
 		//Subject of care
 		timeSlotType.subjectOfCare = timeslot.subjectOfCare.subjectOfCareId
 
