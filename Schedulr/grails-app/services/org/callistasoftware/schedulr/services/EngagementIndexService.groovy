@@ -24,38 +24,41 @@ class EngagementIndexService {
 	 * Delete true if the cahnage was a delete and false if the change was a create or update. 
 	 */
 	def updateEngagementIndex = { Timeslot timeslot, boolean delete=false ->
+		log.debug("updateEngagementIndex")
 		if (!grailsApplication.config.engagementindex.updateEngagementIndex) {
+			log.debug("The application is configured not to update engagement index.")
 			return
 		}
 		Assert.notNull(timeslot.subjectOfCare, 'missing subjectOfCare on booking')
 		Assert.notNull(timeslot.healthcareFacility, 'missing healthcareFacility on booking')
 		UpdateType type = new UpdateType();
 		EngagementTransactionType eiTx = new EngagementTransactionType();
-		
+
 		EngagementType eiType = new EngagementType();
 		eiType.setRegisteredResidentIdentification(timeslot.subjectOfCare.subjectOfCareId)
 		eiType.setServiceDomain('riv:crm:scheduling')
-		eiType.setSourceSystem(grailsApplication.config.schedulr.hsaId)
 		if (timeslot.isInvitation) {
 			eiType.setCategorization('Invitation')
 		} else {
 			eiType.setCategorization('Booking')
 		}
-		eiType.setClinicalProcessInterestId("NA")
 		eiType.setLogicalAddress(timeslot.healthcareFacility.healthcareFacility) // the hsaId of the healthcare facility
 		eiType.setBusinessObjectInstanceIdentifier("${timeslot.id}")
-		//eiType.setClinicalProcessInterestId() // Not used in the crm:scheduling domain
+		eiType.setClinicalProcessInterestId("NA")
 		if (timeslot.isInvitation && !timeslot.getStartTimeInclusive()) {
 			eiType.setMostRecentContent(timeslot.dateCreated.format("yyyyMMddHHmmss"))
 		} else {
 			eiType.setMostRecentContent(timeslot.getStartTimeInclusive().format("yyyyMMddHHmmss"))
 		}
-		
-		eiTx.setEngagement(eiType);
+		eiType.setSourceSystem(grailsApplication.config.schedulr.hsaId)
+		eiType.setDataController("schedulr-controller")
+		eiTx.setEngagement(eiType)
 		eiTx.setDeleteFlag(delete)
 		
 		type.getEngagementTransaction().add(eiTx)
+		log.debug("Sending engagement update entry to engagement index at address ${grailsApplication.config.engagementindex.endpoint.update} ...")
 		UpdateResponseType resp = updateEngagementIndexClient.update(grailsApplication.config.engagementindex.logicalAddress, type)
+		log.debug("Engagement update sent!")
 		resp
 	}
 }

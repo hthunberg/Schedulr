@@ -1,10 +1,8 @@
 // locations to search for config files that get merged into the main config
 // config files can either be Java properties files or ConfigSlurper scripts
 
-// grails.config.locations = [ "classpath:${appName}-config.properties",
-//                             "classpath:${appName}-config.groovy",
-//                             "file:${userHome}/.grails/${appName}-config.properties",
-//                             "file:${userHome}/.grails/${appName}-config.groovy"]
+ grails.config.locations = [ "file:${userHome}/.grails/${appName}-config.properties",
+                             "file:${userHome}/.grails/${appName}-config.groovy"]
 
 // if (System.properties["${appName}.config.location"]) {
 //    grails.config.locations << "file:" + System.properties["${appName}.config.location"]
@@ -62,37 +60,40 @@ grails.hibernate.cache.queries = true
 // set per-environment serverURL stem for creating absolute links
 environments {
     development {
-    grails.logging.jul.usebridge = true
-		schedulr.hsaId = 'OWN-ID-IN-SERVICE-PLATFORM'
-		engagementindex.updateEngagementIndex = true
+        grails.logging.jul.usebridge = true
+		schedulr.hsaId = "tptest.callistasoftware.org"
+		engagementindex.updateEngagementIndex = false
 		engagementindex.endpoint.update = 'https://localhost:20000/vp/Update/1/rivtabp21'
-		engagementindex.trustStore.file = 'clienttruststore.jks'
-		engagementindex.trustStore.password = 'truststore-password-here'
+		engagementindex.trustStore.file = '/opt/mule/certs/clienttruststore.jks'
+		engagementindex.trustStore.password = '[PASSWORD]'
 		engagementindex.trustStore.type = 'jks'
-		engagementindex.keyStore.file = 'client.jks'
-		engagementindex.keyStore.password = 'keystore-password-here'
+		engagementindex.keyStore.file = '/opt/mule/certs/client.jks'
+		engagementindex.keyStore.password = '[PASSWORD]'
 		engagementindex.keyStore.type = 'jks'
 		engagementindex.disableCnCheck = true
-		engagementindex.logicalAddress = 'EI-ID-IN-SERVICE-PLATFORM'
+		engagementindex.logicalAddress = 'HSA-ID-SLL-EI'
     }
     production {
-    grails.logging.jul.usebridge = false
-    schedulr.hsaId = 'OWN-ID-IN-SERVICE-PLATFORM'
-    engagementindex.updateEngagementIndex = true
+        grails.logging.jul.usebridge = false
+		schedulr.hsaId = "tptest.callistasoftware.org"
+		engagementindex.updateEngagementIndex = false
 		engagementindex.endpoint.update = 'https://localhost:20000/vp/Update/1/rivtabp21'
-		engagementindex.trustStore.file = 'clienttruststore.jks'
-		engagementindex.trustStore.password = 'truststore-password-here'
+		engagementindex.trustStore.file = '/opt/mule/certs/clienttruststore.jks'
+		engagementindex.trustStore.password = '[PASSWORD]'
 		engagementindex.trustStore.type = 'jks'
-		engagementindex.keyStore.file = 'client.jks'
-		engagementindex.keyStore.password = 'keystore-password-here'
+		engagementindex.keyStore.file = '/opt/mule/certs/client.jks'
+		engagementindex.keyStore.password = '[PASSWORD]'
 		engagementindex.keyStore.type = 'jks'
-		engagementindex.disableCnCheck = false // make sure this is false before going to production
-		engagementindex.logicalAddress = 'EI-ID-IN-SERVICE-PLATFORM'
+		engagementindex.disableCnCheck = true // set to false before going to production
+		engagementindex.logicalAddress = 'HSA-ID-SLL-EI'
+//		engagementindex.disableCnCheck = true
+		//engagementindex.logicalAddress = '5565594230'
+        // TODO: grails.serverURL = "http://www.changeme.com"
     }
 	test {
 //		grails.logging.jul.usebridge = true
-		schedulr.hsaId = ''
-		engagementindex.updateEngagementIndex = true
+		schedulr.hsaId = "tptest.callistasoftware.org"
+		engagementindex.updateEngagementIndex = false
 		engagementindex.endpoint.update = 'na'
 		engagementindex.trustStore.file = 'na'
 		engagementindex.trustStore.password = 'na'
@@ -125,9 +126,9 @@ log4j = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 	
-    debug  "org.callistasoftware.schedulr"
+    debug  'org.callistasoftware.schedulr'
     
 	root {
-        info()
+        debug()
     }
 }
