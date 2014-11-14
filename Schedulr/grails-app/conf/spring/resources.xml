@@ -23,6 +23,14 @@
 	<jaxws:endpoint id="getbookingdetailsresponderservice"
 		implementor="#getBookingDetailsService" address="/GetBookingDetails/1" >
 	</jaxws:endpoint>
+
+	<jaxws:endpoint id="cancelbookingresponderservice"
+		implementor="#cancelBookingService" address="/CancelBooking/1" >
+	</jaxws:endpoint>
+	
+	<jaxws:endpoint id="makebookingresponderservice"
+		implementor="#makeBookingService" address="/MakeBooking/1" >
+	</jaxws:endpoint>	
 	
 	<jaxws:endpoint id="pingforconfigurationresponderservice"
 		implementor="#pingForConfigurationService" address="/PingForConfiguration/1" >
