@@ -22,6 +22,13 @@ enum Caretype {
 	String getKey() {
 		name()
 	}
+	
+	public static Caretype getById(String id) {
+		for(Caretype e : values()) {
+			if(e.id == id) return e;
+		}
+		return null;
+	}
 
 	static list(){
 		[

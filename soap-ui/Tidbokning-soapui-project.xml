@@ -1104,21 +1104,22 @@ xmlns:urn2="urn:riv:crm:scheduling:CancelBookingResponder:1">
          <urn:actorType>?</urn:actorType>
          <!--You may enter ANY elements at this point-->
       </urn:Actor>
-      <urn1:LogicalAddress>X</urn1:LogicalAddress>
+      <urn1:LogicalAddress>HSA-VKK123</urn1:LogicalAddress>
    </soapenv:Header>
    <soapenv:Body>
       <urn2:MakeBooking>
-         <urn2:healthcare_facility_med>X</urn2:healthcare_facility_med>
+         <urn2:healthcare_facility_med>HSA-VKK123</urn2:healthcare_facility_med>
          <urn2:requestedTimeslot>
-            <urn3:startTimeInclusive>201411141000</urn3:startTimeInclusive>
-            <urn3:endTimeExclusive>201411141100</urn3:endTimeExclusive>
-            <urn3:healthcare_facility>X</urn3:healthcare_facility>
+            <urn3:startTimeInclusive>20150101211500</urn3:startTimeInclusive>
+            <urn3:endTimeExclusive>20150101214500</urn3:endTimeExclusive>
+            <urn3:healthcare_facility>HSA-VKK123</urn3:healthcare_facility>
             <!--Optional:-->
-            <urn3:subject_of_care>121212-1212</urn3:subject_of_care>
+            <urn3:subject_of_care>197004064155</urn3:subject_of_care>
          </urn2:requestedTimeslot>
          <urn2:subject_of_care_info>
-            <urn4:firstName>Tolvan</urn4:firstName>
-            <urn4:lastName>Tolvansson</urn4:lastName>
+            <urn4:firstName>Olle</urn4:firstName>
+            <urn4:lastName>Granberg</urn4:lastName>
+            <urn3:phone>123</urn3:phone>
          </urn2:subject_of_care_info>
       </urn2:MakeBooking>
    </soapenv:Body>

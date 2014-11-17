@@ -24,6 +24,7 @@ class TimeslotController {
 
     def save() {
         def timeslotInstance = new Timeslot(params)
+		timeslotInstance.healthcareFacilityMed = timeslotInstance.healthcareFacility
         if (!timeslotInstance.save(flush: true)) {
             render(view: "create", model: [timeslotInstance: timeslotInstance])
             return
@@ -75,7 +76,8 @@ class TimeslotController {
         }
 
         timeslotInstance.properties = params
-
+		timeslotInstance.healthcareFacilityMed = timeslotInstance.healthcareFacility
+		
         if (!timeslotInstance.save(flush: true)) {
             render(view: "edit", model: [timeslotInstance: timeslotInstance])
             return

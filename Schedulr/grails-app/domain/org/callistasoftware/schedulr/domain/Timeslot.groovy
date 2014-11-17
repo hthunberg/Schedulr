@@ -16,9 +16,40 @@ class Timeslot {
 	String resourceId
 	String resourceName
 	Timetype timetype
+	/**
+	 * The name of the time type as given by the MakeBooking or UpdateBooking request during booking
+	 */
+	String timeTypeNameFromBooking
 	Caretype caretype
+	/**
+	 * The name of the care type as given by the MakeBooking or UpdateBooking request during booking
+	 */
+	String careTypeNameFromBooking
+	/**
+	 * The booked health care facility (SV: mottagning)
+	 */
 	HealthcareFacility healthcareFacility
+	/**
+	 * The name of the healthcare facility as given by the MakeBooking or UpdateBooking request during booking
+	 */
+	String healthcareFacilityNameFromBooking
+	/**
+	 * The healthcare facility holding the medical responsibility 
+	 * (SV: Den vårdenhet som har det medicinska ansvaret; klinik/vårdcentral/sektion)
+	 */
+	HealthcareFacility healthcareFacilityMed
+	/**
+	 * The healthcare professional scheduled for this booking
+	 */
 	Performer performer
+	/**
+	 * The name of the performer as given by the MakeBooking or UpdateBooking request during booking
+	 */
+	String performerNameFromBooking
+	/**
+	 * Notification as given by the MakeBooking or UpdateBooking request during booking
+	 */
+	String notificationFromBooking
 
 	static belongsTo = [subjectOfCare: SubjectOfCare]
 
@@ -36,6 +67,14 @@ class Timeslot {
 		performer(nullable: true)
 		resourceId(blank:true, nullable: true)
 		resourceName(blank:true, nullable: true)
+		
+		timeTypeNameFromBooking(blank:true, nullable: true)
+		careTypeNameFromBooking(blank:true, nullable: true)
+		healthcareFacilityNameFromBooking(blank:true, nullable: true)
+		performerNameFromBooking(blank:true, nullable: true)
+		notificationFromBooking(blank:true, nullable: true)
+		purpose(blank:true, nullable: true)
+		reason(blank:true, nullable: true)
 
 		resourceName validator: { resourceName,obj  ->
 			if(resourceName != null && obj.resourceId == null) return ['resourceName.withoutResourceId']
@@ -45,8 +84,6 @@ class Timeslot {
 			if(resourceId != null && obj.resourceName == null) return ['resourceId.withoutResourceName']
 		}
 	}
-
-
 
 	public String toString() {
 		"$startTimeInclusive - $endTimeExclusive"

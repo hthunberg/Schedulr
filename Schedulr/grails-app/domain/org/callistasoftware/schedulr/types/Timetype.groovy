@@ -11,6 +11,13 @@ enum Timetype {
 		this.name = name;
 		this.id = id;
 	}
+	
+	public static Timetype getById(String id) {
+		for(Timetype e : values()) {
+			if(e.id == id) return e;
+		}
+		return null;
+	}
 
 	String toString() {
 		name

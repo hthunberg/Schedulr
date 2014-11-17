@@ -16,11 +16,11 @@ class SubjectOfCare {
 	static constraints = {
 		firstName(blank: false)
 		lastName(blank: false)
-		phone(blank: false)
-		email(email: true, blank: false, )
+		phone(blank: true, nullable: true)
+		email(email: true, blank: false, nullable: true )
 		subjectOfCareId(blank: false, unique:true, matches: '([0-9]{12})')
 		coAddress(nullable: true)
-		homeAddress(blank: false)
+		homeAddress(nullable: true)
 		middleName(nullable: true)
 	}
 
