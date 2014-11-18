@@ -27,7 +27,8 @@ class GetSubjectOfCareScheduleService implements GetSubjectOfCareScheduleRespond
 	@Override
 	public GetSubjectOfCareScheduleResponseType getSubjectOfCareSchedule(
 	String logicalAddress, ActorType actor, GetSubjectOfCareScheduleType getSubjectOfCareSchedule) {
-		hasText(getSubjectOfCareSchedule.healthcareFacility, "missing argument \"healthcareFacility\"")
+		
+		hasText(getSubjectOfCareSchedule.healthcareFacility, "missing argument \"healthcare_facility\"")
 		hasText(getSubjectOfCareSchedule.subjectOfCare, "missing argument \"subject_of_care\"")
 		isTrue(logicalAddress == getSubjectOfCareSchedule.healthcareFacility, '"logicalAddress" differs from "healthcareFacility"')
 		

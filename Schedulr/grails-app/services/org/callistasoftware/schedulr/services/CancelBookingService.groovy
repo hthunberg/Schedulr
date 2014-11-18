@@ -34,6 +34,10 @@ class CancelBookingService implements CancelBookingResponderInterface {
 				booking: $cancelBooking.bookingId 
 				message: $cancelBooking.message
 				"""
+		hasText(cancelBooking.healthcareFacility, 'missing argument "healthcareFacility"')
+		hasText(cancelBooking.bookingId, "missing argument \"bookingId\"")
+		isTrue(logicalAddress == cancelBooking.healthcareFacility, '"logicalAddress" differs from "healthcareFacility"')
+				
 		CancelBookingResponseType resp = new CancelBookingResponseType();
         def healthcareFacilityInstance = HealthcareFacility.findByHealthcareFacility(cancelBooking.healthcareFacility)
 		if (!healthcareFacilityInstance) {

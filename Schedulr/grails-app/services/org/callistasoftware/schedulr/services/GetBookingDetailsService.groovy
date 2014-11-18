@@ -28,8 +28,8 @@ class GetBookingDetailsService implements GetBookingDetailsResponderInterface{
 	public GetBookingDetailsResponseType getBookingDetails(
 	String logicalAddress, ActorType actor, GetBookingDetailsType getBookingDetails) {
 		hasText(getBookingDetails.bookingId, "missing argument \"bookingId\"")
-		hasText(getBookingDetails.healthcareFacility, 'missing argument "healthcareFacility"')
-		isTrue(logicalAddress == getBookingDetails.healthcareFacility, '"logicalAddress" differs from "healthcareFacility"')
+		hasText(getBookingDetails.healthcareFacility, 'missing argument "healthcare_cacility"')
+		isTrue(logicalAddress == getBookingDetails.healthcareFacility, '"logicalAddress" differs from "healthcare_facility"')
 		
 		log.debug("Get booking details for booking id ${getBookingDetails.bookingId} " +
 			"and health care facility ${getBookingDetails.healthcareFacility}")

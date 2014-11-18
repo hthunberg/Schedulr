@@ -44,6 +44,15 @@ class MakeBookingService implements MakeBookingResponderInterface {
 			end: $makeBooking.requestedTimeslot.startTimeInclusive
 			"""
 
+		hasText(makeBooking.healthcareFacilityMed, "missing argument \"healthcare_facility_med\"")
+		hasText(makeBooking.requestedTimeslot.startTimeInclusive, "missing argument \"requestedTimeslot.startTimeInclusive\"")
+		hasText(makeBooking.requestedTimeslot.endTimeExclusive, "missing argument \"requestedTimeslot.endTimeExclusive\"")
+		hasText(makeBooking.requestedTimeslot.healthcareFacility, "missing argument \"requestedTimeslot.healthcare_facility\"")
+		hasText(makeBooking.requestedTimeslot.subjectOfCare, "missing argument \"requestedTimeslot.subject_of_care\"")
+		hasText(makeBooking.subjectOfCareInfo.firstName, "missing argument \"subjectOfCareInfo.firstName\"")
+		hasText(makeBooking.subjectOfCareInfo.lastName, "missing argument \"subjectOfCareInfo.lastName\"")
+		isTrue(logicalAddress == makeBooking.requestedTimeslot.healthcareFacility, '"logicalAddress" differs from "requestedTimeslot.healthcareFacility"')
+			
 		MakeBookingResponseType resp = new MakeBookingResponseType()
 		
 		def healthcareFacilityInstance = HealthcareFacility.findByHealthcareFacility(makeBooking.requestedTimeslot.healthcareFacility)

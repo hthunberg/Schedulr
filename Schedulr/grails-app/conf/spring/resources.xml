@@ -28,6 +28,14 @@
 		implementor="#cancelBookingService" address="/CancelBooking/1" >
 	</jaxws:endpoint>
 	
+	<jaxws:endpoint id="getallcaretypesresponderservice"
+		implementor="#getAllCareTypesService" address="/GetAllCareTypes/1" >
+	</jaxws:endpoint>
+	
+	<jaxws:endpoint id="getalltimetypesresponderservice"
+		implementor="#getAllTimeTypesService" address="/GetAllTimeTypes/1" >
+	</jaxws:endpoint>	
+	
 	<jaxws:endpoint id="makebookingresponderservice"
 		implementor="#makeBookingService" address="/MakeBooking/1" >
 	</jaxws:endpoint>	

@@ -13,6 +13,12 @@ beans = {
 
 	cancelBookingService(org.callistasoftware.schedulr.services.CancelBookingService){
 	}
+	
+	getAllCareTypesService(org.callistasoftware.schedulr.services.GetAllCareTypesService){
+	}
+	
+	getAllTimeTypesService(org.callistasoftware.schedulr.services.GetAllTimeTypesService){
+	}
 
 	makeBookingService(org.callistasoftware.schedulr.services.MakeBookingService){
 	}
