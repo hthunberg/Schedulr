@@ -19,7 +19,16 @@ beans = {
 	
 	getAllTimeTypesService(org.callistasoftware.schedulr.services.GetAllTimeTypesService){
 	}
+	
+	getAllHealthcareFacilitiesService(org.callistasoftware.schedulr.services.GetAllHealthcareFacilitiesService){
+	}
 
+	getAllPerformersService(org.callistasoftware.schedulr.services.GetAllPerformersService){
+	}
+	
+	getAvailableDatesService(org.callistasoftware.schedulr.services.GetAvailableDatesService){
+	}
+	
 	makeBookingService(org.callistasoftware.schedulr.services.MakeBookingService){
 	}
 	

@@ -1451,4 +1451,1436 @@ xmlns:urn2="urn:riv:crm:scheduling:CancelBookingResponder:1">
          <!--You may enter ANY elements at this point-->
       </urn2:GetAllCareTypes>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:crm:scheduling:GetAllCareTypesResponder:1:GetAllCareTypes"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:crm:scheduling:GetAllCareTypesResponder:1:GetAllCareTypes"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="GetAllTimeTypesResponderBinding" type="wsdl" bindingName="{urn:riv:crm:scheduling:GetAllTimeTypes:1:rivtabp21}GetAllTimeTypesResponderBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080/Schedulr/ws/GetAllTimeTypes/1?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080/Schedulr/ws/GetAllTimeTypes/1?wsdl"><con:part><con:url>http://localhost:8080/Schedulr/ws/GetAllTimeTypes/1?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="GetAllTimeTypesInteraction" targetNamespace="urn:riv:crm:scheduling:GetAllTimeTypes:1:rivtabp21" xmlns:ih="urn:riv:interoperability:headers:1" xmlns:itr="urn:riv:itintegration:registry:1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tjsr="urn:riv:crm:scheduling:GetAllTimeTypesResponder:1" xmlns:tns="urn:riv:crm:scheduling:GetAllTimeTypes:1:rivtabp21" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xs:schema targetNamespace="urn:riv:crm:scheduling:GetAllTimeTypes:1:rivtabp21">
+      <xs:import namespace="urn:riv:crm:scheduling:GetAllTimeTypesResponder:1" schemaLocation="http://localhost:8080/Schedulr/ws/GetAllTimeTypes/1?xsd=GetAllTimeTypesResponder_1.1.xsd"/>
+      <xs:import namespace="urn:riv:itintegration:registry:1" schemaLocation="http://localhost:8080/Schedulr/ws/GetAllTimeTypes/1?xsd=../../core_components/itintegration_registry_1.0.xsd"/>
+      <xs:import namespace="urn:riv:interoperability:headers:1" schemaLocation="http://localhost:8080/Schedulr/ws/GetAllTimeTypes/1?xsd=../../core_components/interoperability_headers_1.0.xsd"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GetAllTimeTypesRequest">
+    <wsdl:part element="itr:LogicalAddress" name="LogicalAddress">
+      <wsdl:documentation>hsaid of the healthcare_facility owning the schedule</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part element="ih:Actor" name="actor"></wsdl:part>
+    <wsdl:part element="tjsr:GetAllTimeTypes" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetAllTimeTypesResponse">
+    <wsdl:part element="tjsr:GetAllTimeTypesResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="GetAllTimeTypesResponderInterface">
+    <wsdl:operation name="GetAllTimeTypes">
+      <wsdl:input message="tns:GetAllTimeTypesRequest"></wsdl:input>
+      <wsdl:output message="tns:GetAllTimeTypesResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GetAllTimeTypesResponderBinding" type="tns:GetAllTimeTypesResponderInterface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetAllTimeTypes">
+      <soap:operation soapAction="urn:riv:crm:scheduling:GetAllTimeTypesResponder:1:GetAllTimeTypes" style="document"/>
+      <wsdl:input>
+        <soap:header message="tns:GetAllTimeTypesRequest" part="LogicalAddress" use="literal"></soap:header>
+        <soap:header message="tns:GetAllTimeTypesRequest" part="actor" use="literal"></soap:header>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GetAllTimeTypesResponderService">
+    <wsdl:port binding="tns:GetAllTimeTypesResponderBinding" name="GetAllTimeTypesResponderPort">
+      <soap:address location="http://localhost:8080/Schedulr/ws/GetAllTimeTypes/1"/>
+    </wsdl:port>
+  </wsdl:service>
+  <xs:annotation>
+    <xs:documentation>Tjänsteinteraktionens namn: GetAllTimeTypesInteraction
+			 Beskrivning: 
+			   Interaction to retrieve all time types supported by a healthcare facility.
+			 Revisioner: 
+			 Tjänstedomän: crm:scheduling
+			 Tjänsteinteraktionstyp: Fråga-Svar
+			 WS-profil: RIVTABP21
+			 Förvaltas av: Sveriges Kommuner och Landsting</xs:documentation>
+  </xs:annotation>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:8080/Schedulr/ws/GetAllTimeTypes/1?xsd=GetAllTimeTypesResponder_1.1.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:riv:crm:scheduling:GetAllTimeTypesResponder:1" version="1.1" xmlns:core="urn:riv:crm:scheduling:1" xmlns:m1="urn:riv:crm:scheduling:GetAllTimeTypesResponder:1.1" xmlns:tns="urn:riv:crm:scheduling:GetAllTimeTypesResponder:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: Tjänsteschema för GetAllTimeTypesResponder.
+	  Revisioner: 
+		2010-04-21: Release version 1.0 johan.eltes@callistaenterprise.se.
+		2011-03-XX: Release version 1.1 johan.eltes@callistaenterprise.se.
+			- Nya request-element: subject_of_care (obligatoriskt), careTypeId (lista). Osor change request: 15088.</xs:documentation>
+  </xs:annotation>
+  <xs:import namespace="urn:riv:crm:scheduling:1" schemaLocation="http://localhost:8080/Schedulr/ws/GetAllTimeTypes/1?xsd=../../core_components/crm_scheduling_1.1.xsd"/>
+  <xs:import namespace="urn:riv:crm:scheduling:GetAllTimeTypesResponder:1.1" schemaLocation="http://localhost:8080/Schedulr/ws/GetAllTimeTypes/1?xsd=GetAllTimeTypesResponder_1.1_ext.xsd"/>
+  <xs:element name="GetAllTimeTypes" type="tns:GetAllTimeTypesType"/>
+  <xs:element name="GetAllTimeTypesResponse" type="tns:GetAllTimeTypesResponseType"/>
+  <xs:complexType name="GetAllTimeTypesType">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="healthcare_facility" type="core:HsaIdType"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="m1:careTypeIDs"/>
+      <xs:element minOccurs="1" ref="m1:subject_of_care"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetAllTimeTypesResponseType">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="ListOfTimeTypes" type="core:TimeTypeType"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8080/Schedulr/ws/GetAllTimeTypes/1?xsd=../../core_components/crm_scheduling_1.1.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Inera AB licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:riv:crm:scheduling:1" version="1.1" xmlns:m1="urn:riv:crm:scheduling:1.1" xmlns:tns="urn:riv:crm:scheduling:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: Meddelandeformat för crm:scheduling.
+	  Revisioner: 
+		2010-04-21: Release version 1.0 johan.eltes@callistaenterprise.se.
+		2011-03-XX: Release version 1.1 johan.eltes@callistaenterprise.se.
+			- SubjectOfCareType: New elements: firstName, middleName, lastName. Osor change request:15075
+			- New structure declared: CareTypeType. Osor change request:15087	
+			- New reusable type: PerformerInfoType. 
+			- New reusable type: HealthcareFacilityInfoType</xs:documentation>
+  </xs:annotation>
+  <xs:import namespace="urn:riv:crm:scheduling:1.1" schemaLocation="http://localhost:8080/Schedulr/ws/GetAllTimeTypes/1?xsd=crm_scheduling_1.1_ext.xsd"/>
+  <xs:complexType name="TimeslotType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="startTimeInclusive" type="tns:TS"/>
+      <xs:element minOccurs="0" name="endTimeExclusive" type="tns:TS"/>
+      <xs:element minOccurs="1" name="healthcare_facility" type="tns:HsaIdType"/>
+      <xs:element minOccurs="0" name="performer" type="tns:HsaIdType"/>
+      <xs:element minOccurs="0" name="bookingId" type="tns:BookingIdType"/>
+      <xs:element minOccurs="0" name="subject_of_care" type="tns:SubjectOfCareIdType"/>
+      <xs:element minOccurs="0" name="purpose" type="xs:string"/>
+      <xs:element minOccurs="0" name="reason" type="xs:string"/>
+      <xs:element minOccurs="0" name="resourceName" type="xs:string"/>
+      <xs:element minOccurs="0" name="healthcare_facility_name" type="xs:string"/>
+      <xs:element minOccurs="0" name="performerName" type="xs:string"/>
+      <xs:element minOccurs="0" name="resourceID" type="tns:ResourceIDType"/>
+      <xs:element minOccurs="0" name="timeTypeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="timeTypeID" type="tns:TimeTypeIDType"/>
+      <xs:element minOccurs="0" name="careTypeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="careTypeID" type="tns:CareTypeIDType"/>
+      <xs:element minOccurs="0" name="cancel_booking_allowed" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="rebooking_allowed" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="message_allowed" type="xs:boolean"/>
+      <xs:element minOccurs="0" ref="m1:isInvitation"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="BookingIdType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="HsaIdType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="SubjectOfCareIdType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="^[0-9]{8}[0-9pPtTfF][0-9]{3}$"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ResultCodeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OK"/>
+      <xs:enumeration value="ERROR"/>
+      <xs:enumeration value="INFO"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="SubjectOfCareType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="phone" type="xs:string"/>
+      <xs:element minOccurs="0" name="email" type="xs:string"/>
+      <xs:element minOccurs="0" name="address" type="xs:string"/>
+      <xs:element minOccurs="0" name="coaddress" type="xs:string"/>
+      <xs:element minOccurs="1" ref="m1:firstName"/>
+      <xs:element minOccurs="0" ref="m1:middleName"/>
+      <xs:element minOccurs="1" ref="m1:lastName"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TimeTypeType">
+    <xs:sequence>
+      <xs:element name="timeTypeName" type="xs:string"/>
+      <xs:element name="timeTypeId" type="tns:TimeTypeIDType"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CareTypeType">
+    <xs:sequence>
+      <xs:element name="careTypeName" type="xs:string"/>
+      <xs:element name="careTypeId" type="tns:CareTypeIDType"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ResourceIDType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="TimeTypeIDType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="CareTypeIDType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="TS">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[1-9]{1}[0-9]{3}(0[1-9]{1}|1[0-2]{1})([0-2]{1}[0-9]{1}|3[0-1]{1})([0-1]{1}[0-9]{1}|2[0-3]{1})[0-5]{1}[0-9]{1}[0-5]{1}[0-9]{1}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DT">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[1-9]{1}[0-9]{3}(0[1-9]{1}|1[0-2]{1})([0-2]{1}[0-9]{1}|3[0-1]{1})"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="PerformerInfoType">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="perfomer" type="tns:HsaIdType"/>
+      <xs:element minOccurs="1" name="firstName" type="xs:string"/>
+      <xs:element minOccurs="1" name="lastName" type="xs:string"/>
+      <xs:element minOccurs="0" name="title" type="xs:string"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="HealthcareFacilityInfoType">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="healthcare_facility" type="tns:HsaIdType"/>
+      <xs:element minOccurs="0" name="healthcare_facility_name" type="xs:string"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8080/Schedulr/ws/GetAllTimeTypes/1?xsd=crm_scheduling_1.1_ext.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Inera AB licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:riv:crm:scheduling:1.1" version="1.1" xmlns:tns="urn:riv:crm:scheduling:1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: Extensibility schema for crm:scheduling 1.1
+	  Revisioner: 
+		2011-03-XX: Release johan.eltes@callistaenterprise.se.</xs:documentation>
+  </xs:annotation>
+  <xs:element name="firstName" type="xs:string"/>
+  <xs:element name="middleName" type="xs:string"/>
+  <xs:element name="lastName" type="xs:string"/>
+  <xs:element name="isInvitation" type="xs:boolean"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8080/Schedulr/ws/GetAllTimeTypes/1?xsd=GetAllTimeTypesResponder_1.1_ext.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Inera AB licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:riv:crm:scheduling:GetAllTimeTypesResponder:1.1" version="1.1" xmlns:core="urn:riv:crm:scheduling:1" xmlns:tns="urn:riv:crm:scheduling:GetAllTimeTypesResponder:1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: Extensibility schema for GetAllTimeTypesResponder 1.1
+	  Revisioner: 
+		2011-03-XX: Release 1.1 johan.eltes@callistaenterprise.se.</xs:documentation>
+  </xs:annotation>
+  <xs:import namespace="urn:riv:crm:scheduling:1" schemaLocation="http://localhost:8080/Schedulr/ws/GetAllTimeTypes/1?xsd=../../core_components/crm_scheduling_1.1.xsd"/>
+  <xs:element name="subject_of_care" type="core:SubjectOfCareIdType"/>
+  <xs:element name="careTypeIDs" type="core:CareTypeIDType"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8080/Schedulr/ws/GetAllTimeTypes/1?xsd=../../core_components/itintegration_registry_1.0.xsd</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="urn:riv:itintegration:registry:1" version="1.0" xmlns="urn:riv:itintegration:registry:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: 	Grundläggande informationsobjekt för domänen itintegration:registry (adressering av tjänster)
+			
+			Revisionshistorik: 2011-06-27 Mats Ekhammar, Callista Enterprise AB
+				Added ServiceContractType
+			
+			Datum:			2011-05-04
+			Beskrivning:	Initial version
+			Författare:		marcus.krantz@callistaenterprise.se</xs:documentation>
+  </xs:annotation>
+  <xs:element name="LogicalAddress" type="LogicalAddressType"/>
+  <xs:element name="ServiceContract" type="ServiceContractType"/>
+  <xs:simpleType name="LogicalAddressType">
+    <xs:annotation>
+      <xs:documentation>Defines the type for logical address according to national reference architecture.
+				Superseeds wsa:To as type for logical address header in RIVTA 2.1.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="ServiceContractType">
+    <xs:annotation>
+      <xs:documentation>Type which describes a service contract. Used in interaction GetSupportedServiceContracts.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ServiceContractNamespace" type="xs:anyURI"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8080/Schedulr/ws/GetAllTimeTypes/1?xsd=../../core_components/interoperability_headers_1.0.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:riv:interoperability:headers:1" version="1.0" xmlns:tns="urn:riv:interoperability:headers:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Actor" type="tns:ActorType"/>
+  <xs:complexType name="ActorType">
+    <xs:sequence>
+      <xs:element name="actorId" type="tns:ActorIdType"/>
+      <xs:element name="actorType" type="tns:ActorTypeEnum"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ActorIdType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="ActorTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="subject_of_care"/>
+      <xs:enumeration value="subject_of_care_agent"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/Schedulr/ws/GetAllTimeTypes/1</con:endpoint></con:endpoints><con:operation isOneWay="false" action="urn:riv:crm:scheduling:GetAllTimeTypesResponder:1:GetAllTimeTypes" name="GetAllTimeTypes" bindingOperationName="GetAllTimeTypes" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/Schedulr/ws/GetAllTimeTypes/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:crm:scheduling:GetAllTimeTypesResponder:1" xmlns:urn3="urn:riv:crm:scheduling:GetAllTimeTypesResponder:1.1">
+   <soapenv:Header>
+      <urn:Actor>
+         <urn:actorId>?</urn:actorId>
+         <urn:actorType>?</urn:actorType>
+         <!--You may enter ANY elements at this point-->
+      </urn:Actor>
+      <urn1:LogicalAddress>HSA-VKK123</urn1:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn2:GetAllTimeTypes>
+         <urn2:healthcare_facility>HSA-VKK123</urn2:healthcare_facility>
+         <!--Zero or more repetitions:-->
+         <urn3:careTypeIDs>?</urn3:careTypeIDs>
+         <urn3:subject_of_care>?</urn3:subject_of_care>
+         <!--You may enter ANY elements at this point-->
+      </urn2:GetAllTimeTypes>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:crm:scheduling:GetAllTimeTypesResponder:1:GetAllTimeTypes"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="GetAllHealthcareFacilitiesResponderBinding" type="wsdl" bindingName="{urn:riv:crm:scheduling:GetAllHealthcareFacilities:1:rivtabp21}GetAllHealthcareFacilitiesResponderBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080/Schedulr/ws/GetAllHealthcareFacilities/1?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080/Schedulr/ws/GetAllHealthcareFacilities/1?wsdl"><con:part><con:url>http://localhost:8080/Schedulr/ws/GetAllHealthcareFacilities/1?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="GetAllHealthcareFacilitiesInteraction" targetNamespace="urn:riv:crm:scheduling:GetAllHealthcareFacilities:1:rivtabp21" xmlns:ih="urn:riv:interoperability:headers:1" xmlns:itr="urn:riv:itintegration:registry:1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tjsr="urn:riv:crm:scheduling:GetAllHealthcareFacilitiesResponder:1" xmlns:tns="urn:riv:crm:scheduling:GetAllHealthcareFacilities:1:rivtabp21" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xs:schema targetNamespace="urn:riv:crm:scheduling:GetAllHealthcareFacilities:1:rivtabp21">
+      <xs:import namespace="urn:riv:crm:scheduling:GetAllHealthcareFacilitiesResponder:1" schemaLocation="http://localhost:8080/Schedulr/ws/GetAllHealthcareFacilities/1?xsd=GetAllHealthcareFacilitiesResponder_1.1.xsd"/>
+      <xs:import namespace="urn:riv:itintegration:registry:1" schemaLocation="http://localhost:8080/Schedulr/ws/GetAllHealthcareFacilities/1?xsd=../../core_components/itintegration_registry_1.0.xsd"/>
+      <xs:import namespace="urn:riv:interoperability:headers:1" schemaLocation="http://localhost:8080/Schedulr/ws/GetAllHealthcareFacilities/1?xsd=../../core_components/interoperability_headers_1.0.xsd"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GetAllHealthcareFacilitiesRequest">
+    <wsdl:part element="itr:LogicalAddress" name="LogicalAddress">
+      <wsdl:documentation>hsaid of the healthcare_facility owning the schedule</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part element="ih:Actor" name="actor"></wsdl:part>
+    <wsdl:part element="tjsr:GetAllHealthcareFacilities" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetAllHealthcareFacilitiesResponse">
+    <wsdl:part element="tjsr:GetAllHealthcareFacilitiesResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="GetAllHealthcareFacilitiesResponderInterface">
+    <wsdl:operation name="GetAllHealthcareFacilities">
+      <wsdl:input message="tns:GetAllHealthcareFacilitiesRequest"></wsdl:input>
+      <wsdl:output message="tns:GetAllHealthcareFacilitiesResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GetAllHealthcareFacilitiesResponderBinding" type="tns:GetAllHealthcareFacilitiesResponderInterface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetAllHealthcareFacilities">
+      <soap:operation soapAction="urn:riv:crm:scheduling:GetAllHealthcareFacilitiesResponder:1:GetAllHealthcareFacilities" style="document"/>
+      <wsdl:input>
+        <soap:header message="tns:GetAllHealthcareFacilitiesRequest" part="LogicalAddress" use="literal"></soap:header>
+        <soap:header message="tns:GetAllHealthcareFacilitiesRequest" part="actor" use="literal"></soap:header>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GetAllHealthcareFacilitiesResponderService">
+    <wsdl:port binding="tns:GetAllHealthcareFacilitiesResponderBinding" name="GetAllHealthcareFacilitiesResponderPort">
+      <soap:address location="http://localhost:8080/Schedulr/ws/GetAllHealthcareFacilities/1"/>
+    </wsdl:port>
+  </wsdl:service>
+  <xs:annotation>
+    <xs:documentation>Tjänsteinteraktionens namn: GetAllHealthcareFacilitiesInteraction
+			 Beskrivning: 
+			   Interaction to retrieve the healthcare_facilities that are offered the subject of care for making appointments. The response depends on the provided argument. Subject of care id allows the producer to adjust the response according to the health history of the subject of care. If a bookingId is provided, the producer must restrict the response to the healthcare_facilities available for rescheduling the of the appointment identified by the bookingId. If the bookingId is provided, that is unknown to the producer, an empty list should be returned. This service contract has semantics different to all the other contracts within the scheduling domain. Like the other service contracts it is directed to a single healthcare_facilitiy, but it is responsible for providing a list of all viable healthcare_facilities according to the business rules of the regional healthcare administration. To summarize: For this particular service contract the responding healthcare_facility takes the role of the regional adminstration, in the context of the caretypes the healthcare_facility supports.
+			 Revisioner: 
+			 Tjänstedomän: crm:scheduling
+			 Tjänsteinteraktionstyp: Fråga-Svar
+			 WS-profil: RIVTABP21
+			 Förvaltas av: Sveriges Kommuner och Landsting</xs:documentation>
+  </xs:annotation>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:8080/Schedulr/ws/GetAllHealthcareFacilities/1?xsd=GetAllHealthcareFacilitiesResponder_1.1.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Inera AB licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:riv:crm:scheduling:GetAllHealthcareFacilitiesResponder:1" version="1.1" xmlns:core="urn:riv:crm:scheduling:1" xmlns:tns="urn:riv:crm:scheduling:GetAllHealthcareFacilitiesResponder:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: Service schema for GetAllHealthcareFacilitiesResponder.
+	  Revisioner: 
+		2011.03-XX: Release version 1.1 johan.eltes@callistaenterprise.se.</xs:documentation>
+  </xs:annotation>
+  <xs:import namespace="urn:riv:crm:scheduling:1" schemaLocation="http://localhost:8080/Schedulr/ws/GetAllHealthcareFacilities/1?xsd=../../core_components/crm_scheduling_1.1.xsd"/>
+  <xs:element name="GetAllHealthcareFacilities" type="tns:GetAllHealthcareFacilitiesType"/>
+  <xs:element name="GetAllHealthcareFacilitiesResponse" type="tns:GetAllHealthcareFacilitiesResponseType"/>
+  <xs:complexType name="GetAllHealthcareFacilitiesType">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="healthcare_facility" type="core:HsaIdType"/>
+      <xs:element minOccurs="1" name="subject_of_care" type="core:SubjectOfCareIdType"/>
+      <xs:element minOccurs="0" name="bookingId" type="core:BookingIdType"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetAllHealthcareFacilitiesResponseType">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="healthcareFacilityInfos" type="core:HealthcareFacilityInfoType"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8080/Schedulr/ws/GetAllHealthcareFacilities/1?xsd=../../core_components/crm_scheduling_1.1.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Inera AB licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:riv:crm:scheduling:1" version="1.1" xmlns:m1="urn:riv:crm:scheduling:1.1" xmlns:tns="urn:riv:crm:scheduling:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: Meddelandeformat för crm:scheduling.
+	  Revisioner: 
+		2010-04-21: Release version 1.0 johan.eltes@callistaenterprise.se.
+		2011-03-XX: Release version 1.1 johan.eltes@callistaenterprise.se.
+			- SubjectOfCareType: New elements: firstName, middleName, lastName. Osor change request:15075
+			- New structure declared: CareTypeType. Osor change request:15087	
+			- New reusable type: PerformerInfoType. 
+			- New reusable type: HealthcareFacilityInfoType</xs:documentation>
+  </xs:annotation>
+  <xs:import namespace="urn:riv:crm:scheduling:1.1" schemaLocation="http://localhost:8080/Schedulr/ws/GetAllHealthcareFacilities/1?xsd=crm_scheduling_1.1_ext.xsd"/>
+  <xs:complexType name="TimeslotType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="startTimeInclusive" type="tns:TS"/>
+      <xs:element minOccurs="0" name="endTimeExclusive" type="tns:TS"/>
+      <xs:element minOccurs="1" name="healthcare_facility" type="tns:HsaIdType"/>
+      <xs:element minOccurs="0" name="performer" type="tns:HsaIdType"/>
+      <xs:element minOccurs="0" name="bookingId" type="tns:BookingIdType"/>
+      <xs:element minOccurs="0" name="subject_of_care" type="tns:SubjectOfCareIdType"/>
+      <xs:element minOccurs="0" name="purpose" type="xs:string"/>
+      <xs:element minOccurs="0" name="reason" type="xs:string"/>
+      <xs:element minOccurs="0" name="resourceName" type="xs:string"/>
+      <xs:element minOccurs="0" name="healthcare_facility_name" type="xs:string"/>
+      <xs:element minOccurs="0" name="performerName" type="xs:string"/>
+      <xs:element minOccurs="0" name="resourceID" type="tns:ResourceIDType"/>
+      <xs:element minOccurs="0" name="timeTypeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="timeTypeID" type="tns:TimeTypeIDType"/>
+      <xs:element minOccurs="0" name="careTypeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="careTypeID" type="tns:CareTypeIDType"/>
+      <xs:element minOccurs="0" name="cancel_booking_allowed" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="rebooking_allowed" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="message_allowed" type="xs:boolean"/>
+      <xs:element minOccurs="0" ref="m1:isInvitation"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="BookingIdType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="HsaIdType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="SubjectOfCareIdType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="^[0-9]{8}[0-9pPtTfF][0-9]{3}$"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ResultCodeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OK"/>
+      <xs:enumeration value="ERROR"/>
+      <xs:enumeration value="INFO"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="SubjectOfCareType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="phone" type="xs:string"/>
+      <xs:element minOccurs="0" name="email" type="xs:string"/>
+      <xs:element minOccurs="0" name="address" type="xs:string"/>
+      <xs:element minOccurs="0" name="coaddress" type="xs:string"/>
+      <xs:element minOccurs="1" ref="m1:firstName"/>
+      <xs:element minOccurs="0" ref="m1:middleName"/>
+      <xs:element minOccurs="1" ref="m1:lastName"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TimeTypeType">
+    <xs:sequence>
+      <xs:element name="timeTypeName" type="xs:string"/>
+      <xs:element name="timeTypeId" type="tns:TimeTypeIDType"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CareTypeType">
+    <xs:sequence>
+      <xs:element name="careTypeName" type="xs:string"/>
+      <xs:element name="careTypeId" type="tns:CareTypeIDType"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ResourceIDType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="TimeTypeIDType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="CareTypeIDType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="TS">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[1-9]{1}[0-9]{3}(0[1-9]{1}|1[0-2]{1})([0-2]{1}[0-9]{1}|3[0-1]{1})([0-1]{1}[0-9]{1}|2[0-3]{1})[0-5]{1}[0-9]{1}[0-5]{1}[0-9]{1}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DT">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[1-9]{1}[0-9]{3}(0[1-9]{1}|1[0-2]{1})([0-2]{1}[0-9]{1}|3[0-1]{1})"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="PerformerInfoType">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="perfomer" type="tns:HsaIdType"/>
+      <xs:element minOccurs="1" name="firstName" type="xs:string"/>
+      <xs:element minOccurs="1" name="lastName" type="xs:string"/>
+      <xs:element minOccurs="0" name="title" type="xs:string"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="HealthcareFacilityInfoType">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="healthcare_facility" type="tns:HsaIdType"/>
+      <xs:element minOccurs="0" name="healthcare_facility_name" type="xs:string"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8080/Schedulr/ws/GetAllHealthcareFacilities/1?xsd=crm_scheduling_1.1_ext.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Inera AB licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:riv:crm:scheduling:1.1" version="1.1" xmlns:tns="urn:riv:crm:scheduling:1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: Extensibility schema for crm:scheduling 1.1
+	  Revisioner: 
+		2011-03-XX: Release johan.eltes@callistaenterprise.se.</xs:documentation>
+  </xs:annotation>
+  <xs:element name="firstName" type="xs:string"/>
+  <xs:element name="middleName" type="xs:string"/>
+  <xs:element name="lastName" type="xs:string"/>
+  <xs:element name="isInvitation" type="xs:boolean"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8080/Schedulr/ws/GetAllHealthcareFacilities/1?xsd=../../core_components/itintegration_registry_1.0.xsd</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="urn:riv:itintegration:registry:1" version="1.0" xmlns="urn:riv:itintegration:registry:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: 	Grundläggande informationsobjekt för domänen itintegration:registry (adressering av tjänster)
+			
+			Revisionshistorik: 2011-06-27 Mats Ekhammar, Callista Enterprise AB
+				Added ServiceContractType
+			
+			Datum:			2011-05-04
+			Beskrivning:	Initial version
+			Författare:		marcus.krantz@callistaenterprise.se</xs:documentation>
+  </xs:annotation>
+  <xs:element name="LogicalAddress" type="LogicalAddressType"/>
+  <xs:element name="ServiceContract" type="ServiceContractType"/>
+  <xs:simpleType name="LogicalAddressType">
+    <xs:annotation>
+      <xs:documentation>Defines the type for logical address according to national reference architecture.
+				Superseeds wsa:To as type for logical address header in RIVTA 2.1.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="ServiceContractType">
+    <xs:annotation>
+      <xs:documentation>Type which describes a service contract. Used in interaction GetSupportedServiceContracts.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ServiceContractNamespace" type="xs:anyURI"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8080/Schedulr/ws/GetAllHealthcareFacilities/1?xsd=../../core_components/interoperability_headers_1.0.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:riv:interoperability:headers:1" version="1.0" xmlns:tns="urn:riv:interoperability:headers:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Actor" type="tns:ActorType"/>
+  <xs:complexType name="ActorType">
+    <xs:sequence>
+      <xs:element name="actorId" type="tns:ActorIdType"/>
+      <xs:element name="actorType" type="tns:ActorTypeEnum"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ActorIdType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="ActorTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="subject_of_care"/>
+      <xs:enumeration value="subject_of_care_agent"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/Schedulr/ws/GetAllHealthcareFacilities/1</con:endpoint></con:endpoints><con:operation isOneWay="false" action="urn:riv:crm:scheduling:GetAllHealthcareFacilitiesResponder:1:GetAllHealthcareFacilities" name="GetAllHealthcareFacilities" bindingOperationName="GetAllHealthcareFacilities" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/Schedulr/ws/GetAllHealthcareFacilities/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:crm:scheduling:GetAllHealthcareFacilitiesResponder:1">
+   <soapenv:Header>
+      <urn:Actor>
+         <urn:actorId>?</urn:actorId>
+         <urn:actorType>?</urn:actorType>
+         <!--You may enter ANY elements at this point-->
+      </urn:Actor>
+      <urn1:LogicalAddress>HSA-VKK123</urn1:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn2:GetAllHealthcareFacilities>
+         <urn2:healthcare_facility>HSA-VKK123</urn2:healthcare_facility>
+         <urn2:subject_of_care>?</urn2:subject_of_care>
+         <!--Optional:-->
+         <urn2:bookingId>?</urn2:bookingId>
+         <!--You may enter ANY elements at this point-->
+      </urn2:GetAllHealthcareFacilities>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:crm:scheduling:GetAllHealthcareFacilitiesResponder:1:GetAllHealthcareFacilities"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="GetAllPerformersResponderBinding" type="wsdl" bindingName="{urn:riv:crm:scheduling:GetAllPerformers:1:rivtabp21}GetAllPerformersResponderBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080/Schedulr/ws/GetAllPerformers/1?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080/Schedulr/ws/GetAllPerformers/1?wsdl"><con:part><con:url>http://localhost:8080/Schedulr/ws/GetAllPerformers/1?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="GetAllPerformersInteraction" targetNamespace="urn:riv:crm:scheduling:GetAllPerformers:1:rivtabp21" xmlns:ih="urn:riv:interoperability:headers:1" xmlns:itr="urn:riv:itintegration:registry:1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tjsr="urn:riv:crm:scheduling:GetAllPerformersResponder:1" xmlns:tns="urn:riv:crm:scheduling:GetAllPerformers:1:rivtabp21" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xs:schema targetNamespace="urn:riv:crm:scheduling:GetAllPerformers:1:rivtabp21">
+      <xs:import namespace="urn:riv:crm:scheduling:GetAllPerformersResponder:1" schemaLocation="http://localhost:8080/Schedulr/ws/GetAllPerformers/1?xsd=GetAllPerformersResponder_1.1.xsd"/>
+      <xs:import namespace="urn:riv:itintegration:registry:1" schemaLocation="http://localhost:8080/Schedulr/ws/GetAllPerformers/1?xsd=../../core_components/itintegration_registry_1.0.xsd"/>
+      <xs:import namespace="urn:riv:interoperability:headers:1" schemaLocation="http://localhost:8080/Schedulr/ws/GetAllPerformers/1?xsd=../../core_components/interoperability_headers_1.0.xsd"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GetAllPerformersResponse">
+    <wsdl:part element="tjsr:GetAllPerformersResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetAllPerformersRequest">
+    <wsdl:part element="itr:LogicalAddress" name="LogicalAddress">
+      <wsdl:documentation>hsaid of the healthcare_facility owning the schedule</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part element="ih:Actor" name="actor"></wsdl:part>
+    <wsdl:part element="tjsr:GetAllPerformers" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="GetAllPerformersResponderInterface">
+    <wsdl:operation name="GetAllPerformers">
+      <wsdl:input message="tns:GetAllPerformersRequest"></wsdl:input>
+      <wsdl:output message="tns:GetAllPerformersResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GetAllPerformersResponderBinding" type="tns:GetAllPerformersResponderInterface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetAllPerformers">
+      <soap:operation soapAction="urn:riv:crm:scheduling:GetAllPerformersResponder:1:GetAllPerformers" style="document"/>
+      <wsdl:input>
+        <soap:header message="tns:GetAllPerformersRequest" part="LogicalAddress" use="literal"></soap:header>
+        <soap:header message="tns:GetAllPerformersRequest" part="actor" use="literal"></soap:header>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GetAllPerformersResponderService">
+    <wsdl:port binding="tns:GetAllPerformersResponderBinding" name="GetAllPerformersResponderPort">
+      <soap:address location="http://localhost:8080/Schedulr/ws/GetAllPerformers/1"/>
+    </wsdl:port>
+  </wsdl:service>
+  <xs:annotation>
+    <xs:documentation>Tjänsteinteraktionens namn: GetAllPerformersInteraction
+			 Beskrivning: 
+			   Interaction to retrieve Performers (healthcare professionals) potentially available for an appointment at the specified healthcare_facility.
+			 Revisioner: 
+			 Tjänstedomän: crm:scheduling
+			 Tjänsteinteraktionstyp: Fråga-Svar
+			 WS-profil: RIVTABP21
+			 Förvaltas av: Sveriges Kommuner och Landsting</xs:documentation>
+  </xs:annotation>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:8080/Schedulr/ws/GetAllPerformers/1?xsd=GetAllPerformersResponder_1.1.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Inera AB licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:riv:crm:scheduling:GetAllPerformersResponder:1" version="1.1" xmlns:core="urn:riv:crm:scheduling:1" xmlns:tns="urn:riv:crm:scheduling:GetAllPerformersResponder:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: Tjänsteschema för GetAllPerformersResponder.
+	  Revisioner: 
+		2011.03-XX: Release version 1.1 johan.eltes@callistaenterprise.se.</xs:documentation>
+  </xs:annotation>
+  <xs:import namespace="urn:riv:crm:scheduling:1" schemaLocation="http://localhost:8080/Schedulr/ws/GetAllPerformers/1?xsd=../../core_components/crm_scheduling_1.1.xsd"/>
+  <xs:element name="GetAllPerformers" type="tns:GetAllPerformersType"/>
+  <xs:element name="GetAllPerformersResponse" type="tns:GetAllPerformersResponseType"/>
+  <xs:complexType name="GetAllPerformersType">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="healthcare_facility" type="core:HsaIdType"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="timeTypeIDs" type="core:TimeTypeIDType"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="careTypeIDs" type="core:CareTypeIDType"/>
+      <xs:element minOccurs="1" name="subject_of_care" type="core:SubjectOfCareIdType"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetAllPerformersResponseType">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="performerInfos" type="core:PerformerInfoType"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8080/Schedulr/ws/GetAllPerformers/1?xsd=../../core_components/crm_scheduling_1.1.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Inera AB licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:riv:crm:scheduling:1" version="1.1" xmlns:m1="urn:riv:crm:scheduling:1.1" xmlns:tns="urn:riv:crm:scheduling:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: Meddelandeformat för crm:scheduling.
+	  Revisioner: 
+		2010-04-21: Release version 1.0 johan.eltes@callistaenterprise.se.
+		2011-03-XX: Release version 1.1 johan.eltes@callistaenterprise.se.
+			- SubjectOfCareType: New elements: firstName, middleName, lastName. Osor change request:15075
+			- New structure declared: CareTypeType. Osor change request:15087	
+			- New reusable type: PerformerInfoType. 
+			- New reusable type: HealthcareFacilityInfoType</xs:documentation>
+  </xs:annotation>
+  <xs:import namespace="urn:riv:crm:scheduling:1.1" schemaLocation="http://localhost:8080/Schedulr/ws/GetAllPerformers/1?xsd=crm_scheduling_1.1_ext.xsd"/>
+  <xs:complexType name="TimeslotType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="startTimeInclusive" type="tns:TS"/>
+      <xs:element minOccurs="0" name="endTimeExclusive" type="tns:TS"/>
+      <xs:element minOccurs="1" name="healthcare_facility" type="tns:HsaIdType"/>
+      <xs:element minOccurs="0" name="performer" type="tns:HsaIdType"/>
+      <xs:element minOccurs="0" name="bookingId" type="tns:BookingIdType"/>
+      <xs:element minOccurs="0" name="subject_of_care" type="tns:SubjectOfCareIdType"/>
+      <xs:element minOccurs="0" name="purpose" type="xs:string"/>
+      <xs:element minOccurs="0" name="reason" type="xs:string"/>
+      <xs:element minOccurs="0" name="resourceName" type="xs:string"/>
+      <xs:element minOccurs="0" name="healthcare_facility_name" type="xs:string"/>
+      <xs:element minOccurs="0" name="performerName" type="xs:string"/>
+      <xs:element minOccurs="0" name="resourceID" type="tns:ResourceIDType"/>
+      <xs:element minOccurs="0" name="timeTypeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="timeTypeID" type="tns:TimeTypeIDType"/>
+      <xs:element minOccurs="0" name="careTypeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="careTypeID" type="tns:CareTypeIDType"/>
+      <xs:element minOccurs="0" name="cancel_booking_allowed" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="rebooking_allowed" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="message_allowed" type="xs:boolean"/>
+      <xs:element minOccurs="0" ref="m1:isInvitation"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="BookingIdType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="HsaIdType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="SubjectOfCareIdType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="^[0-9]{8}[0-9pPtTfF][0-9]{3}$"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ResultCodeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OK"/>
+      <xs:enumeration value="ERROR"/>
+      <xs:enumeration value="INFO"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="SubjectOfCareType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="phone" type="xs:string"/>
+      <xs:element minOccurs="0" name="email" type="xs:string"/>
+      <xs:element minOccurs="0" name="address" type="xs:string"/>
+      <xs:element minOccurs="0" name="coaddress" type="xs:string"/>
+      <xs:element minOccurs="1" ref="m1:firstName"/>
+      <xs:element minOccurs="0" ref="m1:middleName"/>
+      <xs:element minOccurs="1" ref="m1:lastName"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TimeTypeType">
+    <xs:sequence>
+      <xs:element name="timeTypeName" type="xs:string"/>
+      <xs:element name="timeTypeId" type="tns:TimeTypeIDType"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CareTypeType">
+    <xs:sequence>
+      <xs:element name="careTypeName" type="xs:string"/>
+      <xs:element name="careTypeId" type="tns:CareTypeIDType"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ResourceIDType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="TimeTypeIDType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="CareTypeIDType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="TS">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[1-9]{1}[0-9]{3}(0[1-9]{1}|1[0-2]{1})([0-2]{1}[0-9]{1}|3[0-1]{1})([0-1]{1}[0-9]{1}|2[0-3]{1})[0-5]{1}[0-9]{1}[0-5]{1}[0-9]{1}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DT">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[1-9]{1}[0-9]{3}(0[1-9]{1}|1[0-2]{1})([0-2]{1}[0-9]{1}|3[0-1]{1})"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="PerformerInfoType">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="perfomer" type="tns:HsaIdType"/>
+      <xs:element minOccurs="1" name="firstName" type="xs:string"/>
+      <xs:element minOccurs="1" name="lastName" type="xs:string"/>
+      <xs:element minOccurs="0" name="title" type="xs:string"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="HealthcareFacilityInfoType">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="healthcare_facility" type="tns:HsaIdType"/>
+      <xs:element minOccurs="0" name="healthcare_facility_name" type="xs:string"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8080/Schedulr/ws/GetAllPerformers/1?xsd=crm_scheduling_1.1_ext.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Inera AB licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:riv:crm:scheduling:1.1" version="1.1" xmlns:tns="urn:riv:crm:scheduling:1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: Extensibility schema for crm:scheduling 1.1
+	  Revisioner: 
+		2011-03-XX: Release johan.eltes@callistaenterprise.se.</xs:documentation>
+  </xs:annotation>
+  <xs:element name="firstName" type="xs:string"/>
+  <xs:element name="middleName" type="xs:string"/>
+  <xs:element name="lastName" type="xs:string"/>
+  <xs:element name="isInvitation" type="xs:boolean"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8080/Schedulr/ws/GetAllPerformers/1?xsd=../../core_components/itintegration_registry_1.0.xsd</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="urn:riv:itintegration:registry:1" version="1.0" xmlns="urn:riv:itintegration:registry:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: 	Grundläggande informationsobjekt för domänen itintegration:registry (adressering av tjänster)
+			
+			Revisionshistorik: 2011-06-27 Mats Ekhammar, Callista Enterprise AB
+				Added ServiceContractType
+			
+			Datum:			2011-05-04
+			Beskrivning:	Initial version
+			Författare:		marcus.krantz@callistaenterprise.se</xs:documentation>
+  </xs:annotation>
+  <xs:element name="LogicalAddress" type="LogicalAddressType"/>
+  <xs:element name="ServiceContract" type="ServiceContractType"/>
+  <xs:simpleType name="LogicalAddressType">
+    <xs:annotation>
+      <xs:documentation>Defines the type for logical address according to national reference architecture.
+				Superseeds wsa:To as type for logical address header in RIVTA 2.1.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="ServiceContractType">
+    <xs:annotation>
+      <xs:documentation>Type which describes a service contract. Used in interaction GetSupportedServiceContracts.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ServiceContractNamespace" type="xs:anyURI"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8080/Schedulr/ws/GetAllPerformers/1?xsd=../../core_components/interoperability_headers_1.0.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:riv:interoperability:headers:1" version="1.0" xmlns:tns="urn:riv:interoperability:headers:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Actor" type="tns:ActorType"/>
+  <xs:complexType name="ActorType">
+    <xs:sequence>
+      <xs:element name="actorId" type="tns:ActorIdType"/>
+      <xs:element name="actorType" type="tns:ActorTypeEnum"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ActorIdType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="ActorTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="subject_of_care"/>
+      <xs:enumeration value="subject_of_care_agent"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/Schedulr/ws/GetAllPerformers/1</con:endpoint></con:endpoints><con:operation isOneWay="false" action="urn:riv:crm:scheduling:GetAllPerformersResponder:1:GetAllPerformers" name="GetAllPerformers" bindingOperationName="GetAllPerformers" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/Schedulr/ws/GetAllPerformers/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:crm:scheduling:GetAllPerformersResponder:1">
+   <soapenv:Header>
+      <urn:Actor>
+         <urn:actorId>?</urn:actorId>
+         <urn:actorType>?</urn:actorType>
+         <!--You may enter ANY elements at this point-->
+      </urn:Actor>
+      <urn1:LogicalAddress>HSA-VKK123</urn1:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn2:GetAllPerformers>
+         <urn2:healthcare_facility>HSA-VKK123</urn2:healthcare_facility>
+         <!--Zero or more repetitions:-->
+         <urn2:timeTypeIDs>?</urn2:timeTypeIDs>
+         <!--Zero or more repetitions:-->
+         <urn2:careTypeIDs>?</urn2:careTypeIDs>
+         <urn2:subject_of_care>?</urn2:subject_of_care>
+         <!--You may enter ANY elements at this point-->
+      </urn2:GetAllPerformers>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:crm:scheduling:GetAllPerformersResponder:1:GetAllPerformers"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="GetAvailableDatesResponderBinding" type="wsdl" bindingName="{urn:riv:crm:scheduling:GetAvailableDates:1:rivtabp21}GetAvailableDatesResponderBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080/Schedulr/ws/GetAvailableDates/1?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080/Schedulr/ws/GetAvailableDates/1?wsdl"><con:part><con:url>http://localhost:8080/Schedulr/ws/GetAvailableDates/1?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="GetAvailableDatesInteraction" targetNamespace="urn:riv:crm:scheduling:GetAvailableDates:1:rivtabp21" xmlns:ih="urn:riv:interoperability:headers:1" xmlns:itr="urn:riv:itintegration:registry:1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tjsr="urn:riv:crm:scheduling:GetAvailableDatesResponder:1" xmlns:tns="urn:riv:crm:scheduling:GetAvailableDates:1:rivtabp21" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xs:schema targetNamespace="urn:riv:crm:scheduling:GetAvailableDates:1:rivtabp21">
+      <xs:import namespace="urn:riv:crm:scheduling:GetAvailableDatesResponder:1" schemaLocation="http://localhost:8080/Schedulr/ws/GetAvailableDates/1?xsd=GetAvailableDatesResponder_1.1.xsd"/>
+      <xs:import namespace="urn:riv:itintegration:registry:1" schemaLocation="http://localhost:8080/Schedulr/ws/GetAvailableDates/1?xsd=../../core_components/itintegration_registry_1.0.xsd"/>
+      <xs:import namespace="urn:riv:interoperability:headers:1" schemaLocation="http://localhost:8080/Schedulr/ws/GetAvailableDates/1?xsd=../../core_components/interoperability_headers_1.0.xsd"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GetAvailableDatesResponse">
+    <wsdl:part element="tjsr:GetAvailableDatesResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetAvailableDatesRequest">
+    <wsdl:part element="itr:LogicalAddress" name="LogicalAddress">
+      <wsdl:documentation>hsaid of the healthcare_facility owning the schedule</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part element="ih:Actor" name="actor"></wsdl:part>
+    <wsdl:part element="tjsr:GetAvailableDates" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="GetAvailableDatesResponderInterface">
+    <wsdl:operation name="GetAvailableDates">
+      <wsdl:input message="tns:GetAvailableDatesRequest"></wsdl:input>
+      <wsdl:output message="tns:GetAvailableDatesResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GetAvailableDatesResponderBinding" type="tns:GetAvailableDatesResponderInterface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetAvailableDates">
+      <soap:operation soapAction="urn:riv:crm:scheduling:GetAvailableDatesResponder:1:GetAvailableDates" style="document"/>
+      <wsdl:input>
+        <soap:header message="tns:GetAvailableDatesRequest" part="LogicalAddress" use="literal"></soap:header>
+        <soap:header message="tns:GetAvailableDatesRequest" part="actor" use="literal"></soap:header>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GetAvailableDatesResponderService">
+    <wsdl:port binding="tns:GetAvailableDatesResponderBinding" name="GetAvailableDatesResponderPort">
+      <soap:address location="http://localhost:8080/Schedulr/ws/GetAvailableDates/1"/>
+    </wsdl:port>
+  </wsdl:service>
+  <xs:annotation>
+    <xs:documentation>Tjänsteinteraktionens namn: GetAvailableDatesInteraction
+			 Beskrivning: 
+			   Interaction to retrieve dates with at least one available timeslot of the requested type and performer within the schedule of the targeted healthcare facility.
+			 Revisioner: 
+			 Tjänstedomän: crm:scheduling
+			 Tjänsteinteraktionstyp: Fråga-Svar
+			 WS-profil: RIVTABP21
+			 Förvaltas av: Sveriges Kommuner och Landsting</xs:documentation>
+  </xs:annotation>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:8080/Schedulr/ws/GetAvailableDates/1?xsd=GetAvailableDatesResponder_1.1.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Inera AB licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:riv:crm:scheduling:GetAvailableDatesResponder:1" version="1.1" xmlns:core="urn:riv:crm:scheduling:1" xmlns:m1="urn:riv:crm:scheduling:GetAvailableDatesResponder:1.1" xmlns:tns="urn:riv:crm:scheduling:GetAvailableDatesResponder:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: Tjänsteschema för GetAvailableDatesResponder.
+	  Revisioner: 
+		2010-04-21: Release version 1.0 johan.eltes@callistaenterprise.se.
+		2011-03-XX: Release version 1.1 johan.eltes@callistaenterprise.se.
+			- Nytt, obligatoriskt request-element: subject_of_care</xs:documentation>
+  </xs:annotation>
+  <xs:import namespace="urn:riv:crm:scheduling:1" schemaLocation="http://localhost:8080/Schedulr/ws/GetAvailableDates/1?xsd=../../core_components/crm_scheduling_1.1.xsd"/>
+  <xs:import namespace="urn:riv:crm:scheduling:GetAvailableDatesResponder:1.1" schemaLocation="http://localhost:8080/Schedulr/ws/GetAvailableDates/1?xsd=GetAvailableDatesResponder_1.1_ext.xsd"/>
+  <xs:element name="GetAvailableDates" type="tns:GetAvailableDatesType"/>
+  <xs:element name="GetAvailableDatesResponse" type="tns:GetAvailableDatesResponseType"/>
+  <xs:complexType name="GetAvailableDatesType">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="healthcare_facility" type="core:HsaIdType"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="bookingId" type="core:BookingIdType"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="startDateInclusive" type="core:DT"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="endDateInclusive" type="core:DT"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="performer" type="core:HsaIdType"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="timeTypeName" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="timeTypeID" type="core:TimeTypeIDType"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="careTypeName" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="careTypeID" type="core:CareTypeIDType"/>
+      <xs:element minOccurs="1" ref="m1:subject_of_care"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PerformerAvailabilityByDateType">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="healthcare_facility" type="core:HsaIdType"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="performer" type="core:HsaIdType"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="date" type="core:DT"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="resourceName" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="resourceID" type="core:ResourceIDType"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="timeTypeName" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="timeTypeID" type="core:TimeTypeIDType"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="careTypeName" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="careTypeID" type="core:CareTypeIDType"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetAvailableDatesResponseType">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="performerAvailabilityByDate" type="tns:PerformerAvailabilityByDateType"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8080/Schedulr/ws/GetAvailableDates/1?xsd=../../core_components/crm_scheduling_1.1.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Inera AB licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:riv:crm:scheduling:1" version="1.1" xmlns:m1="urn:riv:crm:scheduling:1.1" xmlns:tns="urn:riv:crm:scheduling:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: Meddelandeformat för crm:scheduling.
+	  Revisioner: 
+		2010-04-21: Release version 1.0 johan.eltes@callistaenterprise.se.
+		2011-03-XX: Release version 1.1 johan.eltes@callistaenterprise.se.
+			- SubjectOfCareType: New elements: firstName, middleName, lastName. Osor change request:15075
+			- New structure declared: CareTypeType. Osor change request:15087	
+			- New reusable type: PerformerInfoType. 
+			- New reusable type: HealthcareFacilityInfoType</xs:documentation>
+  </xs:annotation>
+  <xs:import namespace="urn:riv:crm:scheduling:1.1" schemaLocation="http://localhost:8080/Schedulr/ws/GetAvailableDates/1?xsd=crm_scheduling_1.1_ext.xsd"/>
+  <xs:complexType name="TimeslotType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="startTimeInclusive" type="tns:TS"/>
+      <xs:element minOccurs="0" name="endTimeExclusive" type="tns:TS"/>
+      <xs:element minOccurs="1" name="healthcare_facility" type="tns:HsaIdType"/>
+      <xs:element minOccurs="0" name="performer" type="tns:HsaIdType"/>
+      <xs:element minOccurs="0" name="bookingId" type="tns:BookingIdType"/>
+      <xs:element minOccurs="0" name="subject_of_care" type="tns:SubjectOfCareIdType"/>
+      <xs:element minOccurs="0" name="purpose" type="xs:string"/>
+      <xs:element minOccurs="0" name="reason" type="xs:string"/>
+      <xs:element minOccurs="0" name="resourceName" type="xs:string"/>
+      <xs:element minOccurs="0" name="healthcare_facility_name" type="xs:string"/>
+      <xs:element minOccurs="0" name="performerName" type="xs:string"/>
+      <xs:element minOccurs="0" name="resourceID" type="tns:ResourceIDType"/>
+      <xs:element minOccurs="0" name="timeTypeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="timeTypeID" type="tns:TimeTypeIDType"/>
+      <xs:element minOccurs="0" name="careTypeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="careTypeID" type="tns:CareTypeIDType"/>
+      <xs:element minOccurs="0" name="cancel_booking_allowed" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="rebooking_allowed" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="message_allowed" type="xs:boolean"/>
+      <xs:element minOccurs="0" ref="m1:isInvitation"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="BookingIdType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="HsaIdType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="SubjectOfCareIdType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="^[0-9]{8}[0-9pPtTfF][0-9]{3}$"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ResultCodeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OK"/>
+      <xs:enumeration value="ERROR"/>
+      <xs:enumeration value="INFO"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="SubjectOfCareType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="phone" type="xs:string"/>
+      <xs:element minOccurs="0" name="email" type="xs:string"/>
+      <xs:element minOccurs="0" name="address" type="xs:string"/>
+      <xs:element minOccurs="0" name="coaddress" type="xs:string"/>
+      <xs:element minOccurs="1" ref="m1:firstName"/>
+      <xs:element minOccurs="0" ref="m1:middleName"/>
+      <xs:element minOccurs="1" ref="m1:lastName"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TimeTypeType">
+    <xs:sequence>
+      <xs:element name="timeTypeName" type="xs:string"/>
+      <xs:element name="timeTypeId" type="tns:TimeTypeIDType"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CareTypeType">
+    <xs:sequence>
+      <xs:element name="careTypeName" type="xs:string"/>
+      <xs:element name="careTypeId" type="tns:CareTypeIDType"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ResourceIDType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="TimeTypeIDType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="CareTypeIDType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="TS">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[1-9]{1}[0-9]{3}(0[1-9]{1}|1[0-2]{1})([0-2]{1}[0-9]{1}|3[0-1]{1})([0-1]{1}[0-9]{1}|2[0-3]{1})[0-5]{1}[0-9]{1}[0-5]{1}[0-9]{1}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DT">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[1-9]{1}[0-9]{3}(0[1-9]{1}|1[0-2]{1})([0-2]{1}[0-9]{1}|3[0-1]{1})"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="PerformerInfoType">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="perfomer" type="tns:HsaIdType"/>
+      <xs:element minOccurs="1" name="firstName" type="xs:string"/>
+      <xs:element minOccurs="1" name="lastName" type="xs:string"/>
+      <xs:element minOccurs="0" name="title" type="xs:string"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="HealthcareFacilityInfoType">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="healthcare_facility" type="tns:HsaIdType"/>
+      <xs:element minOccurs="0" name="healthcare_facility_name" type="xs:string"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8080/Schedulr/ws/GetAvailableDates/1?xsd=crm_scheduling_1.1_ext.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Inera AB licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:riv:crm:scheduling:1.1" version="1.1" xmlns:tns="urn:riv:crm:scheduling:1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: Extensibility schema for crm:scheduling 1.1
+	  Revisioner: 
+		2011-03-XX: Release johan.eltes@callistaenterprise.se.</xs:documentation>
+  </xs:annotation>
+  <xs:element name="firstName" type="xs:string"/>
+  <xs:element name="middleName" type="xs:string"/>
+  <xs:element name="lastName" type="xs:string"/>
+  <xs:element name="isInvitation" type="xs:boolean"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8080/Schedulr/ws/GetAvailableDates/1?xsd=GetAvailableDatesResponder_1.1_ext.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Inera AB licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:riv:crm:scheduling:GetAvailableDatesResponder:1.1" version="1.1" xmlns:core="urn:riv:crm:scheduling:1" xmlns:tns="urn:riv:crm:scheduling:GetAllTimeTypesResponder:1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: Extensibility schema for GetAvailableDatesResponder 1.1
+	  Revisioner: 
+		2011-03-XX: Release 1.1 johan.eltes@callistaenterprise.se.</xs:documentation>
+  </xs:annotation>
+  <xs:import namespace="urn:riv:crm:scheduling:1" schemaLocation="http://localhost:8080/Schedulr/ws/GetAvailableDates/1?xsd=../../core_components/crm_scheduling_1.1.xsd"/>
+  <xs:element name="subject_of_care" type="core:SubjectOfCareIdType"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8080/Schedulr/ws/GetAvailableDates/1?xsd=../../core_components/itintegration_registry_1.0.xsd</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="urn:riv:itintegration:registry:1" version="1.0" xmlns="urn:riv:itintegration:registry:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: 	Grundläggande informationsobjekt för domänen itintegration:registry (adressering av tjänster)
+			
+			Revisionshistorik: 2011-06-27 Mats Ekhammar, Callista Enterprise AB
+				Added ServiceContractType
+			
+			Datum:			2011-05-04
+			Beskrivning:	Initial version
+			Författare:		marcus.krantz@callistaenterprise.se</xs:documentation>
+  </xs:annotation>
+  <xs:element name="LogicalAddress" type="LogicalAddressType"/>
+  <xs:element name="ServiceContract" type="ServiceContractType"/>
+  <xs:simpleType name="LogicalAddressType">
+    <xs:annotation>
+      <xs:documentation>Defines the type for logical address according to national reference architecture.
+				Superseeds wsa:To as type for logical address header in RIVTA 2.1.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="ServiceContractType">
+    <xs:annotation>
+      <xs:documentation>Type which describes a service contract. Used in interaction GetSupportedServiceContracts.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ServiceContractNamespace" type="xs:anyURI"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8080/Schedulr/ws/GetAvailableDates/1?xsd=../../core_components/interoperability_headers_1.0.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:riv:interoperability:headers:1" version="1.0" xmlns:tns="urn:riv:interoperability:headers:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Actor" type="tns:ActorType"/>
+  <xs:complexType name="ActorType">
+    <xs:sequence>
+      <xs:element name="actorId" type="tns:ActorIdType"/>
+      <xs:element name="actorType" type="tns:ActorTypeEnum"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ActorIdType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="ActorTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="subject_of_care"/>
+      <xs:enumeration value="subject_of_care_agent"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/Schedulr/ws/GetAvailableDates/1</con:endpoint></con:endpoints><con:operation isOneWay="false" action="urn:riv:crm:scheduling:GetAvailableDatesResponder:1:GetAvailableDates" name="GetAvailableDates" bindingOperationName="GetAvailableDates" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/Schedulr/ws/GetAvailableDates/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:crm:scheduling:GetAvailableDatesResponder:1" xmlns:urn3="urn:riv:crm:scheduling:GetAvailableDatesResponder:1.1">
+   <soapenv:Header>
+      <urn:Actor>
+         <urn:actorId>?</urn:actorId>
+         <urn:actorType>?</urn:actorType>
+         <!--You may enter ANY elements at this point-->
+      </urn:Actor>
+      <urn1:LogicalAddress>HSA-VKK123</urn1:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn2:GetAvailableDates>
+         <urn2:healthcare_facility>HSA-VKK123</urn2:healthcare_facility>
+         <!--Optional:-->
+         <urn2:bookingId>?</urn2:bookingId>
+         <urn2:startDateInclusive>20150101</urn2:startDateInclusive>
+         <urn2:endDateInclusive>20150101</urn2:endDateInclusive>
+         <urn3:subject_of_care>?</urn3:subject_of_care>
+         <!--You may enter ANY elements at this point-->
+      </urn2:GetAvailableDates>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:crm:scheduling:GetAvailableDatesResponder:1:GetAvailableDates"/><con:wsrmConfig version="1.2"/></con:call><con:call name="Request 2 filter"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/Schedulr/ws/GetAvailableDates/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:crm:scheduling:GetAvailableDatesResponder:1" xmlns:urn3="urn:riv:crm:scheduling:GetAvailableDatesResponder:1.1">
+   <soapenv:Header>
+      <urn:Actor>
+         <urn:actorId>?</urn:actorId>
+         <urn:actorType>?</urn:actorType>
+         <!--You may enter ANY elements at this point-->
+      </urn:Actor>
+      <urn1:LogicalAddress>HSA-VKK123</urn1:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn2:GetAvailableDates>
+         <urn2:healthcare_facility>HSA-VKK123</urn2:healthcare_facility>
+         <!--Optional:-->
+         <urn2:bookingId>?</urn2:bookingId>
+         <urn2:startDateInclusive>20150101</urn2:startDateInclusive>
+         <urn2:endDateInclusive>20150103</urn2:endDateInclusive>
+         <!--Zero or more repetitions:-->
+         <urn2:performer>123456-098</urn2:performer>
+         <urn2:performer>HSA-12345</urn2:performer>
+         <!--Optional:-->
+         <urn2:timeTypeName>Övrigt</urn2:timeTypeName>
+         <!--Optional:-->
+         <urn2:timeTypeID>5</urn2:timeTypeID>
+         <!--Optional:-->
+         <urn2:careTypeName>Provtagning</urn2:careTypeName>
+         <!--Optional:-->
+         <urn2:careTypeID>2</urn2:careTypeID>
+         <urn3:subject_of_care>?</urn3:subject_of_care>
+         <!--You may enter ANY elements at this point-->
+      </urn2:GetAvailableDates>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:crm:scheduling:GetAvailableDatesResponder:1:GetAvailableDates"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

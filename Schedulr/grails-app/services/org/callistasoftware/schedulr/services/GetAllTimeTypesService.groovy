@@ -36,8 +36,8 @@ class GetAllTimeTypesService implements GetAllTimeTypesResponderInterface{
 		
 		def healthcareFacilityInstance = HealthcareFacility.findByHealthcareFacility(getAllTimeTypes.healthcareFacility)
 		if (healthcareFacilityInstance) {
-			for (c in Timetype.values()) {
-				resp.getListOfTimeTypes().add(new TimeTypeType(timeTypeId: c.id, timeTypeName: c.name))
+			Timetype.values().each {
+				resp.getListOfTimeTypes().add(new TimeTypeType(timeTypeId: it.id, timeTypeName: it.name))
 			}
 		} else {
 			log.debug "No healthcare facility with id $getAllTimeTypes.healthcareFacility returning empty list of time types"
