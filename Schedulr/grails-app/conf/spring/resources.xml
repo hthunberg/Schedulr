@@ -48,6 +48,10 @@
 		implementor="#getAvailableDatesService" address="/GetAvailableDates/1" >
 	</jaxws:endpoint>
 	
+	<jaxws:endpoint id="getavailabletimeslotsservice"
+		implementor="#getAvailableTimeslotsService" address="/GetAvailableTimeslots/1" >
+	</jaxws:endpoint>	
+	
 	<jaxws:endpoint id="makebookingresponderservice"
 		implementor="#makeBookingService" address="/MakeBooking/1" >
 	</jaxws:endpoint>	

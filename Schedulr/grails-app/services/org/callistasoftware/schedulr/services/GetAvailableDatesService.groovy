@@ -82,7 +82,7 @@ class GetAvailableDatesService implements GetAvailableDatesResponderInterface{
 				performers.each buildPerformerDates
 			}
 		} else {
-			log.debug "No healthcare facility with id $getAvailableDates.healthcareFacility returning empty list of performers"
+			log.debug "No healthcare facility with id $getAvailableDates.healthcareFacility returning empty list of available dates"
 		}
 		return resp;
 	}

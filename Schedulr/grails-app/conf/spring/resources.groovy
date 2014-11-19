@@ -29,6 +29,9 @@ beans = {
 	getAvailableDatesService(org.callistasoftware.schedulr.services.GetAvailableDatesService){
 	}
 	
+	getAvailableTimeslotsService(org.callistasoftware.schedulr.services.GetAvailableTimeslotsService){
+	}
+	
 	makeBookingService(org.callistasoftware.schedulr.services.MakeBookingService){
 	}
 	
