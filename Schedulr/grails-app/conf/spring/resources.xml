@@ -54,6 +54,10 @@
 	
 	<jaxws:endpoint id="makebookingresponderservice"
 		implementor="#makeBookingService" address="/MakeBooking/1" >
+	</jaxws:endpoint>
+	
+	<jaxws:endpoint id="updatebookingresponderservice"
+		implementor="#updateBookingService" address="/UpdateBooking/1" >
 	</jaxws:endpoint>	
 	
 	<jaxws:endpoint id="pingforconfigurationresponderservice"

@@ -3285,4 +3285,606 @@ xmlns:urn2="urn:riv:crm:scheduling:CancelBookingResponder:1">
          <urn3:subject_of_care>?</urn3:subject_of_care>
       </urn2:GetAvailableTimeslots>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:crm:scheduling:GetAvailableTimeslotsResponder:1:GetAvailableTimeslots"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:crm:scheduling:GetAvailableTimeslotsResponder:1:GetAvailableTimeslots"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="PingForConfigurationResponderBinding" type="wsdl" bindingName="{urn:riv:itintegration:monitoring:PingForConfiguration:1:rivtabp21}PingForConfigurationResponderBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080/Schedulr/ws/PingForConfiguration/1?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080/Schedulr/ws/PingForConfiguration/1?wsdl"><con:part><con:url>http://localhost:8080/Schedulr/ws/PingForConfiguration/1?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="PingForConfigurationInteraction" targetNamespace="urn:riv:itintegration:monitoring:PingForConfiguration:1:rivtabp21" xmlns:rgy="urn:riv:itintegration:registry:1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tjsi="urn:riv:itintegration:monitoring:PingForConfigurationInitiator:1" xmlns:tjsr="urn:riv:itintegration:monitoring:PingForConfigurationResponder:1" xmlns:tns="urn:riv:itintegration:monitoring:PingForConfiguration:1:rivtabp21" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xs:schema targetNamespace="urn:riv:itintegration:monitoring:PingForConfiguration:1:rivtabp21">
+      <xs:import namespace="urn:riv:itintegration:monitoring:PingForConfigurationResponder:1" schemaLocation="http://localhost:8080/Schedulr/ws/PingForConfiguration/1?xsd=PingForConfigurationResponder_1.0.xsd"/>
+      <xs:import namespace="urn:riv:itintegration:registry:1" schemaLocation="http://localhost:8080/Schedulr/ws/PingForConfiguration/1?xsd=../../core_components/itintegration_registry_1.0.xsd"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="PingForConfigurationRequest">
+    <wsdl:part element="rgy:LogicalAddress" name="LogicalAddress">
+      <xs:annotation>
+        <xs:documentation>The org nr of AB Inera (SE165565594230-1000)</xs:documentation>
+      </xs:annotation>
+    </wsdl:part>
+    <wsdl:part element="tjsr:PingForConfiguration" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="PingForConfigurationResponse">
+    <wsdl:part element="tjsr:PingForConfigurationResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="PingForConfigurationResponderInterface">
+    <wsdl:operation name="PingForConfiguration">
+      <wsdl:input message="tns:PingForConfigurationRequest"></wsdl:input>
+      <wsdl:output message="tns:PingForConfigurationResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PingForConfigurationResponderBinding" type="tns:PingForConfigurationResponderInterface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="PingForConfiguration">
+      <soap:operation soapAction="urn:riv:itintegration:monitoring:PingForConfigurationResponder:1:PingForConfiguration" style="document"/>
+      <wsdl:input>
+        <soap:header message="tns:PingForConfigurationRequest" part="LogicalAddress" use="literal"></soap:header>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PingForConfigurationResponderService">
+    <wsdl:port binding="tns:PingForConfigurationResponderBinding" name="PingForConfigurationResponderPort">
+      <soap:address location="http://localhost:8080/Schedulr/ws/PingForConfiguration/1"/>
+    </wsdl:port>
+  </wsdl:service>
+  <xs:annotation>
+    <xs:documentation>Tjänsteinteraktionens namn: PingForConfigurationInteraction
+			 Beskrivning: 
+			   A service interaction for monitoring and querying the configuration of service endpoints. 
+			   The idea is that each module that exposes RIV TA web services should also expose a service according to this contract.
+			   It should report the configuration (version etc) of the module/system/component. The fact that this is a well-known 
+			   service without side effects and no or insignificant resource consumption, it is also use-ful for monitoring the health
+			   of the module. If this service fails, it is likely that also the other services exposed by the same module will fail.
+			 Revisioner: 
+			 Tjänstedomän: itintegration:monitoring
+			 Tjänsteinteraktionstyp: Fråga-Svar
+			 WS-profil: RIVTABP21
+			 Förvaltas av: Center för E-hälsa i Samverkan</xs:documentation>
+  </xs:annotation>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:8080/Schedulr/ws/PingForConfiguration/1?xsd=PingForConfigurationResponder_1.0.xsd</con:url><con:content><![CDATA[<!--Licensed to Sveriges Kommuner och Landsting under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:riv:itintegration:monitoring:PingForConfigurationResponder:1" version="1.0" xmlns:core="urn:riv:itintegration:monitoring:1" xmlns:tns="urn:riv:itintegration:monitoring:PingForConfigurationResponder:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="urn:riv:itintegration:monitoring:1" schemaLocation="http://localhost:8080/Schedulr/ws/PingForConfiguration/1?xsd=../../core_components/itintegration_monitoring_1.0.xsd"/>
+  <xs:element name="PingForConfiguration" type="tns:PingForConfigurationType"/>
+  <xs:element name="PingForConfigurationResponse" type="tns:PingForConfigurationResponseType"/>
+  <xs:complexType name="PingForConfigurationType">
+    <xs:sequence>
+      <xs:element name="serviceContractNamespace" type="xs:anyURI">
+        <xs:annotation>
+          <xs:documentation>The namespace qualifier of the service contract to ping (which is also the namespace of the service request element).
+			This element is primarilly of interest to a forwarding intermediary.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="logicalAddress" type="xs:anyURI">
+        <xs:annotation>
+          <xs:documentation>The logical address to ping.
+			This element is primarilly of interest to a forwarding intermediary.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PingForConfigurationResponseType">
+    <xs:sequence>
+      <xs:element name="version" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Version of the service component that responds.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="pingDateTime" type="core:TS">
+        <xs:annotation>
+          <xs:documentation>Date and time for the ping response.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="configuration" type="tns:ConfigurationType">
+        <xs:annotation>
+          <xs:documentation>Optional list of environment information from the service component.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ConfigurationType">
+    <xs:annotation>
+      <xs:documentation>Example of configuration information (Named by the name element): jvm/.net version, operating system version, local system time, last start/restart</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="value" type="xs:string"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8080/Schedulr/ws/PingForConfiguration/1?xsd=../../core_components/itintegration_monitoring_1.0.xsd</con:url><con:content><![CDATA[<!--Licensed to Sveriges Kommuner och Landsting under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:riv:itintegration:monitoring:1" version="1.0" xmlns:tns="urn:riv:itintegration:monitoring:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="TS">
+    <xs:annotation>
+      <xs:documentation>Regexp declaration for timestamp in the format: YYYYMMDDHHMMSS</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[1-9]{1}[0-9]{3}(0[1-9]{1}|1[0-2]{1})([0-2]{1}[0-9]{1}|3[0-1]{1})([0-1]{1}[0-9]{1}|2[0-3]{1})[0-5]{1}[0-9]{1}[0-5]{1}[0-9]{1}"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8080/Schedulr/ws/PingForConfiguration/1?xsd=../../core_components/itintegration_registry_1.0.xsd</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="urn:riv:itintegration:registry:1" version="1.0" xmlns="urn:riv:itintegration:registry:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: 	Grundläggande informationsobjekt för domänen itintegration:registry (adressering av tjänster)
+			
+			Revisionshistorik: 2011-06-27 Mats Ekhammar, Callista Enterprise AB
+				Added ServiceContractType
+			
+			Datum:			2011-05-04
+			Beskrivning:	Initial version
+			Författare:		marcus.krantz@callistaenterprise.se</xs:documentation>
+  </xs:annotation>
+  <xs:element name="LogicalAddress" type="LogicalAddressType"/>
+  <xs:element name="ServiceContract" type="ServiceContractType"/>
+  <xs:simpleType name="LogicalAddressType">
+    <xs:annotation>
+      <xs:documentation>Defines the type for logical address according to national reference architecture.
+				Superseeds wsa:To as type for logical address header in RIVTA 2.1.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="ServiceContractType">
+    <xs:annotation>
+      <xs:documentation>Type which describes a service contract. Used in interaction GetSupportedServiceContracts.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ServiceContractNamespace" type="xs:anyURI"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/Schedulr/ws/PingForConfiguration/1</con:endpoint></con:endpoints><con:operation isOneWay="false" action="urn:riv:itintegration:monitoring:PingForConfigurationResponder:1:PingForConfiguration" name="PingForConfiguration" bindingOperationName="PingForConfiguration" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://46.137.103.113/form-engine-intsvc/ws/pingForConfiguration</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:itintegration:monitoring:PingForConfigurationResponder:1">
+   <soapenv:Header>
+      <urn:LogicalAddress>?</urn:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn1:PingForConfiguration>
+         <urn1:serviceContractNamespace>infrastructure:eservicesupply:forminteraction</urn1:serviceContractNamespace>
+         <urn1:logicalAddress>?</urn1:logicalAddress>
+         <!--You may enter ANY elements at this point-->
+      </urn1:PingForConfiguration>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:itintegration:monitoring:PingForConfigurationResponder:1:PingForConfiguration"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="UpdateBookingResponderBinding" type="wsdl" bindingName="{urn:riv:crm:scheduling:UpdateBooking:1:rivtabp21}UpdateBookingResponderBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080/Schedulr/ws/UpdateBooking/1?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080/Schedulr/ws/UpdateBooking/1?wsdl"><con:part><con:url>http://localhost:8080/Schedulr/ws/UpdateBooking/1?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="UpdateBookingInteraction" targetNamespace="urn:riv:crm:scheduling:UpdateBooking:1:rivtabp21" xmlns:ih="urn:riv:interoperability:headers:1" xmlns:itr="urn:riv:itintegration:registry:1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tjsr="urn:riv:crm:scheduling:UpdateBookingResponder:1" xmlns:tns="urn:riv:crm:scheduling:UpdateBooking:1:rivtabp21" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xs:schema targetNamespace="urn:riv:crm:scheduling:UpdateBooking:1:rivtabp21">
+      <xs:import namespace="urn:riv:crm:scheduling:UpdateBookingResponder:1" schemaLocation="http://localhost:8080/Schedulr/ws/UpdateBooking/1?xsd=UpdateBookingResponder_1.1.xsd"/>
+      <xs:import namespace="urn:riv:itintegration:registry:1" schemaLocation="http://localhost:8080/Schedulr/ws/UpdateBooking/1?xsd=../../core_components/itintegration_registry_1.0.xsd"/>
+      <xs:import namespace="urn:riv:interoperability:headers:1" schemaLocation="http://localhost:8080/Schedulr/ws/UpdateBooking/1?xsd=../../core_components/interoperability_headers_1.0.xsd"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="UpdateBookingResponse">
+    <wsdl:part element="tjsr:UpdateBookingResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UpdateBookingRequest">
+    <wsdl:part element="itr:LogicalAddress" name="LogicalAddress">
+      <wsdl:documentation>hsaid of the healthcare_facility owning the schedule</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part element="ih:Actor" name="actor"></wsdl:part>
+    <wsdl:part element="tjsr:UpdateBooking" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="UpdateBookingResponderInterface">
+    <wsdl:operation name="UpdateBooking">
+      <wsdl:input message="tns:UpdateBookingRequest"></wsdl:input>
+      <wsdl:output message="tns:UpdateBookingResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="UpdateBookingResponderBinding" type="tns:UpdateBookingResponderInterface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="UpdateBooking">
+      <soap:operation soapAction="urn:riv:crm:scheduling:UpdateBookingResponder:1:UpdateBooking" style="document"/>
+      <wsdl:input>
+        <soap:header message="tns:UpdateBookingRequest" part="LogicalAddress" use="literal"></soap:header>
+        <soap:header message="tns:UpdateBookingRequest" part="actor" use="literal"></soap:header>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UpdateBookingResponderService">
+    <wsdl:port binding="tns:UpdateBookingResponderBinding" name="UpdateBookingResponderPort">
+      <soap:address location="http://localhost:8080/Schedulr/ws/UpdateBooking/1"/>
+    </wsdl:port>
+  </wsdl:service>
+  <xs:annotation>
+    <xs:documentation>Tjänsteinteraktionens namn: UpdateBookingInteraction
+			 Beskrivning: 
+			   Interaction to update a new booking at a healthcare facility with a new timeslot, i.e to "move" a booking from the existing time slot to a new one.
+			 Revisioner: 
+			 Tjänstedomän: crm:scheduling
+			 Tjänsteinteraktionstyp: Fråga-Svar
+			 WS-profil: RIVTABP21
+			 Förvaltas av: Sveriges Kommuner och Landsting</xs:documentation>
+  </xs:annotation>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:8080/Schedulr/ws/UpdateBooking/1?xsd=UpdateBookingResponder_1.1.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Inera AB licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:riv:crm:scheduling:UpdateBookingResponder:1" version="1.1" xmlns:core="urn:riv:crm:scheduling:1" xmlns:tns="urn:riv:crm:scheduling:UpdateBookingResponder:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: Tjänsteschema för UpdateBookingResponder.
+	  Revisioner: 
+		2010-04-21: Release version 1.0 johan.eltes@callistaenterprise.se.
+		2011-03-XX: Release version 1.1 johan.eltes@callistaenterprise.se.
+			- content of subject_of_care_info has been extended with firstName and lastName (both 1:1). Osor change request:15075</xs:documentation>
+  </xs:annotation>
+  <xs:import namespace="urn:riv:crm:scheduling:1" schemaLocation="http://localhost:8080/Schedulr/ws/UpdateBooking/1?xsd=../../core_components/crm_scheduling_1.1.xsd"/>
+  <xs:element name="UpdateBooking" type="tns:UpdateBookingType"/>
+  <xs:element name="UpdateBookingResponse" type="tns:UpdateBookingResponseType"/>
+  <xs:complexType name="UpdateBookingType">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="requestedTimeslot" type="core:TimeslotType"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="subject_of_care_info" type="core:SubjectOfCareType"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="notification" type="xs:string"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="UpdateBookingResponseType">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="resultCode" type="core:ResultCodeEnum"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="resultText" type="xs:string"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8080/Schedulr/ws/UpdateBooking/1?xsd=../../core_components/crm_scheduling_1.1.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Inera AB licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:riv:crm:scheduling:1" version="1.1" xmlns:m1="urn:riv:crm:scheduling:1.1" xmlns:tns="urn:riv:crm:scheduling:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: Meddelandeformat för crm:scheduling.
+	  Revisioner: 
+		2010-04-21: Release version 1.0 johan.eltes@callistaenterprise.se.
+		2011-03-XX: Release version 1.1 johan.eltes@callistaenterprise.se.
+			- SubjectOfCareType: New elements: firstName, middleName, lastName. Osor change request:15075
+			- New structure declared: CareTypeType. Osor change request:15087	
+			- New reusable type: PerformerInfoType. 
+			- New reusable type: HealthcareFacilityInfoType</xs:documentation>
+  </xs:annotation>
+  <xs:import namespace="urn:riv:crm:scheduling:1.1" schemaLocation="http://localhost:8080/Schedulr/ws/UpdateBooking/1?xsd=crm_scheduling_1.1_ext.xsd"/>
+  <xs:complexType name="TimeslotType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="startTimeInclusive" type="tns:TS"/>
+      <xs:element minOccurs="0" name="endTimeExclusive" type="tns:TS"/>
+      <xs:element minOccurs="1" name="healthcare_facility" type="tns:HsaIdType"/>
+      <xs:element minOccurs="0" name="performer" type="tns:HsaIdType"/>
+      <xs:element minOccurs="0" name="bookingId" type="tns:BookingIdType"/>
+      <xs:element minOccurs="0" name="subject_of_care" type="tns:SubjectOfCareIdType"/>
+      <xs:element minOccurs="0" name="purpose" type="xs:string"/>
+      <xs:element minOccurs="0" name="reason" type="xs:string"/>
+      <xs:element minOccurs="0" name="resourceName" type="xs:string"/>
+      <xs:element minOccurs="0" name="healthcare_facility_name" type="xs:string"/>
+      <xs:element minOccurs="0" name="performerName" type="xs:string"/>
+      <xs:element minOccurs="0" name="resourceID" type="tns:ResourceIDType"/>
+      <xs:element minOccurs="0" name="timeTypeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="timeTypeID" type="tns:TimeTypeIDType"/>
+      <xs:element minOccurs="0" name="careTypeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="careTypeID" type="tns:CareTypeIDType"/>
+      <xs:element minOccurs="0" name="cancel_booking_allowed" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="rebooking_allowed" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="message_allowed" type="xs:boolean"/>
+      <xs:element minOccurs="0" ref="m1:isInvitation"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="BookingIdType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="HsaIdType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="SubjectOfCareIdType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="^[0-9]{8}[0-9pPtTfF][0-9]{3}$"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ResultCodeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OK"/>
+      <xs:enumeration value="ERROR"/>
+      <xs:enumeration value="INFO"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="SubjectOfCareType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="phone" type="xs:string"/>
+      <xs:element minOccurs="0" name="email" type="xs:string"/>
+      <xs:element minOccurs="0" name="address" type="xs:string"/>
+      <xs:element minOccurs="0" name="coaddress" type="xs:string"/>
+      <xs:element minOccurs="1" ref="m1:firstName"/>
+      <xs:element minOccurs="0" ref="m1:middleName"/>
+      <xs:element minOccurs="1" ref="m1:lastName"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TimeTypeType">
+    <xs:sequence>
+      <xs:element name="timeTypeName" type="xs:string"/>
+      <xs:element name="timeTypeId" type="tns:TimeTypeIDType"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CareTypeType">
+    <xs:sequence>
+      <xs:element name="careTypeName" type="xs:string"/>
+      <xs:element name="careTypeId" type="tns:CareTypeIDType"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ResourceIDType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="TimeTypeIDType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="CareTypeIDType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="TS">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[1-9]{1}[0-9]{3}(0[1-9]{1}|1[0-2]{1})([0-2]{1}[0-9]{1}|3[0-1]{1})([0-1]{1}[0-9]{1}|2[0-3]{1})[0-5]{1}[0-9]{1}[0-5]{1}[0-9]{1}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DT">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[1-9]{1}[0-9]{3}(0[1-9]{1}|1[0-2]{1})([0-2]{1}[0-9]{1}|3[0-1]{1})"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="PerformerInfoType">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="perfomer" type="tns:HsaIdType"/>
+      <xs:element minOccurs="1" name="firstName" type="xs:string"/>
+      <xs:element minOccurs="1" name="lastName" type="xs:string"/>
+      <xs:element minOccurs="0" name="title" type="xs:string"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="HealthcareFacilityInfoType">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="healthcare_facility" type="tns:HsaIdType"/>
+      <xs:element minOccurs="0" name="healthcare_facility_name" type="xs:string"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8080/Schedulr/ws/UpdateBooking/1?xsd=crm_scheduling_1.1_ext.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Inera AB licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:riv:crm:scheduling:1.1" version="1.1" xmlns:tns="urn:riv:crm:scheduling:1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: Extensibility schema for crm:scheduling 1.1
+	  Revisioner: 
+		2011-03-XX: Release johan.eltes@callistaenterprise.se.</xs:documentation>
+  </xs:annotation>
+  <xs:element name="firstName" type="xs:string"/>
+  <xs:element name="middleName" type="xs:string"/>
+  <xs:element name="lastName" type="xs:string"/>
+  <xs:element name="isInvitation" type="xs:boolean"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8080/Schedulr/ws/UpdateBooking/1?xsd=../../core_components/itintegration_registry_1.0.xsd</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="urn:riv:itintegration:registry:1" version="1.0" xmlns="urn:riv:itintegration:registry:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: 	Grundläggande informationsobjekt för domänen itintegration:registry (adressering av tjänster)
+			
+			Revisionshistorik: 2011-06-27 Mats Ekhammar, Callista Enterprise AB
+				Added ServiceContractType
+			
+			Datum:			2011-05-04
+			Beskrivning:	Initial version
+			Författare:		marcus.krantz@callistaenterprise.se</xs:documentation>
+  </xs:annotation>
+  <xs:element name="LogicalAddress" type="LogicalAddressType"/>
+  <xs:element name="ServiceContract" type="ServiceContractType"/>
+  <xs:simpleType name="LogicalAddressType">
+    <xs:annotation>
+      <xs:documentation>Defines the type for logical address according to national reference architecture.
+				Superseeds wsa:To as type for logical address header in RIVTA 2.1.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="ServiceContractType">
+    <xs:annotation>
+      <xs:documentation>Type which describes a service contract. Used in interaction GetSupportedServiceContracts.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ServiceContractNamespace" type="xs:anyURI"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8080/Schedulr/ws/UpdateBooking/1?xsd=../../core_components/interoperability_headers_1.0.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:riv:interoperability:headers:1" version="1.0" xmlns:tns="urn:riv:interoperability:headers:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Actor" type="tns:ActorType"/>
+  <xs:complexType name="ActorType">
+    <xs:sequence>
+      <xs:element name="actorId" type="tns:ActorIdType"/>
+      <xs:element name="actorType" type="tns:ActorTypeEnum"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ActorIdType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="ActorTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="subject_of_care"/>
+      <xs:enumeration value="subject_of_care_agent"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/Schedulr/ws/UpdateBooking/1</con:endpoint></con:endpoints><con:operation isOneWay="false" action="urn:riv:crm:scheduling:UpdateBookingResponder:1:UpdateBooking" name="UpdateBooking" bindingOperationName="UpdateBooking" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/Schedulr/ws/UpdateBooking/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:crm:scheduling:UpdateBookingResponder:1" xmlns:urn3="urn:riv:crm:scheduling:1" xmlns:urn4="urn:riv:crm:scheduling:1.1">
+   <soapenv:Header>
+      <urn:Actor>
+         <urn:actorId>?</urn:actorId>
+         <urn:actorType>?</urn:actorType>
+         <!--You may enter ANY elements at this point-->
+      </urn:Actor>
+      <urn1:LogicalAddress>?</urn1:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn2:UpdateBooking>
+         <urn2:requestedTimeslot>
+            <!--Optional:-->
+            <urn3:startTimeInclusive>?</urn3:startTimeInclusive>
+            <!--Optional:-->
+            <urn3:endTimeExclusive>?</urn3:endTimeExclusive>
+            <urn3:healthcare_facility>?</urn3:healthcare_facility>
+            <!--Optional:-->
+            <urn3:performer>?</urn3:performer>
+            <!--Optional:-->
+            <urn3:bookingId>?</urn3:bookingId>
+            <!--Optional:-->
+            <urn3:subject_of_care>?</urn3:subject_of_care>
+            <!--Optional:-->
+            <urn3:purpose>?</urn3:purpose>
+            <!--Optional:-->
+            <urn3:reason>?</urn3:reason>
+            <!--Optional:-->
+            <urn3:resourceName>?</urn3:resourceName>
+            <!--Optional:-->
+            <urn3:healthcare_facility_name>?</urn3:healthcare_facility_name>
+            <!--Optional:-->
+            <urn3:performerName>?</urn3:performerName>
+            <!--Optional:-->
+            <urn3:resourceID>?</urn3:resourceID>
+            <!--Optional:-->
+            <urn3:timeTypeName>?</urn3:timeTypeName>
+            <!--Optional:-->
+            <urn3:timeTypeID>?</urn3:timeTypeID>
+            <!--Optional:-->
+            <urn3:careTypeName>?</urn3:careTypeName>
+            <!--Optional:-->
+            <urn3:careTypeID>?</urn3:careTypeID>
+            <!--Optional:-->
+            <urn3:cancel_booking_allowed>?</urn3:cancel_booking_allowed>
+            <!--Optional:-->
+            <urn3:rebooking_allowed>?</urn3:rebooking_allowed>
+            <!--Optional:-->
+            <urn3:message_allowed>?</urn3:message_allowed>
+            <!--Optional:-->
+            <urn4:isInvitation>?</urn4:isInvitation>
+         </urn2:requestedTimeslot>
+         <!--Optional:-->
+         <urn2:subject_of_care_info>
+            <!--Optional:-->
+            <urn3:phone>?</urn3:phone>
+            <!--Optional:-->
+            <urn3:email>?</urn3:email>
+            <!--Optional:-->
+            <urn3:address>?</urn3:address>
+            <!--Optional:-->
+            <urn3:coaddress>?</urn3:coaddress>
+            <urn4:firstName>?</urn4:firstName>
+            <!--Optional:-->
+            <urn4:middleName>?</urn4:middleName>
+            <urn4:lastName>?</urn4:lastName>
+            <!--You may enter ANY elements at this point-->
+         </urn2:subject_of_care_info>
+         <!--Optional:-->
+         <urn2:notification>?</urn2:notification>
+         <!--You may enter ANY elements at this point-->
+      </urn2:UpdateBooking>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:crm:scheduling:UpdateBookingResponder:1:UpdateBooking"/><con:wsrmConfig version="1.2"/></con:call><con:call name="Request 2 small"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/Schedulr/ws/UpdateBooking/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:crm:scheduling:UpdateBookingResponder:1" xmlns:urn3="urn:riv:crm:scheduling:1" xmlns:urn4="urn:riv:crm:scheduling:1.1">
+   <soapenv:Header>
+      <urn:Actor>
+         <urn:actorId>?</urn:actorId>
+         <urn:actorType>?</urn:actorType>
+         <!--You may enter ANY elements at this point-->
+      </urn:Actor>
+      <urn1:LogicalAddress>HSA-VKK123</urn1:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn2:UpdateBooking>
+         <urn2:requestedTimeslot>
+            <urn3:startTimeInclusive>20150101211500</urn3:startTimeInclusive>
+            <urn3:endTimeExclusive>20150101214500</urn3:endTimeExclusive>
+            <urn3:healthcare_facility>HSA-VKK123</urn3:healthcare_facility>
+            <urn3:bookingId>7</urn3:bookingId>
+            <urn3:subject_of_care>197004064155</urn3:subject_of_care>
+         </urn2:requestedTimeslot>
+         <urn2:subject_of_care_info>
+            <urn4:firstName>Olle</urn4:firstName>
+            <urn4:lastName>Granberg</urn4:lastName>
+            <urn3:phone>123</urn3:phone>
+         </urn2:subject_of_care_info>
+         <urn2:notification>HEJ</urn2:notification>
+      </urn2:UpdateBooking>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:crm:scheduling:UpdateBookingResponder:1:UpdateBooking"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

@@ -35,6 +35,9 @@ beans = {
 	makeBookingService(org.callistasoftware.schedulr.services.MakeBookingService){
 	}
 	
+	updateBookingService(org.callistasoftware.schedulr.services.UpdateBookingService){
+	}
+	
 	pingForConfigurationService(org.callistasoftware.schedulr.services.PingForConfigurationService){
 	}
 
