@@ -1,0 +1,5 @@
+Version 0.6
+Implemented all the remaining services in the crm.scheduling domain.
+
+Version 0.7
+Fixed a bug by adding a Hibernate transaction around find call in GetBookingDetails

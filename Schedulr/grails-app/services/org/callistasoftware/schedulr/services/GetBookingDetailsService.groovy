@@ -39,8 +39,10 @@ class GetBookingDetailsService implements GetBookingDetailsResponderInterface{
 	}
 
 	private Timeslot getTimeslotWithBookingId(String bookingId, String healthcareFacilityId){
-		Timeslot.find {
-			id == bookingId && healthcareFacility.healthcareFacility == healthcareFacilityId
+		Timeslot.withTransaction {
+			Timeslot.find {
+				id == bookingId && healthcareFacility.healthcareFacility == healthcareFacilityId
+				}
 		}
 	}
 }
