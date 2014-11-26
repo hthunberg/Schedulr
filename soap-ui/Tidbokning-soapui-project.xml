@@ -330,7 +330,7 @@
       <xs:enumeration value="subject_of_care_agent"/>
     </xs:restriction>
   </xs:simpleType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://tempuri.org</con:endpoint></con:endpoints><con:operation isOneWay="false" action="urn:riv:crm:scheduling:CancelBookingResponder:1:CancelBooking" name="CancelBooking" bindingOperationName="CancelBooking" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/Schedulr/ws/CancelBooking/1?wsdl</con:endpoint><con:request><![CDATA[<soapenv:Envelope 
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://tempuri.org</con:endpoint><con:endpoint>https://www.kalendercentralen.se/Schedulr/ws/CancelBooking/1</con:endpoint></con:endpoints><con:operation isOneWay="false" action="urn:riv:crm:scheduling:CancelBookingResponder:1:CancelBooking" name="CancelBooking" bindingOperationName="CancelBooking" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/Schedulr/ws/CancelBooking/1?wsdl</con:endpoint><con:request><![CDATA[<soapenv:Envelope 
 xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
 xmlns:urn="urn:riv:interoperability:headers:1" 
 xmlns:urn1="urn:riv:itintegration:registry:1" 
@@ -681,7 +681,7 @@ xmlns:urn2="urn:riv:crm:scheduling:CancelBookingResponder:1">
       <xs:enumeration value="subject_of_care_agent"/>
     </xs:restriction>
   </xs:simpleType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://tempuri.org</con:endpoint></con:endpoints><con:operation isOneWay="false" action="urn:riv:crm:scheduling:GetSubjectOfCareScheduleResponder:1:GetSubjectOfCareSchedule" name="GetSubjectOfCareSchedule" bindingOperationName="GetSubjectOfCareSchedule" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/Schedulr/ws/GetSubjectOfCareSchedule/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope 
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://tempuri.org</con:endpoint><con:endpoint>https://www.kalendercentralen.se/Schedulr/ws/GetSubjectOfCareSchedule/1</con:endpoint></con:endpoints><con:operation isOneWay="false" action="urn:riv:crm:scheduling:GetSubjectOfCareScheduleResponder:1:GetSubjectOfCareSchedule" name="GetSubjectOfCareSchedule" bindingOperationName="GetSubjectOfCareSchedule" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/Schedulr/ws/GetSubjectOfCareSchedule/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope 
 	xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
 	xmlns:urn="urn:riv:interoperability:headers:1" 
 	xmlns:urn1="urn:riv:itintegration:registry:1" 
@@ -1024,7 +1024,7 @@ xmlns:urn2="urn:riv:crm:scheduling:CancelBookingResponder:1">
       <xs:enumeration value="subject_of_care_agent"/>
     </xs:restriction>
   </xs:simpleType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/Schedulr/ws/MakeBooking/1</con:endpoint></con:endpoints><con:operation isOneWay="false" action="urn:riv:crm:scheduling:MakeBookingResponder:1:MakeBooking" name="MakeBooking" bindingOperationName="MakeBooking" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/Schedulr/ws/MakeBooking/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:crm:scheduling:MakeBookingResponder:1" xmlns:urn3="urn:riv:crm:scheduling:1" xmlns:urn4="urn:riv:crm:scheduling:1.1">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/Schedulr/ws/MakeBooking/1</con:endpoint><con:endpoint>https://www.kalendercentralen.se/Schedulr/ws/MakeBooking/1</con:endpoint></con:endpoints><con:operation isOneWay="false" action="urn:riv:crm:scheduling:MakeBookingResponder:1:MakeBooking" name="MakeBooking" bindingOperationName="MakeBooking" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/Schedulr/ws/MakeBooking/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:crm:scheduling:MakeBookingResponder:1" xmlns:urn3="urn:riv:crm:scheduling:1" xmlns:urn4="urn:riv:crm:scheduling:1.1">
    <soapenv:Header>
       <urn:Actor>
          <urn:actorId>?</urn:actorId>
@@ -1431,7 +1431,7 @@ xmlns:urn2="urn:riv:crm:scheduling:CancelBookingResponder:1">
       <xs:enumeration value="subject_of_care_agent"/>
     </xs:restriction>
   </xs:simpleType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/Schedulr/ws/GetAllCareTypes/1</con:endpoint></con:endpoints><con:operation isOneWay="false" action="urn:riv:crm:scheduling:GetAllCareTypesResponder:1:GetAllCareTypes" name="GetAllCareTypes" bindingOperationName="GetAllCareTypes" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/Schedulr/ws/GetAllCareTypes/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:crm:scheduling:GetAllCareTypesResponder:1">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/Schedulr/ws/GetAllCareTypes/1</con:endpoint><con:endpoint>https://www.kalendercentralen.se/Schedulr/ws/GetAllCareTypes/1</con:endpoint></con:endpoints><con:operation isOneWay="false" action="urn:riv:crm:scheduling:GetAllCareTypesResponder:1:GetAllCareTypes" name="GetAllCareTypes" bindingOperationName="GetAllCareTypes" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/Schedulr/ws/GetAllCareTypes/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:crm:scheduling:GetAllCareTypesResponder:1">
    <soapenv:Header>
       <urn:Actor>
          <urn:actorId>?</urn:actorId>
@@ -1791,7 +1791,7 @@ xmlns:urn2="urn:riv:crm:scheduling:CancelBookingResponder:1">
       <xs:enumeration value="subject_of_care_agent"/>
     </xs:restriction>
   </xs:simpleType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/Schedulr/ws/GetAllTimeTypes/1</con:endpoint></con:endpoints><con:operation isOneWay="false" action="urn:riv:crm:scheduling:GetAllTimeTypesResponder:1:GetAllTimeTypes" name="GetAllTimeTypes" bindingOperationName="GetAllTimeTypes" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/Schedulr/ws/GetAllTimeTypes/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:crm:scheduling:GetAllTimeTypesResponder:1" xmlns:urn3="urn:riv:crm:scheduling:GetAllTimeTypesResponder:1.1">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/Schedulr/ws/GetAllTimeTypes/1</con:endpoint><con:endpoint>https://www.kalendercentralen.se/Schedulr/ws/GetAllTimeTypes/1</con:endpoint></con:endpoints><con:operation isOneWay="false" action="urn:riv:crm:scheduling:GetAllTimeTypesResponder:1:GetAllTimeTypes" name="GetAllTimeTypes" bindingOperationName="GetAllTimeTypes" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/Schedulr/ws/GetAllTimeTypes/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:crm:scheduling:GetAllTimeTypesResponder:1" xmlns:urn3="urn:riv:crm:scheduling:GetAllTimeTypesResponder:1.1">
    <soapenv:Header>
       <urn:Actor>
          <urn:actorId>?</urn:actorId>
@@ -2121,7 +2121,7 @@ xmlns:urn2="urn:riv:crm:scheduling:CancelBookingResponder:1">
       <xs:enumeration value="subject_of_care_agent"/>
     </xs:restriction>
   </xs:simpleType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/Schedulr/ws/GetAllHealthcareFacilities/1</con:endpoint></con:endpoints><con:operation isOneWay="false" action="urn:riv:crm:scheduling:GetAllHealthcareFacilitiesResponder:1:GetAllHealthcareFacilities" name="GetAllHealthcareFacilities" bindingOperationName="GetAllHealthcareFacilities" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/Schedulr/ws/GetAllHealthcareFacilities/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:crm:scheduling:GetAllHealthcareFacilitiesResponder:1">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/Schedulr/ws/GetAllHealthcareFacilities/1</con:endpoint><con:endpoint>https://www.kalendercentralen.se/Schedulr/ws/GetAllHealthcareFacilities/1</con:endpoint></con:endpoints><con:operation isOneWay="false" action="urn:riv:crm:scheduling:GetAllHealthcareFacilitiesResponder:1:GetAllHealthcareFacilities" name="GetAllHealthcareFacilities" bindingOperationName="GetAllHealthcareFacilities" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/Schedulr/ws/GetAllHealthcareFacilities/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:crm:scheduling:GetAllHealthcareFacilitiesResponder:1">
    <soapenv:Header>
       <urn:Actor>
          <urn:actorId>?</urn:actorId>
@@ -2452,7 +2452,7 @@ xmlns:urn2="urn:riv:crm:scheduling:CancelBookingResponder:1">
       <xs:enumeration value="subject_of_care_agent"/>
     </xs:restriction>
   </xs:simpleType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/Schedulr/ws/GetAllPerformers/1</con:endpoint></con:endpoints><con:operation isOneWay="false" action="urn:riv:crm:scheduling:GetAllPerformersResponder:1:GetAllPerformers" name="GetAllPerformers" bindingOperationName="GetAllPerformers" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/Schedulr/ws/GetAllPerformers/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:crm:scheduling:GetAllPerformersResponder:1">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/Schedulr/ws/GetAllPerformers/1</con:endpoint><con:endpoint>https://www.kalendercentralen.se/Schedulr/ws/GetAllPerformers/1</con:endpoint></con:endpoints><con:operation isOneWay="false" action="urn:riv:crm:scheduling:GetAllPerformersResponder:1:GetAllPerformers" name="GetAllPerformers" bindingOperationName="GetAllPerformers" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/Schedulr/ws/GetAllPerformers/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:crm:scheduling:GetAllPerformersResponder:1">
    <soapenv:Header>
       <urn:Actor>
          <urn:actorId>?</urn:actorId>
@@ -2832,7 +2832,7 @@ xmlns:urn2="urn:riv:crm:scheduling:CancelBookingResponder:1">
       <xs:enumeration value="subject_of_care_agent"/>
     </xs:restriction>
   </xs:simpleType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/Schedulr/ws/GetAvailableDates/1</con:endpoint></con:endpoints><con:operation isOneWay="false" action="urn:riv:crm:scheduling:GetAvailableDatesResponder:1:GetAvailableDates" name="GetAvailableDates" bindingOperationName="GetAvailableDates" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/Schedulr/ws/GetAvailableDates/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:crm:scheduling:GetAvailableDatesResponder:1" xmlns:urn3="urn:riv:crm:scheduling:GetAvailableDatesResponder:1.1">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/Schedulr/ws/GetAvailableDates/1</con:endpoint><con:endpoint>https://www.kalendercentralen.se/Schedulr/ws/GetAvailableDates/1</con:endpoint></con:endpoints><con:operation isOneWay="false" action="urn:riv:crm:scheduling:GetAvailableDatesResponder:1:GetAvailableDates" name="GetAvailableDates" bindingOperationName="GetAvailableDates" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/Schedulr/ws/GetAvailableDates/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:crm:scheduling:GetAvailableDatesResponder:1" xmlns:urn3="urn:riv:crm:scheduling:GetAvailableDatesResponder:1.1">
    <soapenv:Header>
       <urn:Actor>
          <urn:actorId>?</urn:actorId>
@@ -3229,7 +3229,7 @@ xmlns:urn2="urn:riv:crm:scheduling:CancelBookingResponder:1">
       <xs:enumeration value="subject_of_care_agent"/>
     </xs:restriction>
   </xs:simpleType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/Schedulr/ws/GetAvailableTimeslots/1</con:endpoint></con:endpoints><con:operation isOneWay="false" action="urn:riv:crm:scheduling:GetAvailableTimeslotsResponder:1:GetAvailableTimeslots" name="GetAvailableTimeslots" bindingOperationName="GetAvailableTimeslots" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/Schedulr/ws/GetAvailableTimeslots/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:crm:scheduling:GetAvailableTimeslotsResponder:1" xmlns:urn3="urn:riv:crm:scheduling:GetAvailableTimeslotsResponder:1.1">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/Schedulr/ws/GetAvailableTimeslots/1</con:endpoint><con:endpoint>https://www.kalendercentralen.se/Schedulr/ws/GetAvailableTimeslots/1</con:endpoint></con:endpoints><con:operation isOneWay="false" action="urn:riv:crm:scheduling:GetAvailableTimeslotsResponder:1:GetAvailableTimeslots" name="GetAvailableTimeslots" bindingOperationName="GetAvailableTimeslots" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/Schedulr/ws/GetAvailableTimeslots/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:crm:scheduling:GetAvailableTimeslotsResponder:1" xmlns:urn3="urn:riv:crm:scheduling:GetAvailableTimeslotsResponder:1.1">
    <soapenv:Header>
       <urn:Actor>
          <urn:actorId>?</urn:actorId>
@@ -3462,7 +3462,7 @@ xmlns:urn2="urn:riv:crm:scheduling:CancelBookingResponder:1">
       <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
     </xs:sequence>
   </xs:complexType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/Schedulr/ws/PingForConfiguration/1</con:endpoint></con:endpoints><con:operation isOneWay="false" action="urn:riv:itintegration:monitoring:PingForConfigurationResponder:1:PingForConfiguration" name="PingForConfiguration" bindingOperationName="PingForConfiguration" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://46.137.103.113/form-engine-intsvc/ws/pingForConfiguration</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:itintegration:monitoring:PingForConfigurationResponder:1">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/Schedulr/ws/PingForConfiguration/1</con:endpoint><con:endpoint>https://www.kalendercentralen.se/Schedulr/ws/PingForConfiguration/1</con:endpoint></con:endpoints><con:operation isOneWay="false" action="urn:riv:itintegration:monitoring:PingForConfigurationResponder:1:PingForConfiguration" name="PingForConfiguration" bindingOperationName="PingForConfiguration" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://46.137.103.113/form-engine-intsvc/ws/pingForConfiguration</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:itintegration:monitoring:PingForConfigurationResponder:1">
    <soapenv:Header>
       <urn:LogicalAddress>?</urn:LogicalAddress>
    </soapenv:Header>
@@ -3788,7 +3788,7 @@ xmlns:urn2="urn:riv:crm:scheduling:CancelBookingResponder:1">
       <xs:enumeration value="subject_of_care_agent"/>
     </xs:restriction>
   </xs:simpleType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/Schedulr/ws/UpdateBooking/1</con:endpoint></con:endpoints><con:operation isOneWay="false" action="urn:riv:crm:scheduling:UpdateBookingResponder:1:UpdateBooking" name="UpdateBooking" bindingOperationName="UpdateBooking" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/Schedulr/ws/UpdateBooking/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:crm:scheduling:UpdateBookingResponder:1" xmlns:urn3="urn:riv:crm:scheduling:1" xmlns:urn4="urn:riv:crm:scheduling:1.1">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/Schedulr/ws/UpdateBooking/1</con:endpoint><con:endpoint>https://www.kalendercentralen.se/Schedulr/ws/UpdateBooking/1</con:endpoint></con:endpoints><con:operation isOneWay="false" action="urn:riv:crm:scheduling:UpdateBookingResponder:1:UpdateBooking" name="UpdateBooking" bindingOperationName="UpdateBooking" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/Schedulr/ws/UpdateBooking/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:crm:scheduling:UpdateBookingResponder:1" xmlns:urn3="urn:riv:crm:scheduling:1" xmlns:urn4="urn:riv:crm:scheduling:1.1">
    <soapenv:Header>
       <urn:Actor>
          <urn:actorId>?</urn:actorId>
@@ -3887,4 +3887,680 @@ xmlns:urn2="urn:riv:crm:scheduling:CancelBookingResponder:1">
          <urn2:notification>HEJ</urn2:notification>
       </urn2:UpdateBooking>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:crm:scheduling:UpdateBookingResponder:1:UpdateBooking"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:crm:scheduling:UpdateBookingResponder:1:UpdateBooking"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="GetBookingDetailsResponderBinding" type="wsdl" bindingName="{urn:riv:crm:scheduling:GetBookingDetails:1:rivtabp21}GetBookingDetailsResponderBinding" soapVersion="1_1" anonymous="optional" definition="https://www.kalendercentralen.se/Schedulr/ws/GetBookingDetails/1?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://www.kalendercentralen.se/Schedulr/ws/GetBookingDetails/1?wsdl"><con:part><con:url>https://www.kalendercentralen.se/Schedulr/ws/GetBookingDetails/1?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="GetBookingDetailsInteraction" targetNamespace="urn:riv:crm:scheduling:GetBookingDetails:1:rivtabp21" xmlns:ih="urn:riv:interoperability:headers:1" xmlns:itr="urn:riv:itintegration:registry:1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tjsr="urn:riv:crm:scheduling:GetBookingDetailsResponder:1" xmlns:tns="urn:riv:crm:scheduling:GetBookingDetails:1:rivtabp21" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xs:schema targetNamespace="urn:riv:crm:scheduling:GetBookingDetails:1:rivtabp21">
+      <xs:import namespace="urn:riv:crm:scheduling:GetBookingDetailsResponder:1" schemaLocation="https://www.kalendercentralen.se/Schedulr/ws/GetBookingDetails/1?xsd=GetBookingDetailsResponder_1.1.xsd"/>
+      <xs:import namespace="urn:riv:itintegration:registry:1" schemaLocation="https://www.kalendercentralen.se/Schedulr/ws/GetBookingDetails/1?xsd=../../core_components/itintegration_registry_1.0.xsd"/>
+      <xs:import namespace="urn:riv:interoperability:headers:1" schemaLocation="https://www.kalendercentralen.se/Schedulr/ws/GetBookingDetails/1?xsd=../../core_components/interoperability_headers_1.0.xsd"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GetBookingDetailsRequest">
+    <wsdl:part element="itr:LogicalAddress" name="LogicalAddress">
+      <wsdl:documentation>hsaid of the healthcare_facility owning the schedule</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part element="ih:Actor" name="actor"></wsdl:part>
+    <wsdl:part element="tjsr:GetBookingDetails" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetBookingDetailsResponse">
+    <wsdl:part element="tjsr:GetBookingDetailsResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="GetBookingDetailsResponderInterface">
+    <wsdl:operation name="GetBookingDetails">
+      <wsdl:input message="tns:GetBookingDetailsRequest"></wsdl:input>
+      <wsdl:output message="tns:GetBookingDetailsResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GetBookingDetailsResponderBinding" type="tns:GetBookingDetailsResponderInterface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetBookingDetails">
+      <soap:operation soapAction="urn:riv:crm:scheduling:GetBookingDetailsResponder:1:GetBookingDetails" style="document"/>
+      <wsdl:input>
+        <soap:header message="tns:GetBookingDetailsRequest" part="LogicalAddress" use="literal"></soap:header>
+        <soap:header message="tns:GetBookingDetailsRequest" part="actor" use="literal"></soap:header>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GetBookingDetailsResponderService">
+    <wsdl:port binding="tns:GetBookingDetailsResponderBinding" name="GetBookingDetailsResponderPort">
+      <soap:address location="https://www.kalendercentralen.se/Schedulr/ws/GetBookingDetails/1"/>
+    </wsdl:port>
+  </wsdl:service>
+  <xs:annotation>
+    <xs:documentation>Tjänsteinteraktionens namn: GetBookingDetailsInteraction
+			 Beskrivning: 
+			   Interaction to retrieve details about an existing booking at a healthcare facility.
+			 Revisioner: 
+			 Tjänstedomän: crm:scheduling
+			 Tjänsteinteraktionstyp: Fråga-Svar
+			 WS-profil: RIVTABP21
+			 Förvaltas av: Sveriges Kommuner och Landsting</xs:documentation>
+  </xs:annotation>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>https://www.kalendercentralen.se/Schedulr/ws/GetBookingDetails/1?xsd=GetBookingDetailsResponder_1.1.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Inera AB licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:riv:crm:scheduling:GetBookingDetailsResponder:1" version="1.1" xmlns:core="urn:riv:crm:scheduling:1" xmlns:tns="urn:riv:crm:scheduling:GetBookingDetailsResponder:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: Tjänsteschema för GetBookingDetailsResponder.
+	  Revisioner: 
+		2010-04-21: Release version 1.0 johan.eltes@callistaenterprise.se.
+		2011-03-XX: Release version 1.1 johan.eltes@callistaenterprise.se.
+			- ingen förändring sedan 1.0</xs:documentation>
+  </xs:annotation>
+  <xs:import namespace="urn:riv:crm:scheduling:1" schemaLocation="https://www.kalendercentralen.se/Schedulr/ws/GetBookingDetails/1?xsd=../../core_components/crm_scheduling_1.1.xsd"/>
+  <xs:element name="GetBookingDetails" type="tns:GetBookingDetailsType"/>
+  <xs:element name="GetBookingDetailsResponse" type="tns:GetBookingDetailsResponseType"/>
+  <xs:complexType name="GetBookingDetailsType">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="healthcare_facility" type="core:HsaIdType"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="bookingId" type="core:BookingIdType"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetBookingDetailsResponseType">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="timeslotDetail" type="core:TimeslotType"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>https://www.kalendercentralen.se/Schedulr/ws/GetBookingDetails/1?xsd=../../core_components/crm_scheduling_1.1.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Inera AB licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:riv:crm:scheduling:1" version="1.1" xmlns:m1="urn:riv:crm:scheduling:1.1" xmlns:tns="urn:riv:crm:scheduling:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: Meddelandeformat för crm:scheduling.
+	  Revisioner: 
+		2010-04-21: Release version 1.0 johan.eltes@callistaenterprise.se.
+		2011-03-XX: Release version 1.1 johan.eltes@callistaenterprise.se.
+			- SubjectOfCareType: New elements: firstName, middleName, lastName. Osor change request:15075
+			- New structure declared: CareTypeType. Osor change request:15087	
+			- New reusable type: PerformerInfoType. 
+			- New reusable type: HealthcareFacilityInfoType</xs:documentation>
+  </xs:annotation>
+  <xs:import namespace="urn:riv:crm:scheduling:1.1" schemaLocation="https://www.kalendercentralen.se/Schedulr/ws/GetBookingDetails/1?xsd=crm_scheduling_1.1_ext.xsd"/>
+  <xs:complexType name="TimeslotType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="startTimeInclusive" type="tns:TS"/>
+      <xs:element minOccurs="0" name="endTimeExclusive" type="tns:TS"/>
+      <xs:element minOccurs="1" name="healthcare_facility" type="tns:HsaIdType"/>
+      <xs:element minOccurs="0" name="performer" type="tns:HsaIdType"/>
+      <xs:element minOccurs="0" name="bookingId" type="tns:BookingIdType"/>
+      <xs:element minOccurs="0" name="subject_of_care" type="tns:SubjectOfCareIdType"/>
+      <xs:element minOccurs="0" name="purpose" type="xs:string"/>
+      <xs:element minOccurs="0" name="reason" type="xs:string"/>
+      <xs:element minOccurs="0" name="resourceName" type="xs:string"/>
+      <xs:element minOccurs="0" name="healthcare_facility_name" type="xs:string"/>
+      <xs:element minOccurs="0" name="performerName" type="xs:string"/>
+      <xs:element minOccurs="0" name="resourceID" type="tns:ResourceIDType"/>
+      <xs:element minOccurs="0" name="timeTypeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="timeTypeID" type="tns:TimeTypeIDType"/>
+      <xs:element minOccurs="0" name="careTypeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="careTypeID" type="tns:CareTypeIDType"/>
+      <xs:element minOccurs="0" name="cancel_booking_allowed" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="rebooking_allowed" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="message_allowed" type="xs:boolean"/>
+      <xs:element minOccurs="0" ref="m1:isInvitation"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="BookingIdType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="HsaIdType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="SubjectOfCareIdType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="^[0-9]{8}[0-9pPtTfF][0-9]{3}$"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ResultCodeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OK"/>
+      <xs:enumeration value="ERROR"/>
+      <xs:enumeration value="INFO"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="SubjectOfCareType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="phone" type="xs:string"/>
+      <xs:element minOccurs="0" name="email" type="xs:string"/>
+      <xs:element minOccurs="0" name="address" type="xs:string"/>
+      <xs:element minOccurs="0" name="coaddress" type="xs:string"/>
+      <xs:element minOccurs="1" ref="m1:firstName"/>
+      <xs:element minOccurs="0" ref="m1:middleName"/>
+      <xs:element minOccurs="1" ref="m1:lastName"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TimeTypeType">
+    <xs:sequence>
+      <xs:element name="timeTypeName" type="xs:string"/>
+      <xs:element name="timeTypeId" type="tns:TimeTypeIDType"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CareTypeType">
+    <xs:sequence>
+      <xs:element name="careTypeName" type="xs:string"/>
+      <xs:element name="careTypeId" type="tns:CareTypeIDType"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ResourceIDType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="TimeTypeIDType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="CareTypeIDType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="TS">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[1-9]{1}[0-9]{3}(0[1-9]{1}|1[0-2]{1})([0-2]{1}[0-9]{1}|3[0-1]{1})([0-1]{1}[0-9]{1}|2[0-3]{1})[0-5]{1}[0-9]{1}[0-5]{1}[0-9]{1}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DT">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[1-9]{1}[0-9]{3}(0[1-9]{1}|1[0-2]{1})([0-2]{1}[0-9]{1}|3[0-1]{1})"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="PerformerInfoType">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="perfomer" type="tns:HsaIdType"/>
+      <xs:element minOccurs="1" name="firstName" type="xs:string"/>
+      <xs:element minOccurs="1" name="lastName" type="xs:string"/>
+      <xs:element minOccurs="0" name="title" type="xs:string"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="HealthcareFacilityInfoType">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="healthcare_facility" type="tns:HsaIdType"/>
+      <xs:element minOccurs="0" name="healthcare_facility_name" type="xs:string"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>https://www.kalendercentralen.se/Schedulr/ws/GetBookingDetails/1?xsd=crm_scheduling_1.1_ext.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Inera AB licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:riv:crm:scheduling:1.1" version="1.1" xmlns:tns="urn:riv:crm:scheduling:1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: Extensibility schema for crm:scheduling 1.1
+	  Revisioner: 
+		2011-03-XX: Release johan.eltes@callistaenterprise.se.</xs:documentation>
+  </xs:annotation>
+  <xs:element name="firstName" type="xs:string"/>
+  <xs:element name="middleName" type="xs:string"/>
+  <xs:element name="lastName" type="xs:string"/>
+  <xs:element name="isInvitation" type="xs:boolean"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>https://www.kalendercentralen.se/Schedulr/ws/GetBookingDetails/1?xsd=../../core_components/itintegration_registry_1.0.xsd</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="urn:riv:itintegration:registry:1" version="1.0" xmlns="urn:riv:itintegration:registry:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: 	Grundläggande informationsobjekt för domänen itintegration:registry (adressering av tjänster)
+			
+			Revisionshistorik: 2011-06-27 Mats Ekhammar, Callista Enterprise AB
+				Added ServiceContractType
+			
+			Datum:			2011-05-04
+			Beskrivning:	Initial version
+			Författare:		marcus.krantz@callistaenterprise.se</xs:documentation>
+  </xs:annotation>
+  <xs:element name="LogicalAddress" type="LogicalAddressType"/>
+  <xs:element name="ServiceContract" type="ServiceContractType"/>
+  <xs:simpleType name="LogicalAddressType">
+    <xs:annotation>
+      <xs:documentation>Defines the type for logical address according to national reference architecture.
+				Superseeds wsa:To as type for logical address header in RIVTA 2.1.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="ServiceContractType">
+    <xs:annotation>
+      <xs:documentation>Type which describes a service contract. Used in interaction GetSupportedServiceContracts.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ServiceContractNamespace" type="xs:anyURI"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>https://www.kalendercentralen.se/Schedulr/ws/GetBookingDetails/1?xsd=../../core_components/interoperability_headers_1.0.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:riv:interoperability:headers:1" version="1.0" xmlns:tns="urn:riv:interoperability:headers:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Actor" type="tns:ActorType"/>
+  <xs:complexType name="ActorType">
+    <xs:sequence>
+      <xs:element name="actorId" type="tns:ActorIdType"/>
+      <xs:element name="actorType" type="tns:ActorTypeEnum"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ActorIdType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="ActorTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="subject_of_care"/>
+      <xs:enumeration value="subject_of_care_agent"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://www.kalendercentralen.se/Schedulr/ws/GetBookingDetails/1</con:endpoint></con:endpoints><con:operation isOneWay="false" action="urn:riv:crm:scheduling:GetBookingDetailsResponder:1:GetBookingDetails" name="GetBookingDetails" bindingOperationName="GetBookingDetails" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.kalendercentralen.se/Schedulr/ws/GetBookingDetails/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:crm:scheduling:GetBookingDetailsResponder:1">
+   <soapenv:Header>
+      <urn:Actor>
+         <urn:actorId>?</urn:actorId>
+         <urn:actorType>?</urn:actorType>
+         <!--You may enter ANY elements at this point-->
+      </urn:Actor>
+      <urn1:LogicalAddress>HSA-VKK123</urn1:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn2:GetBookingDetails>
+         <urn2:healthcare_facility>HSA-VKK123</urn2:healthcare_facility>
+         <urn2:bookingId>62</urn2:bookingId>
+         <!--You may enter ANY elements at this point-->
+      </urn2:GetBookingDetails>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:crm:scheduling:GetBookingDetailsResponder:1:GetBookingDetails"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite name="Regression Test"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="PingForConfiguration" searchProperties="true"><con:settings/><con:testStep type="request" name="PingForConfiguration"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>PingForConfigurationResponderBinding</con:interface><con:operation>PingForConfiguration</con:operation><con:request name="PingForConfiguration"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.kalendercentralen.se/Schedulr/ws/PingForConfiguration/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:itintegration:monitoring:PingForConfigurationResponder:1">
+   <soapenv:Header>
+      <urn:LogicalAddress>HSA-VKK123</urn:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn1:PingForConfiguration>
+         <urn1:serviceContractNamespace>?</urn1:serviceContractNamespace>
+         <urn1:logicalAddress>HSA-VKK123</urn1:logicalAddress>
+      </urn1:PingForConfiguration>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:assertion type="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion"/><con:assertion type="XPath Match" name="Check contains version"><con:configuration><path>declare namespace ns1='urn:riv:itintegration:monitoring:PingForConfigurationResponder:1';
+declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace ns2='urn:riv:itintegration:registry:1';
+count(//ns1:PingForConfigurationResponse/ns1:version[text()])</path><content>1</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="XPath Match" name="Check contains application name"><con:configuration><path>declare namespace ns1='urn:riv:itintegration:monitoring:PingForConfigurationResponder:1';
+declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace ns2='urn:riv:itintegration:registry:1';
+count(//ns1:PingForConfigurationResponse/ns1:configuration/ns1:value[text() = 'Schedulr'])</path><content>1</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetAllCareTypes" searchProperties="true"><con:settings/><con:testStep type="request" name="GetAllCareTypes"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetAllCareTypesResponderBinding</con:interface><con:operation>GetAllCareTypes</con:operation><con:request name="GetAllCareTypes"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.kalendercentralen.se/Schedulr/ws/GetAllCareTypes/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:crm:scheduling:GetAllCareTypesResponder:1">
+   <soapenv:Header>
+      <urn:Actor>
+         <urn:actorId>?</urn:actorId>
+         <urn:actorType>?</urn:actorType>
+      </urn:Actor>
+      <urn1:LogicalAddress>HSA-VKK123</urn1:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn2:GetAllCareTypes>
+         <urn2:healthcare_facility>HSA-VKK123</urn2:healthcare_facility>
+         <urn2:subject_of_care>191212121212</urn2:subject_of_care>
+      </urn2:GetAllCareTypes>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:assertion type="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion"/><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>declare namespace ns4='urn:riv:crm:scheduling:1.1';
+declare namespace ns2='urn:riv:crm:scheduling:GetAllCareTypesResponder:1';
+declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace ns1='urn:riv:interoperability:headers:1';
+declare namespace ns3='urn:riv:crm:scheduling:1';
+declare namespace ns5='urn:riv:itintegration:registry:1';
+count(//ns2:careTypes)>1</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetAllHealthcareFacilities" searchProperties="true"><con:settings/><con:testStep type="request" name="GetAllHealthcareFacilities"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetAllHealthcareFacilitiesResponderBinding</con:interface><con:operation>GetAllHealthcareFacilities</con:operation><con:request name="GetAllHealthcareFacilities"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.kalendercentralen.se/Schedulr/ws/GetAllHealthcareFacilities/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:crm:scheduling:GetAllHealthcareFacilitiesResponder:1">
+   <soapenv:Header>
+      <urn:Actor>
+         <urn:actorId>?</urn:actorId>
+         <urn:actorType>?</urn:actorType>
+      </urn:Actor>
+      <urn1:LogicalAddress>HSA-VKK123</urn1:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn2:GetAllHealthcareFacilities>
+         <urn2:healthcare_facility>HSA-VKK123</urn2:healthcare_facility>
+         <urn2:subject_of_care>191212121212</urn2:subject_of_care>
+      </urn2:GetAllHealthcareFacilities>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:assertion type="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion"/><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>declare namespace ns4='urn:riv:crm:scheduling:1.1';
+declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace ns1='urn:riv:interoperability:headers:1';
+declare namespace ns3='urn:riv:crm:scheduling:1';
+declare namespace ns5='urn:riv:itintegration:registry:1';
+declare namespace ns2='urn:riv:crm:scheduling:GetAllHealthcareFacilitiesResponder:1';
+count(//ns2:healthcareFacilityInfos)>1</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetAllPerformers" searchProperties="true"><con:settings/><con:testStep type="request" name="GetAllPerformers"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetAllPerformersResponderBinding</con:interface><con:operation>GetAllPerformers</con:operation><con:request name="GetAllPerformers"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.kalendercentralen.se/Schedulr/ws/GetAllPerformers/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:crm:scheduling:GetAllPerformersResponder:1">
+   <soapenv:Header>
+      <urn:Actor>
+         <urn:actorId>?</urn:actorId>
+         <urn:actorType>?</urn:actorType>
+      </urn:Actor>
+      <urn1:LogicalAddress>HSA-VKK123</urn1:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn2:GetAllPerformers>
+         <urn2:healthcare_facility>HSA-VKK123</urn2:healthcare_facility>
+         <urn2:subject_of_care>191212121212</urn2:subject_of_care>
+      </urn2:GetAllPerformers>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:assertion type="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion"/><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>declare namespace ns4='urn:riv:crm:scheduling:1.1';
+declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace ns1='urn:riv:interoperability:headers:1';
+declare namespace ns3='urn:riv:crm:scheduling:1';
+declare namespace ns2='urn:riv:crm:scheduling:GetAllPerformersResponder:1';
+declare namespace ns5='urn:riv:itintegration:registry:1';
+count(//ns2:performerInfos)>1</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetAllTimeTypes" searchProperties="true"><con:settings/><con:testStep type="request" name="GetAllTimeTypes"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetAllTimeTypesResponderBinding</con:interface><con:operation>GetAllTimeTypes</con:operation><con:request name="GetAllTimeTypes"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.kalendercentralen.se/Schedulr/ws/GetAllTimeTypes/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:crm:scheduling:GetAllTimeTypesResponder:1" xmlns:urn3="urn:riv:crm:scheduling:GetAllTimeTypesResponder:1.1">
+   <soapenv:Header>
+      <urn:Actor>
+         <urn:actorId>?</urn:actorId>
+         <urn:actorType>?</urn:actorType>
+      </urn:Actor>
+      <urn1:LogicalAddress>HSA-VKK123</urn1:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn2:GetAllTimeTypes>
+         <urn2:healthcare_facility>HSA-VKK123</urn2:healthcare_facility>
+         <urn3:subject_of_care>191212121212</urn3:subject_of_care>
+      </urn2:GetAllTimeTypes>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:assertion type="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion"/><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>declare namespace ns3='urn:riv:crm:scheduling:GetAllTimeTypesResponder:1.1';
+declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace ns2='urn:riv:crm:scheduling:GetAllTimeTypesResponder:1';
+declare namespace ns1='urn:riv:interoperability:headers:1';
+declare namespace ns4='urn:riv:crm:scheduling:1';
+declare namespace ns6='urn:riv:itintegration:registry:1';
+declare namespace ns5='urn:riv:crm:scheduling:1.1';
+count(//ns2:ListOfTimeTypes)>1</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetAvailableDates" searchProperties="true"><con:settings/><con:testStep type="request" name="GetAvailableDates"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetAvailableDatesResponderBinding</con:interface><con:operation>GetAvailableDates</con:operation><con:request name="GetAvailableDates"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.kalendercentralen.se/Schedulr/ws/GetAvailableDates/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:crm:scheduling:GetAvailableDatesResponder:1" xmlns:urn3="urn:riv:crm:scheduling:GetAvailableDatesResponder:1.1">
+   <soapenv:Header>
+      <urn:Actor>
+         <urn:actorId>?</urn:actorId>
+         <urn:actorType>?</urn:actorType>
+      </urn:Actor>
+      <urn1:LogicalAddress>HSA-VKK123</urn1:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn2:GetAvailableDates>
+         <urn2:healthcare_facility>HSA-VKK123</urn2:healthcare_facility>
+         <urn2:startDateInclusive>20150101</urn2:startDateInclusive>
+         <urn2:endDateInclusive>20150101</urn2:endDateInclusive>
+         <urn3:subject_of_care>191212121212</urn3:subject_of_care>
+         <urn2:timeTypeName>Övrigt</urn2:timeTypeName>
+         <urn2:timeTypeID>5</urn2:timeTypeID>
+         <urn2:careTypeName>Provtagning</urn2:careTypeName>         
+      </urn2:GetAvailableDates>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:assertion type="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion"/><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace ns2='urn:riv:crm:scheduling:GetAvailableDatesResponder:1';
+declare namespace ns1='urn:riv:interoperability:headers:1';
+declare namespace ns4='urn:riv:crm:scheduling:1';
+declare namespace ns3='urn:riv:crm:scheduling:GetAvailableDatesResponder:1.1';
+declare namespace ns6='urn:riv:itintegration:registry:1';
+declare namespace ns5='urn:riv:crm:scheduling:1.1';
+count(//ns2:performerAvailabilityByDate)</path><content>5</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetAvailableTimeslots" searchProperties="true"><con:settings/><con:testStep type="request" name="GetAvailableTimeslots"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetAvailableTimeslotsResponderBinding</con:interface><con:operation>GetAvailableTimeslots</con:operation><con:request name="GetAvailableTimeslots"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.kalendercentralen.se/Schedulr/ws/GetAvailableTimeslots/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:crm:scheduling:GetAvailableTimeslotsResponder:1" xmlns:urn3="urn:riv:crm:scheduling:GetAvailableTimeslotsResponder:1.1">
+   <soapenv:Header>
+      <urn:Actor>
+         <urn:actorId>?</urn:actorId>
+         <urn:actorType>?</urn:actorType>
+      </urn:Actor>
+      <urn1:LogicalAddress>HSA-VKK123</urn1:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn2:GetAvailableTimeslots>
+	    <urn2:healthcare_facility>HSA-VKK123</urn2:healthcare_facility>      
+         <!--Optional:-->
+         <urn2:bookingId>?</urn2:bookingId>
+         <urn2:startDateInclusive>20150101</urn2:startDateInclusive>
+         <urn2:endDateInclusive>20150103</urn2:endDateInclusive>
+         <!--Zero or more repetitions:-->
+         <urn2:performer>123456-098</urn2:performer>
+         <urn2:performer>HSA-12345</urn2:performer>
+         <!--Optional:-->
+         <urn2:timeTypeName>Övrigt</urn2:timeTypeName>
+         <!--Optional:-->
+         <urn2:timeTypeID>5</urn2:timeTypeID>
+         <!--Optional:-->
+         <urn2:careTypeName>Provtagning</urn2:careTypeName>
+         <!--Optional:-->
+         <urn2:careTypeID>2</urn2:careTypeID>
+         <urn3:subject_of_care>?</urn3:subject_of_care>
+      </urn2:GetAvailableTimeslots>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:assertion type="Schema Compliance" disabled="true"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion"/><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace ns3='urn:riv:crm:scheduling:GetAvailableTimeslotsResponder:1.1';
+declare namespace ns1='urn:riv:interoperability:headers:1';
+declare namespace ns4='urn:riv:crm:scheduling:1';
+declare namespace ns2='urn:riv:crm:scheduling:GetAvailableTimeslotsResponder:1';
+declare namespace ns6='urn:riv:itintegration:registry:1';
+declare namespace ns5='urn:riv:crm:scheduling:1.1';
+count(//ns2:timeslotDetail)</path><content>60</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Booking Lifecycle" searchProperties="true" id="aed85038-3513-48a4-8bbc-bb8ff6583bc7"><con:settings/><con:testStep type="request" name="MakeBooking"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MakeBookingResponderBinding</con:interface><con:operation>MakeBooking</con:operation><con:request name="MakeBooking"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.kalendercentralen.se/Schedulr/ws/MakeBooking/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:crm:scheduling:MakeBookingResponder:1" xmlns:urn3="urn:riv:crm:scheduling:1" xmlns:urn4="urn:riv:crm:scheduling:1.1">
+   <soapenv:Header>
+      <urn:Actor>
+         <urn:actorId>?</urn:actorId>
+         <urn:actorType>?</urn:actorType>
+      </urn:Actor>
+      <urn1:LogicalAddress>HSA-VKK123</urn1:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn2:MakeBooking>
+         <urn2:healthcare_facility_med>HSA-VKK123</urn2:healthcare_facility_med>
+         <urn2:requestedTimeslot>
+            <urn3:startTimeInclusive>20150101211500</urn3:startTimeInclusive>
+            <urn3:endTimeExclusive>20150101214500</urn3:endTimeExclusive>
+            <urn3:healthcare_facility>HSA-VKK123</urn3:healthcare_facility>
+            <urn3:subject_of_care>191212121221</urn3:subject_of_care>
+         </urn2:requestedTimeslot>
+         <urn2:subject_of_care_info>
+            <urn4:firstName>Tolvan</urn4:firstName>
+            <urn4:lastName>Tolvansson</urn4:lastName>
+            <urn3:phone>123</urn3:phone>
+         </urn2:subject_of_care_info>
+      </urn2:MakeBooking>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:assertion type="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion"/><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>declare namespace ns4='urn:riv:crm:scheduling:1.1';
+declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace ns1='urn:riv:interoperability:headers:1';
+declare namespace ns3='urn:riv:crm:scheduling:1';
+declare namespace ns5='urn:riv:itintegration:registry:1';
+declare namespace ns2='urn:riv:crm:scheduling:MakeBookingResponder:1';
+//ns2:resultCode[text()]</path><content>OK</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer bookingId"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" useXQuery="false" entitize="false" transferChildNodes="false"><con:name>bookingId</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>MakeBooking</con:sourceStep><con:sourcePath>declare namespace ns2='urn:riv:crm:scheduling:MakeBookingResponder:1';
+//ns2:bookingId[text()]</con:sourcePath><con:targetType>bookingId</con:targetType><con:targetStep>#TestCase#</con:targetStep></con:transfers></con:config></con:testStep><con:testStep type="request" name="GetBookingDetails"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetBookingDetailsResponderBinding</con:interface><con:operation>GetBookingDetails</con:operation><con:request name="GetBookingDetails"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.kalendercentralen.se/Schedulr/ws/GetBookingDetails/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:crm:scheduling:GetBookingDetailsResponder:1">
+   <soapenv:Header>
+      <urn:Actor>
+         <urn:actorId>?</urn:actorId>
+         <urn:actorType>?</urn:actorType>
+      </urn:Actor>
+      <urn1:LogicalAddress>HSA-VKK123</urn1:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn2:GetBookingDetails>
+         <urn2:healthcare_facility>HSA-VKK123</urn2:healthcare_facility>
+         <urn2:bookingId>${#TestCase#bookingId}</urn2:bookingId>
+      </urn2:GetBookingDetails>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:assertion type="Schema Compliance" disabled="true"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion"/><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>declare namespace ns4='urn:riv:crm:scheduling:1.1';
+declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace ns1='urn:riv:interoperability:headers:1';
+declare namespace ns3='urn:riv:crm:scheduling:1';
+declare namespace ns5='urn:riv:itintegration:registry:1';
+declare namespace ns2='urn:riv:crm:scheduling:GetBookingDetailsResponder:1';
+//ns3:bookingId[text()]</path><content>${#TestCase#bookingId}</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="XPath Match" name="Check time"><con:configuration><path>declare namespace ns4='urn:riv:crm:scheduling:1.1';
+declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace ns1='urn:riv:interoperability:headers:1';
+declare namespace ns3='urn:riv:crm:scheduling:1';
+declare namespace ns5='urn:riv:itintegration:registry:1';
+declare namespace ns2='urn:riv:crm:scheduling:GetBookingDetailsResponder:1';
+//ns3:startTimeInclusive[text()]</path><content>20150101211500</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="UpdateBooking"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>UpdateBookingResponderBinding</con:interface><con:operation>UpdateBooking</con:operation><con:request name="UpdateBooking"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.kalendercentralen.se/Schedulr/ws/UpdateBooking/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:crm:scheduling:UpdateBookingResponder:1" xmlns:urn3="urn:riv:crm:scheduling:1" xmlns:urn4="urn:riv:crm:scheduling:1.1">
+   <soapenv:Header>
+      <urn:Actor>
+         <urn:actorId>?</urn:actorId>
+         <urn:actorType>?</urn:actorType>
+      </urn:Actor>
+      <urn1:LogicalAddress>HSA-VKK123</urn1:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn2:UpdateBooking>
+         <urn2:requestedTimeslot>
+            <urn3:startTimeInclusive>20150101221500</urn3:startTimeInclusive>
+            <urn3:endTimeExclusive>20150101224500</urn3:endTimeExclusive>
+            <urn3:healthcare_facility>HSA-VKK123</urn3:healthcare_facility>
+            <urn3:bookingId>${#TestCase#bookingId}</urn3:bookingId>
+            <urn3:subject_of_care>191212121212</urn3:subject_of_care>
+         </urn2:requestedTimeslot>
+         <urn2:subject_of_care_info>
+            <urn4:firstName>Tolvan</urn4:firstName>
+            <urn4:lastName>Tolvansson</urn4:lastName>
+            <urn3:phone>123</urn3:phone>
+         </urn2:subject_of_care_info>
+         <urn2:notification>HEJ</urn2:notification>
+      </urn2:UpdateBooking>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:assertion type="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion"/><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>declare namespace ns3='urn:riv:crm:scheduling:1.1';
+declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace ns1='urn:riv:interoperability:headers:1';
+declare namespace ns2='urn:riv:crm:scheduling:1';
+declare namespace ns5='urn:riv:itintegration:registry:1';
+declare namespace ns4='urn:riv:crm:scheduling:UpdateBookingResponder:1';
+//ns4:resultCode[text()]</path><content>OK</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Check time updated in details"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetBookingDetailsResponderBinding</con:interface><con:operation>GetBookingDetails</con:operation><con:request name="Check time updated in details"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.kalendercentralen.se/Schedulr/ws/GetBookingDetails/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:crm:scheduling:GetBookingDetailsResponder:1">
+   <soapenv:Header>
+      <urn:Actor>
+         <urn:actorId>?</urn:actorId>
+         <urn:actorType>?</urn:actorType>
+      </urn:Actor>
+      <urn1:LogicalAddress>HSA-VKK123</urn1:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn2:GetBookingDetails>
+         <urn2:healthcare_facility>HSA-VKK123</urn2:healthcare_facility>
+         <urn2:bookingId>${#TestCase#bookingId}</urn2:bookingId>
+      </urn2:GetBookingDetails>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:assertion type="Schema Compliance" disabled="true"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion"/><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>declare namespace ns4='urn:riv:crm:scheduling:1.1';
+declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace ns1='urn:riv:interoperability:headers:1';
+declare namespace ns3='urn:riv:crm:scheduling:1';
+declare namespace ns5='urn:riv:itintegration:registry:1';
+declare namespace ns2='urn:riv:crm:scheduling:GetBookingDetailsResponder:1';
+//ns3:startTimeInclusive[text()]</path><content>20150101221500</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="GetSubjectOfCareSchedule"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetSubjectOfCareScheduleResponderBinding</con:interface><con:operation>GetSubjectOfCareSchedule</con:operation><con:request name="GetSubjectOfCareSchedule"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.kalendercentralen.se/Schedulr/ws/GetSubjectOfCareSchedule/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:crm:scheduling:GetSubjectOfCareScheduleResponder:1">
+   <soapenv:Header>
+      <urn:Actor>
+         <urn:actorId>?</urn:actorId>
+         <urn:actorType>?</urn:actorType>
+      </urn:Actor>
+      <urn1:LogicalAddress>HSA-VKK123</urn1:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn2:GetSubjectOfCareSchedule>
+         <urn2:healthcare_facility>HSA-VKK123</urn2:healthcare_facility>
+         <urn2:subject_of_care>191212121212</urn2:subject_of_care>
+      </urn2:GetSubjectOfCareSchedule>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:assertion type="Schema Compliance" disabled="true"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion"/><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>declare namespace ns4='urn:riv:crm:scheduling:1.1';
+declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace ns1='urn:riv:interoperability:headers:1';
+declare namespace ns3='urn:riv:crm:scheduling:1';
+declare namespace ns2='urn:riv:crm:scheduling:GetSubjectOfCareScheduleResponder:1';
+declare namespace ns5='urn:riv:itintegration:registry:1';
+count(//ns3:bookingId[text() = '${#TestCase#bookingId}'])</path><content>1</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="CancelBooking"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CancelBookingResponderBinding</con:interface><con:operation>CancelBooking</con:operation><con:request name="CancelBooking"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.kalendercentralen.se/Schedulr/ws/CancelBooking/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:crm:scheduling:CancelBookingResponder:1">
+   <soapenv:Header>
+      <urn:Actor>
+         <urn:actorId>?</urn:actorId>
+         <urn:actorType>?</urn:actorType>
+      </urn:Actor>
+      <urn1:LogicalAddress>HSA-VKK123</urn1:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn2:CancelBooking>
+         <urn2:healthcare_facility>HSA-VKK123</urn2:healthcare_facility>
+         <urn2:bookingId>${#TestCase#bookingId}</urn2:bookingId>
+      </urn2:CancelBooking>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:assertion type="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion"/><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>declare namespace ns4='urn:riv:crm:scheduling:1.1';
+declare namespace ns2='urn:riv:crm:scheduling:CancelBookingResponder:1';
+declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace ns1='urn:riv:interoperability:headers:1';
+declare namespace ns3='urn:riv:crm:scheduling:1';
+declare namespace ns5='urn:riv:itintegration:registry:1';
+//ns2:resultCode[text()]</path><content>OK</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Check removed from Schedule"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetSubjectOfCareScheduleResponderBinding</con:interface><con:operation>GetSubjectOfCareSchedule</con:operation><con:request name="Check removed from Schedule"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.kalendercentralen.se/Schedulr/ws/GetSubjectOfCareSchedule/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:crm:scheduling:GetSubjectOfCareScheduleResponder:1">
+   <soapenv:Header>
+      <urn:Actor>
+         <urn:actorId>?</urn:actorId>
+         <urn:actorType>?</urn:actorType>
+      </urn:Actor>
+      <urn1:LogicalAddress>HSA-VKK123</urn1:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn2:GetSubjectOfCareSchedule>
+         <urn2:healthcare_facility>HSA-VKK123</urn2:healthcare_facility>
+         <urn2:subject_of_care>191212121212</urn2:subject_of_care>
+      </urn2:GetSubjectOfCareSchedule>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:assertion type="Schema Compliance" disabled="true"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion"/><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>declare namespace ns4='urn:riv:crm:scheduling:1.1';
+declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace ns1='urn:riv:interoperability:headers:1';
+declare namespace ns3='urn:riv:crm:scheduling:1';
+declare namespace ns2='urn:riv:crm:scheduling:GetSubjectOfCareScheduleResponder:1';
+declare namespace ns5='urn:riv:itintegration:registry:1';
+count(//ns3:bookingId[text() = '${#TestCase#bookingId}'])</path><content>0</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Check no BookingDetails"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetBookingDetailsResponderBinding</con:interface><con:operation>GetBookingDetails</con:operation><con:request name="Check no BookingDetails"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.kalendercentralen.se/Schedulr/ws/GetBookingDetails/1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:crm:scheduling:GetBookingDetailsResponder:1">
+   <soapenv:Header>
+      <urn:Actor>
+         <urn:actorId>?</urn:actorId>
+         <urn:actorType>?</urn:actorType>
+      </urn:Actor>
+      <urn1:LogicalAddress>HSA-VKK123</urn1:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn2:GetBookingDetails>
+         <urn2:healthcare_facility>HSA-VKK123</urn2:healthcare_facility>
+         <urn2:bookingId>${#TestCase#bookingId}</urn2:bookingId>
+      </urn2:GetBookingDetails>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:assertion type="Schema Compliance" disabled="true"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion"/><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>declare namespace ns4='urn:riv:crm:scheduling:1.1';
+declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace ns1='urn:riv:interoperability:headers:1';
+declare namespace ns3='urn:riv:crm:scheduling:1';
+declare namespace ns5='urn:riv:itintegration:registry:1';
+declare namespace ns2='urn:riv:crm:scheduling:GetBookingDetailsResponder:1';
+count(//ns2:GetBookingDetailsResponse/*)</path><content>0</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties><con:property><con:name>bookingId</con:name><con:value>69</con:value></con:property></con:properties></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
