@@ -1,5 +1,9 @@
-Version 0.6
-Implemented all the remaining services in the crm.scheduling domain.
+Version 0.8
+* Updated logging in WS implementations
+* Updated to property based baseUrl for SOAP UI regression tests
 
 Version 0.7
-Fixed a bug by adding a Hibernate transaction around find call in GetBookingDetails
+* Fixed a bug by adding a Hibernate transaction around find call in GetBookingDetails
+
+Version 0.6
+* Implemented all the remaining services in the crm.scheduling domain.

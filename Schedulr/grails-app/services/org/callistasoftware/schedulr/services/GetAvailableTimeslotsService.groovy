@@ -27,7 +27,11 @@ class GetAvailableTimeslotsService implements GetAvailableTimeslotsResponderInte
 	@Override
 	public GetAvailableTimeslotsResponseType getAvailableTimeslots(String logicalAddress,
 			ActorType actor, GetAvailableTimeslotsType getAvailableTimeslots) {
-		log.debug "GetAvailableTimeslots"
+		log.info """
+				GetAvailableTimeslots 
+				logicalAddress: $logicalAddress
+				healthcareFacility: $getAvailableTimeslots.healthcareFacility
+				"""
 		hasText(getAvailableTimeslots.healthcareFacility, 'missing argument "healthcareFacility"')
 		hasText(getAvailableTimeslots.startDateInclusive, 'missing argument "startDateInclusive"')
 		hasText(getAvailableTimeslots.endDateInclusive, 'missing argument "endDateInclusive"')
