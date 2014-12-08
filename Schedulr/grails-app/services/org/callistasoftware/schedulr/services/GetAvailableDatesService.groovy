@@ -26,7 +26,11 @@ class GetAvailableDatesService implements GetAvailableDatesResponderInterface{
 	@Override
 	public GetAvailableDatesResponseType getAvailableDates(String logicalAddress,
 			ActorType actor, GetAvailableDatesType getAvailableDates) {
-		log.debug "GetAvailableDates"
+		log.info """
+				GetAvailableDates 
+				logicalAddress: $logicalAddress
+				healthcareFacility: $getAvailableDates.healthcareFacility
+				"""
 		hasText(getAvailableDates.healthcareFacility, 'missing argument "healthcareFacility"')
 		hasText(getAvailableDates.startDateInclusive, 'missing argument "startDateInclusive"')
 		hasText(getAvailableDates.endDateInclusive, 'missing argument "endDateInclusive"')

@@ -37,6 +37,7 @@ class MakeBookingService implements MakeBookingResponderInterface {
 			MakeBookingType makeBooking) {
 		log.info """
 			MakeBooking
+			logicalAddress: $logicalAddress
 			healthcareFacilityMed: $makeBooking.healthcareFacilityMed
 			healthcareFacility: $makeBooking.requestedTimeslot.healthcareFacility
 			bookingId: $makeBooking.requestedTimeslot.bookingId

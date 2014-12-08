@@ -27,6 +27,13 @@ class GetBookingDetailsService implements GetBookingDetailsResponderInterface{
 	@Override
 	public GetBookingDetailsResponseType getBookingDetails(
 	String logicalAddress, ActorType actor, GetBookingDetailsType getBookingDetails) {
+		log.info """
+				GetBookingDetails 
+				logicalAddress: $logicalAddress
+				healthcareFacility: $getBookingDetails.healthcareFacility
+				bookingId: $getBookingDetails.bookingId
+				"""
+	
 		hasText(getBookingDetails.bookingId, "missing argument \"bookingId\"")
 		hasText(getBookingDetails.healthcareFacility, 'missing argument "healthcare_cacility"')
 		isTrue(logicalAddress == getBookingDetails.healthcareFacility, '"logicalAddress" differs from "healthcare_facility"')

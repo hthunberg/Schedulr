@@ -30,6 +30,7 @@ class CancelBookingService implements CancelBookingResponderInterface {
 			CancelBookingType cancelBooking) {
 		log.info """
 				CancelBooking 
+				logicalAddress: $logicalAddress
 				healthcareFacility: $cancelBooking.healthcareFacility 
 				booking: $cancelBooking.bookingId 
 				message: $cancelBooking.message

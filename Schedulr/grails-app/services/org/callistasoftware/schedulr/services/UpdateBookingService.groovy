@@ -36,6 +36,7 @@ class UpdateBookingService implements UpdateBookingResponderInterface {
 	public UpdateBookingResponseType updateBooking(String logicalAddress, ActorType actor, UpdateBookingType updateBooking) {
 		log.info """
 			UpdateBooking
+			logicalAddress: $logicalAddress 
 			healthcareFacility: $updateBooking.requestedTimeslot.healthcareFacility
 			bookingId: $updateBooking.requestedTimeslot.bookingId
 			start: $updateBooking.requestedTimeslot.startTimeInclusive

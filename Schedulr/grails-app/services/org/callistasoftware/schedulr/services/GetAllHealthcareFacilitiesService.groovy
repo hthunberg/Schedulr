@@ -24,7 +24,11 @@ class GetAllHealthcareFacilitiesService implements GetAllHealthcareFacilitiesRes
 	@Override
 	public GetAllHealthcareFacilitiesResponseType getAllHealthcareFacilities(
 			String logicalAddress, ActorType actor, GetAllHealthcareFacilitiesType getAllHealthCareFacilities) {
-		log.debug "GetAllHealthcareFacilities"
+		log.info """
+				GetAllHealthcareFacilities 
+				logicalAddress: $logicalAddress
+				healthcareFacility: $getAllHealthCareFacilities.healthcareFacility
+				"""
 		hasText(getAllHealthCareFacilities.healthcareFacility, 'missing argument "healthcareFacility"')
 		hasText(getAllHealthCareFacilities.subjectOfCare, "missing argument \"subjectOfCare\"")
 		isTrue(logicalAddress == getAllHealthCareFacilities.healthcareFacility, '"logicalAddress" differs from "healthcare_facility"')

@@ -23,7 +23,11 @@ class GetAllPerformersService implements GetAllPerformersResponderInterface{
 	@Override
 	public GetAllPerformersResponseType getAllPerformers(String logicalAddress,
 			ActorType actor, GetAllPerformersType getAllPerformers) {
-		log.debug "GetAllPerformers"
+		log.info """
+				GetAllPerformers 
+				logicalAddress: $logicalAddress
+				healthcareFacility: $getAllPerformers.healthcareFacility
+				"""
 		hasText(getAllPerformers.healthcareFacility, 'missing argument "healthcareFacility"')
 		hasText(getAllPerformers.subjectOfCare, "missing argument \"subjectOfCare\"")
 		isTrue(logicalAddress == getAllPerformers.healthcareFacility, '"logicalAddress" differs from "healthcare_facility"')

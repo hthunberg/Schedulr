@@ -26,8 +26,11 @@ class GetAllTimeTypesService implements GetAllTimeTypesResponderInterface{
 	@Override
 	public GetAllTimeTypesResponseType getAllTimeTypes(String logicalAddress,
 			ActorType actor, GetAllTimeTypesType getAllTimeTypes) {
-		log.debug "GetAllTimeTypes"
-		
+		log.info """
+				GetAllTimeTypes 
+				logicalAddress: $logicalAddress
+				healthcareFacility: $getAllTimeTypes.healthcareFacility
+				"""
 		hasText(getAllTimeTypes.healthcareFacility, 'missing argument "healthcareFacility"')
 		hasText(getAllTimeTypes.subjectOfCare, "missing argument \"subjectOfCare\"")
 		isTrue(logicalAddress == getAllTimeTypes.healthcareFacility, '"logicalAddress" differs from "healthcareFacility"')

@@ -27,8 +27,11 @@ class GetAllCareTypesService implements GetAllCareTypesResponderInterface{
 	 @Override
 	public GetAllCareTypesResponseType getAllCareTypes(ActorType actor,
 			String logicalAddress, GetAllCareTypesType getAllCareTypes) {
-			log.debug "GetAllCareTypes"
-			
+			log.info """
+				GetAllCareTypes 
+				logicalAddress: $logicalAddress
+				healthcareFacility: $getAllCareTypes.healthcareFacility
+				"""
 			hasText(getAllCareTypes.healthcareFacility, 'missing argument "healthcareFacility"')
 			hasText(getAllCareTypes.subjectOfCare, "missing argument \"subjectOfCare\"")
 			isTrue(logicalAddress == getAllCareTypes.healthcareFacility, '"logicalAddress" differs from "healthcareFacility"')
